@@ -1,6 +1,8 @@
+import NavBar from '../components/header/NavBar'
+
 function App() {
   return (
-    <div>Komquest</div>
+    <NavBar />
   );
 }
 
