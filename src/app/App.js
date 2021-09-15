@@ -1,9 +1,8 @@
-import NavBar from '../components/header/NavBar'
+import React from "react";
+import KomquestsUI from "./KomquestsUI";
 
 function App() {
-  return (
-    <NavBar />
-  );
+  return <KomquestsUI />;
 }
 
 export default App;

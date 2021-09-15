@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import SearchFields from "./SearchFields";
-import komquestsLogo from "../common/komquestsLogo.png";
+import komquestsLogo from "../common/images/komquestsLogo.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import SearchLocationInput from "./SearchLocationInputField";
 import * as SearchQuerySelectors from "./redux/selectors";
-import * as SearchQueryActions from "./redux/actions";
+import * as KomsActions from "../results/redux/actions";
 import SearchWattsInputField from "./SearchWattsInputField";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +33,7 @@ const SearchFields = () => {
   const isInputFilled = useSelector(SearchQuerySelectors.selectIsInputValid);
 
   const handleSubmitSearchQuery = () => {
-    dispatch(SearchQueryActions.fetchRecommendedKoms());
+    dispatch(KomsActions.fetchRecommendedKoms());
   };
 
   return (
@@ -46,6 +46,7 @@ const SearchFields = () => {
         <Button
           variant="contained"
           color="primary"
+          size="large"
           disabled={!isInputFilled}
           onClick={handleSubmitSearchQuery}
         >

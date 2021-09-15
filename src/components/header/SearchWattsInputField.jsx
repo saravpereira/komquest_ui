@@ -14,9 +14,14 @@ const useStyles = makeStyles((theme) => ({
       outline: "none",
     },
   },
+  unitText: {
+    paddingTop: theme.spacing(1.8),
+    paddingRight: theme.spacing(0.5),
+  },
   searchLocationInput: {
     display: "flex",
-    width: theme.spacing(24.5),
+    // width: theme.spacing(24.5),
+    backgroundColor: "white",
     borderRadius: theme.spacing(0.5),
     border: "1px solid #BAB9B9",
     "&:hover": {
@@ -24,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
       borderColor: "rgba(223,225,229,0)",
     },
     "&:focus-within": {
-      border: "2px solid #2257C1",
+      // border: "2px solid #2257C1",
       boxShadow: "0 1px 6px 0 rgba(32,33,36,0.28)",
     },
   },
@@ -49,7 +54,9 @@ const SearchWattsInputField = () => {
         value={query}
         required
         type="number"
+        min="0"
       />
+      <div className={classes.unitText}><span>W</span></div>
     </div>
   );
 };

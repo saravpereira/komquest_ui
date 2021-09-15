@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
       borderColor: "rgba(223,225,229,0)",
     },
     "&:focus-within": {
-      border: "2px solid #2257C1",
+      // border: "2px solid #2257C1",
       boxShadow: "0 1px 6px 0 rgba(32,33,36,0.28)",
     },
   },
