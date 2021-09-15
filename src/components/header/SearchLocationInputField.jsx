@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { GOOGLE_PLACES_API } from "../common/constants/urls";
 
 const useStyles = makeStyles((theme) => ({
   searchLocationInput: {
@@ -7,26 +8,26 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(60.5),
     borderRadius: theme.spacing(0.5),
     border: "1px solid #BAB9B9",
-    '&:hover': {
-        boxShadow: '0 1px 6px 0 rgba(32,33,36,0.28)',
-        borderColor: 'rgba(223,225,229,0)',
+    "&:hover": {
+      boxShadow: "0 1px 6px 0 rgba(32,33,36,0.28)",
+      borderColor: "rgba(223,225,229,0)",
     },
-    '&:focus-within': {
-        border: '2px solid #2257C1',
-        boxShadow: '0 1px 6px 0 rgba(32,33,36,0.28)',
-    }
+    "&:focus-within": {
+      border: "2px solid #2257C1",
+      boxShadow: "0 1px 6px 0 rgba(32,33,36,0.28)",
+    },
   },
   inputField: {
     height: theme.spacing(4),
-    width: '100%',
-    padding: '8px 12px',
-    border: 'none',
-    fontSize: '16px',
+    width: "100%",
+    padding: "8px 12px",
+    border: "none",
+    fontSize: "16px",
     borderRadius: theme.spacing(0.5),
-    '&:focus': {
-        outline: 'none',
+    "&:focus": {
+      outline: "none",
     },
-  }
+  },
 }));
 
 let autoComplete;
@@ -72,9 +73,8 @@ function SearchLocationInput() {
   const autoCompleteRef = useRef(null);
 
   useEffect(() => {
-    loadScript(
-      `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_API_KEY}&libraries=places`,
-      () => handleScriptLoad(setQuery, autoCompleteRef)
+    loadScript(GOOGLE_PLACES_API, () =>
+      handleScriptLoad(setQuery, autoCompleteRef)
     );
   }, []);
 

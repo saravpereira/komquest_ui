@@ -1,6 +1,7 @@
 const defaults = {
   watts: null,
   address: null,
+  koms: null,
 };
 
 export default function searchQuery(state = defaults, action) {
@@ -15,6 +16,12 @@ export default function searchQuery(state = defaults, action) {
       return {
         ...state,
         address: defaults.address,
+      };
+    }
+    case "SEARCH_QUERY/SET_KOMS": {
+      return {
+        ...state,
+        koms: defaults.koms,
       };
     }
     default:
