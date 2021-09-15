@@ -9,19 +9,20 @@ export default function searchQuery(state = defaults, action) {
     case "SEARCH_QUERY/SET_WATTS": {
       return {
         ...state,
-        watts: defaults.watts,
+        watts: action.payload,
       };
     }
     case "SEARCH_QUERY/SET_ADDRESS": {
+      console.log()
       return {
         ...state,
-        address: defaults.address,
+        address: action.payload,
       };
     }
     case "SEARCH_QUERY/SET_KOMS": {
       return {
         ...state,
-        koms: defaults.koms,
+        koms: action.payload,
       };
     }
     default:

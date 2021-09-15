@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import { GOOGLE_PLACES_API } from "../common/constants/urls";
+import * as SearchQueryActions from "./redux/actions";
 
 const useStyles = makeStyles((theme) => ({
   searchLocationInput: {
@@ -30,47 +32,59 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-let autoComplete;
-
-const loadScript = (url, callback) => {
-  let script = document.createElement("script");
-  script.type = "text/javascript";
-
-  if (script.readyState) {
-    script.onreadystatechange = function () {
-      if (script.readyState === "loaded" || script.readyState === "complete") {
-        script.onreadystatechange = null;
-        callback();
-      }
-    };
-  } else {
-    script.onload = () => callback();
-  }
-
-  script.src = url;
-  document.getElementsByTagName("head")[0].appendChild(script);
-};
-
-function handleScriptLoad(updateQuery, autoCompleteRef) {
-  autoComplete = new window.google.maps.places.Autocomplete(
-    autoCompleteRef.current
-  );
-  autoComplete.setFields(["address_components", "formatted_address"]);
-  autoComplete.addListener("place_changed", () =>
-    handlePlaceSelect(updateQuery)
-  );
-}
-
-async function handlePlaceSelect(updateQuery) {
-  const addressObject = autoComplete.getPlace();
-  const query = addressObject.formatted_address;
-  updateQuery(query);
-}
-
-function SearchLocationInput() {
+const SearchLocationInput = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
+
+  let autoComplete;
+
+  const loadScript = (url, callback) => {
+    let script = document.createElement("script");
+    script.type = "text/javascript";
+
+    if (script.readyState) {
+      script.onreadystatechange = function () {
+        if (
+          script.readyState === "loaded" ||
+          script.readyState === "complete"
+        ) {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      script.onload = () => callback();
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  };
+
+  const handleScriptLoad = (updateQuery, autoCompleteRef) => {
+    autoComplete = new window.google.maps.places.Autocomplete(
+      autoCompleteRef.current
+    );
+    autoComplete.setFields(["address_components", "formatted_address"]);
+    autoComplete.addListener("place_changed", () =>
+      handlePlaceSelect(updateQuery)
+    );
+  }
+
+
+
+  async function handlePlaceSelect(updateQuery) {
+    const addressObject = autoComplete.getPlace();
+    const query = addressObject.formatted_address;
+    dispatch(SearchQueryActions.setAddress(query))
+    updateQuery(query);
+  }
+
+  const handleOnChange = e => {
+    setQuery(e.target.value)
+    dispatch(SearchQueryActions.setAddress(query))
+  }
 
   useEffect(() => {
     loadScript(GOOGLE_PLACES_API, () =>
@@ -83,8 +97,8 @@ function SearchLocationInput() {
       <input
         className={classes.inputField}
         ref={autoCompleteRef}
-        onChange={(event) => setQuery(event.target.value)}
-        placeholder="Enter Address *"
+        onChange={handleOnChange}
+        placeholder="Address *"
         value={query}
         required
       />
