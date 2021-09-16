@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 import * as SearchQueryActions from "./redux/actions";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,12 +16,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   unitText: {
-    paddingTop: theme.spacing(1.8),
+    paddingTop: theme.spacing(1.5),
     paddingRight: theme.spacing(0.5),
   },
-  searchLocationInput: {
+  searchWattsInput: {
     display: "flex",
-    // width: theme.spacing(24.5),
     backgroundColor: "white",
     borderRadius: theme.spacing(0.5),
     border: "1px solid #BAB9B9",
@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
       borderColor: "rgba(223,225,229,0)",
     },
     "&:focus-within": {
-      // border: "2px solid #2257C1",
       boxShadow: "0 1px 6px 0 rgba(32,33,36,0.28)",
     },
   },
@@ -46,7 +45,7 @@ const SearchWattsInputField = () => {
   };
 
   return (
-    <div className={classes.searchLocationInput}>
+    <div className={classes.searchWattsInput}>
       <input
         className={classes.wattsInput}
         onChange={handleWattsChange}
@@ -56,7 +55,13 @@ const SearchWattsInputField = () => {
         type="number"
         min="0"
       />
-      <div className={classes.unitText}><span>W</span></div>
+      <div className={classes.unitText}>
+        <span>
+          <Typography variant="body1" component="p">
+            W
+          </Typography>
+        </span>
+      </div>
     </div>
   );
 };

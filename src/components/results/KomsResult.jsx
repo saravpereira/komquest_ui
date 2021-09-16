@@ -10,6 +10,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '30%',
     margin: theme.spacing(1),
+    [theme.breakpoints.down('md')]: {
+      width: '50%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '70%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+    },
   },
 }));
 

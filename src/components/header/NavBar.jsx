@@ -9,6 +9,7 @@ import komquestsLogo from "../common/images/komquestsLogo.png";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginTop: 4,
   },
   logoAndTitle: {
     display: "flex",
@@ -29,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    [theme.breakpoints.down('md')]: {
+      flexWrap: 'wrap',
+    },
   },
 }));
 

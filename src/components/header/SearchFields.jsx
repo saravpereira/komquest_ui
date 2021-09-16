@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Tooltip from "@material-ui/core/Tooltip";
 import SearchLocationInput from "./SearchLocationInputField";
 import * as SearchQuerySelectors from "./redux/selectors";
 import * as KomsActions from "../results/redux/actions";
@@ -11,19 +12,26 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     flexDirection: "row",
+    [theme.breakpoints.down("md")]: {
+      flexWrap: "wrap",
+    },
   },
   inputField: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "center",
     "& > *": {
-      margin: theme.spacing(1),
+      margin: theme.spacing(0.5),
+    },
+    [theme.breakpoints.down("md")]: {
+      flexWrap: "wrap",
     },
   },
   locationField: {
     borderRadius: theme.spacing(3),
   },
   submitButton: {
-    paddingTop: theme.spacing(1.5),
+    paddingTop: theme.spacing(0.5),
   },
 }));
 
@@ -41,18 +49,25 @@ const SearchFields = () => {
       <form className={classes.inputField} noValidate autoComplete="off">
         <SearchWattsInputField />
         <SearchLocationInput />
-      </form>
-      <div className={classes.submitButton}>
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          disabled={!isInputFilled}
-          onClick={handleSubmitSearchQuery}
+        <Tooltip
+          title={
+            isInputFilled ? "" : "Enter Watts and Address to start your search"
+          }
+          aria-label="search"
         >
-          Search KOMS
-        </Button>
-      </div>
+          <div className={classes.submitButton}>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              disabled={!isInputFilled}
+              onClick={handleSubmitSearchQuery}
+            >
+              Search KOMS
+            </Button>
+          </div>
+        </Tooltip>
+      </form>
     </div>
   );
 };

@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     flexDirection: "column",
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '20px'
+    },
   },
   cards: {
     display: "flex",
@@ -23,9 +26,9 @@ const useStyles = makeStyles((theme) => ({
   scrollTop: {
     position: "fixed",
     width: "100%",
-    bottom: "20px",
+    bottom: theme.spacing(2.5),
     alignItems: "center",
-    height: "20px",
+    height: theme.spacing(2.5),
     justifyContent: "center",
     zIndex: "1000",
     cursor: "pointer",
