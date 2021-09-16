@@ -1,4 +1,4 @@
-https://komquests-ui.web.app/
+https://www.komquests.com/
 
 ## `npm i`
 Run this to install all project dependencies.
