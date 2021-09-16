@@ -11,11 +11,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    marginTop: '20px',
-    [theme.breakpoints.down('xs')]: {
+    marginTop: "20px",
+    [theme.breakpoints.down("xs")]: {
       height: "500px",
       overflowY: "auto",
-      marginTop: '20px'
     },
   },
   cards: {
