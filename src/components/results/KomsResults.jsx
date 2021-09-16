@@ -11,8 +11,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '20px'
+    marginTop: "20px",
+    [theme.breakpoints.down("xs")]: {
+      height: "500px",
+      overflowY: "auto",
     },
   },
   cards: {
@@ -59,7 +61,7 @@ const KomsResults = () => {
   return (
     <div className={classes.root}>
       {recommendedKoms?.map((result) => (
-        <div className={classes.cards}>
+        <div className={classes.cards} key={result.name}>
           <KomsResult
             id={result.id}
             name={result.name}
