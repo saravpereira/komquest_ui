@@ -63,10 +63,11 @@ const KomsResults = () => {
       {recommendedKoms?.map((result) => (
         <div className={classes.cards} key={result.name}>
           <KomsResult
-            id={result.id}
-            name={result.name}
-            distance={result.distance}
-            key={result.name}
+            id={result.segment.id}
+            name={result.segment.name}
+            distance={result.segment.distance}
+            miles={result.miles}
+            key={result.segment.name}
           />
         </div>
       ))}
