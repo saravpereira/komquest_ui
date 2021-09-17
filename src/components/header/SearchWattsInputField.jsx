@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import * as SearchQueryActions from "./redux/actions";
+import * as SearchQuerySelectors from "./redux/selectors";
 
 const useStyles = makeStyles((theme) => ({
   wattsInput: {
@@ -38,6 +39,7 @@ const SearchWattsInputField = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const [query, setQuery] = useState("");
+  const currentWatts = useSelector(SearchQuerySelectors.selectWatts);
 
   const handleWattsChange = (e) => {
     setQuery(e.target.value);
@@ -50,7 +52,7 @@ const SearchWattsInputField = () => {
         className={classes.wattsInput}
         onChange={handleWattsChange}
         placeholder="Watts *"
-        value={query}
+        value={query || currentWatts}
         required
         type="number"
         min="0"
