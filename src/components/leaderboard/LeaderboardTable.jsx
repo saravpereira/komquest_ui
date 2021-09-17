@@ -122,7 +122,7 @@ const LeaderboardTable = ({ match }) => {
         </div>
 
         <TableContainer className={classes.table}>
-          <Table sx={{ width: 600 }} aria-label="simple table">
+          <Table aria-label="simple table">
             <TableHead>
               <TableRow>
                 <StyledTableCell>Name</StyledTableCell>
