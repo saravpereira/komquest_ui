@@ -11,7 +11,6 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@material-ui/core/Typography";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
-import EmptyLeaderboard from "./EmptyLeaderboard";
 import * as KomsSelector from "../results/redux/selectors";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
