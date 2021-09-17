@@ -6,20 +6,22 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { STRAVA_URL } from '../common/constants/urls';
+import FlashOnIcon from "@mui/icons-material/FlashOn";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import { STRAVA_URL } from "../common/constants/urls";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '30%',
+    width: "30%",
     margin: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-      width: '50%',
+    [theme.breakpoints.down("md")]: {
+      width: "50%",
     },
-    [theme.breakpoints.down('sm')]: {
-      width: '70%',
+    [theme.breakpoints.down("sm")]: {
+      width: "70%",
     },
-    [theme.breakpoints.down('xs')]: {
-      width: '100%',
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
     },
   },
   buttons: {
@@ -27,9 +29,19 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     width: "97%",
   },
+  power: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  komDetails: {
+    paddingTop: 1,
+    width: '100%',
+    display: "flex",
+    flexDirection: "row",
+  }
 }));
 
-const KomsResult = ({ id, name, distance, miles }) => {
+const KomsResult = ({ id, name, distance, miles, kom }) => {
   const classes = useStyles();
 
   const handleClick = () => {
@@ -45,11 +57,30 @@ const KomsResult = ({ id, name, distance, miles }) => {
         <Typography variant="body2" component="p">
           {distance} meters <span>•</span> {miles.toFixed(2)} miles
         </Typography>
+        <br />
+        <div className={classes.power}>
+          <EmojiEventsIcon sx={{ color: "#FFD700" }} fontSize="medium" />
+          &nbsp;
+          <div className={classes.komDetails}>
+            <Typography variant="body2" component="p">
+              <strong>KOM:</strong> {kom.power}W
+            </Typography>
+            <FlashOnIcon fontSize="small" color="disabled" />
+            <Typography variant="body2" component="p">
+              , {kom.time}
+            </Typography>
+          </div>
+        </div>
       </CardContent>
       <CardActions className={classes.buttons}>
-        <Button size="small" color="primary" onClick={handleClick}>View in Strava</Button>
-        <Link to={`/leaderboard/${id}`} style={{ textDecoration: 'none' }}><Button size="small" color="primary" >View Leaderboard</Button></Link>
-        
+        <Button size="small" color="primary" onClick={handleClick}>
+          View in Strava
+        </Button>
+        <Link to={`/leaderboard/${id}`} style={{ textDecoration: "none" }}>
+          <Button size="small" color="primary">
+            View Leaderboard
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );

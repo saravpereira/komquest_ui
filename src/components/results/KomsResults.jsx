@@ -68,6 +68,7 @@ const KomsResults = () => {
             distance={result.segment.distance}
             miles={result.miles}
             key={result.segment.name}
+            kom={result.segmentLeaderboard.leaderboardEntries[0]}
           />
         </div>
       ))}
