@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import { GOOGLE_PLACES_API } from "../common/constants/urls";
 import * as SearchQueryActions from "./redux/actions";
+import * as SearchQuerySelectors from "./redux/selectors";
 
 const useStyles = makeStyles((theme) => ({
   searchLocationInput: {
@@ -39,18 +40,19 @@ const SearchLocationInput = () => {
   const dispatch = useDispatch();
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
+  const currentAddress = useSelector(SearchQuerySelectors.selectAddress);
 
   let autoComplete;
 
   const loadScript = (url, callback) => {
-    let script = document.createElement("script");
+    let script = document?.createElement("script");
     script.type = "text/javascript";
 
-    if (script.readyState) {
+    if (script?.readyState) {
       script.onreadystatechange = function () {
         if (
-          script.readyState === "loaded" ||
-          script.readyState === "complete"
+          script?.readyState === "loaded" ||
+          script?.readyState === "complete"
         ) {
           script.onreadystatechange = null;
           callback();
@@ -61,31 +63,29 @@ const SearchLocationInput = () => {
     }
 
     script.src = url;
-    document.getElementsByTagName("head")[0].appendChild(script);
+    document?.getElementsByTagName("head")[0]?.appendChild(script);
   };
 
   const handleScriptLoad = (updateQuery, autoCompleteRef) => {
     autoComplete = new window.google.maps.places.Autocomplete(
-      autoCompleteRef.current
+      autoCompleteRef?.current
     );
-    autoComplete.setFields(["address_components", "formatted_address"]);
-    autoComplete.addListener("place_changed", () =>
+    autoComplete?.setFields(["address_components", "formatted_address"]);
+    autoComplete?.addListener("place_changed", () =>
       handlePlaceSelect(updateQuery)
     );
   }
 
-
-
   async function handlePlaceSelect(updateQuery) {
-    const addressObject = autoComplete.getPlace();
-    const query = addressObject.formatted_address;
+    const addressObject = autoComplete?.getPlace();
+    const query = addressObject?.formatted_address;
     dispatch(SearchQueryActions.setAddress(query))
     updateQuery(query);
   }
 
   const handleOnChange = e => {
     setQuery(e.target.value)
-    dispatch(SearchQueryActions.setAddress(query))
+    dispatch(SearchQueryActions.setAddress(e.target.value))
   }
 
   useEffect(() => {
@@ -101,7 +101,7 @@ const SearchLocationInput = () => {
         ref={autoCompleteRef}
         onChange={handleOnChange}
         placeholder="Address *"
-        value={query}
+        value={query || currentAddress}
         required
       />
     </div>

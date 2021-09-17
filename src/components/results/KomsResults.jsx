@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { isEmpty } from "lodash";
 import { makeStyles } from "@material-ui/core/styles";
 import { FaArrowCircleUp } from "react-icons/fa";
 import KomsResult from "./KomsResult";
@@ -61,7 +62,7 @@ const KomsResults = () => {
   return (
     <div className={classes.root}>
       {recommendedKoms?.map((result) => (
-        <div className={classes.cards} key={result.name}>
+        <div className={classes.cards} key={result.segment.name}>
           <KomsResult
             id={result.segment.id}
             name={result.segment.name}
@@ -72,7 +73,7 @@ const KomsResults = () => {
           />
         </div>
       ))}
-      {!recommendedKoms && (
+      {isEmpty(recommendedKoms) && (
         <div>
           <EmptyView />
         </div>

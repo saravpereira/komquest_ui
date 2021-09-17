@@ -1,5 +1,5 @@
 const defaults = {
-  recommendedKoms: null,
+  recommendedKoms: [],
 };
 
 export default function komsReducer(state = defaults, action) {
