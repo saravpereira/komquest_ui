@@ -11,19 +11,19 @@ export const setRecommendedKoms = (payload) => ({
 
 export function fetchRecommendedKoms() {
   return function fetchRecommendedKomsThunk(dispatch, getState) {
-    dispatch(setRecommendedKoms(mockData));
+    //dispatch(setRecommendedKoms(mockData));
 
-    // const state = getState();
-    // const watts = SearchQuerySelectors.selectWatts(state);
-    // const address = SearchQuerySelectors.selectAddress(state);
+    const state = getState();
+    const watts = SearchQuerySelectors.selectWatts(state);
+    const address = SearchQuerySelectors.selectAddress(state);
 
-    // const params = {
-    //   watts: watts.toString(),
-    //   address: address,
-    // };
+    const params = {
+      watts: watts.toString(),
+      address: address
+    };
 
-    // return getRecommendedKoms(params).then((data) => {
-    //   dispatch(setKoms(data));
-    // });
+    return getRecommendedKoms(params).then((data) => {
+      dispatch(setRecommendedKoms(data));
+    });
   };
 }

@@ -1,2522 +1,2594 @@
-export const mockData = [
-  {
-    segment: {
-      id: 4538855,
-      name: "Great Oaks Shuffle",
-      distance: 1363.1,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Kory W.",
-          speed: "53.3",
-          power: 412,
-          time: "1:32",
-        },
-        {
-          name: "Ryan C.",
-          speed: "51.7",
-          power: 394,
-          time: "1:35",
-        },
-        {
-          name: "Jim H.",
-          speed: "49.6",
-          power: 270,
-          time: "1:39",
-        },
-        {
-          name: "Matty Heckeroth",
-          speed: "48.6",
-          power: 382,
-          time: "1:41",
-        },
-        {
-          name: "Clint B.",
-          speed: "47.6",
-          power: 221,
-          time: "1:43",
-        },
-        {
-          name: "Luis Acosta",
-          speed: "47.2",
-          power: 262,
-          time: "1:44",
-        },
-        {
-          name: "Andrew Yeh",
-          speed: "46.7",
-          power: 389,
-          time: "1:45",
-        },
-        {
-          name: "Namseok Jang",
-          speed: "46.7",
-          power: 0,
-          time: "1:45",
-        },
-        {
-          name: "Douglas Whitman",
-          speed: "46.7",
-          power: 0,
-          time: "1:45",
-        },
-        {
-          name: "Bubba T.",
-          speed: "46.3",
-          power: 310,
-          time: "1:46",
-        },
-      ],
-    },
-    miles: 0.8469931773273516,
+export const mockData = 
+[{
+  "segment": {
+    "id": 11002162,
+    "name": "15th Street Downhill",
+    "distance": 786.5
   },
-  {
-    segment: {
-      id: 26553345,
-      name: "WB Brushy Creek Trail AW Grimes to Georgetown St",
-      distance: 1660.9,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "44.2",
+      "power": 0,
+      "time": "1:04"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "41.0",
+      "power": 246,
+      "time": "1:09"
+    }, {
+      "name": "Mark L.",
+      "speed": "40.4",
+      "power": 214,
+      "time": "1:10"
+    }, {
+      "name": "Darren Mora",
+      "speed": "40.4",
+      "power": 0,
+      "time": "1:10"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "39.3",
+      "power": 229,
+      "time": "1:12"
+    }, {
+      "name": "Xoel R.",
+      "speed": "38.8",
+      "power": 254,
+      "time": "1:13"
+    }, {
+      "name": "Sean Roe",
+      "speed": "35.0",
+      "power": 147,
+      "time": "1:21"
+    }, {
+      "name": "Allen Carter",
+      "speed": "33.7",
+      "power": 119,
+      "time": "1:24"
+    }, {
+      "name": "John Sturd",
+      "speed": "32.2",
+      "power": 0,
+      "time": "1:28"
+    }, {
+      "name": "Michael Bumgarner",
+      "speed": "30.8",
+      "power": 156,
+      "time": "1:32"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "44.2",
+      "power": 0,
+      "time": "1:04"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Big Tony",
-          speed: "35.8",
-          power: 403,
-          time: "2:47",
-        },
-        {
-          name: "Travis Wilky",
-          speed: "35.8",
-          power: 187,
-          time: "2:47",
-        },
-        {
-          name: "Michael B.",
-          speed: "32.0",
-          power: 186,
-          time: "3:07",
-        },
-        {
-          name: "David Clark",
-          speed: "31.8",
-          power: 290,
-          time: "3:08",
-        },
-        {
-          name: "Kevin Sullivan",
-          speed: "31.5",
-          power: 228,
-          time: "3:10",
-        },
-        {
-          name: "David Savoy",
-          speed: "31.1",
-          power: 188,
-          time: "3:12",
-        },
-        {
-          name: "Eric W.",
-          speed: "30.8",
-          power: 180,
-          time: "3:14",
-        },
-        {
-          name: "Brian Johnson",
-          speed: "30.8",
-          power: 0,
-          time: "3:14",
-        },
-        {
-          name: "Agustin “Auggie” Ramos 🇵🇷",
-          speed: "30.7",
-          power: 190,
-          time: "3:15",
-        },
-        {
-          name: "Eli H.",
-          speed: "30.7",
-          power: 148,
-          time: "3:15",
-        },
-      ],
-    },
-    miles: 1.0320379783016642,
+    "lastPlace": {
+      "name": "Michael Bumgarner",
+      "speed": "30.8",
+      "power": 156,
+      "time": "1:32"
+    }
   },
-  {
-    segment: {
-      id: 21180528,
-      name: "Blur Thursday night",
-      distance: 2120.8,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Travis Wilky",
-          speed: "48.6",
-          power: 314,
-          time: "2:37",
-        },
-        {
-          name: "Dave Luplow",
-          speed: "47.7",
-          power: 315,
-          time: "2:40",
-        },
-        {
-          name: "Big Tony",
-          speed: "47.4",
-          power: 488,
-          time: "2:41",
-        },
-        {
-          name: "Kyle Ali",
-          speed: "46.8",
-          power: 431,
-          time: "2:43",
-        },
-        {
-          name: "Khoi Nguyen",
-          speed: "46.3",
-          power: 292,
-          time: "2:45",
-        },
-        {
-          name: "John Robertson",
-          speed: "46.0",
-          power: 410,
-          time: "2:46",
-        },
-        {
-          name: "Jeff L.",
-          speed: "45.2",
-          power: 381,
-          time: "2:49",
-        },
-        {
-          name: "Paul Baird",
-          speed: "45.2",
-          power: 260,
-          time: "2:49",
-        },
-        {
-          name: "Eric W.",
-          speed: "45.2",
-          power: 303,
-          time: "2:49",
-        },
-        {
-          name: "Jenny M.",
-          speed: "44.9",
-          power: 181,
-          time: "2:50",
-        },
-      ],
-    },
-    miles: 1.3178072998869104,
+  "miles": 0.48870965737507305
+}, {
+  "segment": {
+    "id": 21202105,
+    "name": "Radio Lane Bulldog stretch",
+    "distance": 1492.7
   },
-  {
-    segment: {
-      id: 1322920,
-      name: "Heatherwild 1 Laner Bookit",
-      distance: 1745.1,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Sean Roe",
+      "speed": "32.2",
+      "power": 226,
+      "time": "2:47"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "31.1",
+      "power": 236,
+      "time": "2:53"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "30.7",
+      "power": 213,
+      "time": "2:55"
+    }, {
+      "name": "John Sturd",
+      "speed": "28.9",
+      "power": 0,
+      "time": "3:06"
+    }, {
+      "name": "Tom &quot;not ready for primetime pedaler&quot;&quot;constitution nazi&quot; Martz",
+      "speed": "27.8",
+      "power": 231,
+      "time": "3:13"
+    }, {
+      "name": "john collins",
+      "speed": "26.6",
+      "power": 0,
+      "time": "3:22"
+    }, {
+      "name": "Michelle Chen",
+      "speed": "23.3",
+      "power": 110,
+      "time": "3:51"
+    }, {
+      "name": "james jappa",
+      "speed": "22.9",
+      "power": 173,
+      "time": "3:55"
+    }, {
+      "name": "Rachel Locke",
+      "speed": "20.2",
+      "power": 0,
+      "time": "4:26"
+    }, {
+      "name": "Clint Locke",
+      "speed": "20.1",
+      "power": 0,
+      "time": "4:28"
+    }],
+    "firstPlace": {
+      "name": "Sean Roe",
+      "speed": "32.2",
+      "power": 226,
+      "time": "2:47"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Kory W.",
-          speed: "45.5",
-          power: 303,
-          time: "2:18",
-        },
-        {
-          name: "Sean B.",
-          speed: "44.9",
-          power: 233,
-          time: "2:20",
-        },
-        {
-          name: "Alex R.",
-          speed: "44.6",
-          power: 0,
-          time: "2:21",
-        },
-        {
-          name: "Corris R.",
-          speed: "43.9",
-          power: 266,
-          time: "2:23",
-        },
-        {
-          name: "Ben Schenck",
-          speed: "41.6",
-          power: 323,
-          time: "2:31",
-        },
-        {
-          name: "Michael Hinds | U.",
-          speed: "41.6",
-          power: 208,
-          time: "2:31",
-        },
-        {
-          name: "Joshua Gordon",
-          speed: "41.6",
-          power: 212,
-          time: "2:31",
-        },
-        {
-          name: "Ben P.",
-          speed: "41.1",
-          power: 209,
-          time: "2:33",
-        },
-        {
-          name: "Clint B.",
-          speed: "41.1",
-          power: 223,
-          time: "2:33",
-        },
-        {
-          name: "Rachel S.",
-          speed: "40.8",
-          power: 197,
-          time: "2:34",
-        },
-      ],
-    },
-    miles: 1.0843575627275777,
+    "lastPlace": {
+      "name": "Clint Locke",
+      "speed": "20.1",
+      "power": 0,
+      "time": "4:28"
+    }
   },
-  {
-    segment: {
-      id: 1817092,
-      name: "Limmer Loop climb from 130",
-      distance: 793.4,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Travis Wilky",
-          speed: "48.4",
-          power: 373,
-          time: "59",
-        },
-        {
-          name: "Gabe L.",
-          speed: "47.6",
-          power: 679,
-          time: "1:00",
-        },
-        {
-          name: "Dave Luplow",
-          speed: "43.9",
-          power: 457,
-          time: "1:05",
-        },
-        {
-          name: "Big Tony",
-          speed: "43.3",
-          power: 815,
-          time: "1:06",
-        },
-        {
-          name: "Cameron Cope",
-          speed: "42.6",
-          power: 447,
-          time: "1:07",
-        },
-        {
-          name: "Aaron Z.",
-          speed: "39.7",
-          power: 789,
-          time: "1:12",
-        },
-        {
-          name: "Ben P.",
-          speed: "39.7",
-          power: 353,
-          time: "1:12",
-        },
-        {
-          name: "Tommy Ketterhagen ",
-          speed: "39.1",
-          power: 378,
-          time: "1:13",
-        },
-        {
-          name: "Timothy Roan",
-          speed: "38.6",
-          power: 0,
-          time: "1:14",
-        },
-        {
-          name: "Ladislav Onhajzer",
-          speed: "38.1",
-          power: 481,
-          time: "1:15",
-        },
-      ],
-    },
-    miles: 0.4929971292579567,
+  "miles": 0.9275230839971667
+}, {
+  "segment": {
+    "id": 20755694,
+    "name": "Rainbow Bend Climb",
+    "distance": 560.3
   },
-  {
-    segment: {
-      id: 11690353,
-      name: "BLUR TN - TOP Loop CW",
-      distance: 1195.3,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "35.4",
+      "power": 0,
+      "time": "57"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "34.8",
+      "power": 510,
+      "time": "58"
+    }, {
+      "name": "Aaron S.",
+      "speed": "30.1",
+      "power": 405,
+      "time": "1:07"
+    }, {
+      "name": "Michael Bumgarner",
+      "speed": "30.1",
+      "power": 593,
+      "time": "1:07"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "28.4",
+      "power": 328,
+      "time": "1:11"
+    }, {
+      "name": "Jesse M.",
+      "speed": "28.4",
+      "power": 364,
+      "time": "1:11"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "25.2",
+      "power": 127,
+      "time": "1:20"
+    }, {
+      "name": "Tyler B.",
+      "speed": "24.6",
+      "power": 281,
+      "time": "1:22"
+    }, {
+      "name": "Ruth Bumgarner",
+      "speed": "24.0",
+      "power": 0,
+      "time": "1:24"
+    }, {
+      "name": "Noel Adamson",
+      "speed": "22.2",
+      "power": 288,
+      "time": "1:31"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "35.4",
+      "power": 0,
+      "time": "57"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Josiah ..",
-          speed: "49.5",
-          power: 387,
-          time: "1:27",
-        },
-        {
-          name: "Joe B.",
-          speed: "44.4",
-          power: 374,
-          time: "1:37",
-        },
-        {
-          name: "Christopher Handlos",
-          speed: "44.4",
-          power: 299,
-          time: "1:37",
-        },
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "43.9",
-          power: 251,
-          time: "1:38",
-        },
-        {
-          name: "Roddie Haley",
-          speed: "43.9",
-          power: 343,
-          time: "1:38",
-        },
-        {
-          name: "Isaac Spencer",
-          speed: "43.5",
-          power: 221,
-          time: "1:39",
-        },
-        {
-          name: "Alan Barrows",
-          speed: "43.5",
-          power: 252,
-          time: "1:39",
-        },
-        {
-          name: "Alex R.",
-          speed: "43.5",
-          power: 290,
-          time: "1:39",
-        },
-        {
-          name: "Dimitri Lemus",
-          speed: "43.5",
-          power: 350,
-          time: "1:39",
-        },
-        {
-          name: "Rodrigo Colín",
-          speed: "43.5",
-          power: 266,
-          time: "1:39",
-        },
-      ],
-    },
-    miles: 0.742726832117514,
+    "lastPlace": {
+      "name": "Noel Adamson",
+      "speed": "22.2",
+      "power": 288,
+      "time": "1:31"
+    }
   },
-  {
-    segment: {
-      id: 20702522,
-      name: "Full Kenney Ft Bridge Climb",
-      distance: 688.8,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Eli Mealey",
-          speed: "33.1",
-          power: 151,
-          time: "1:15",
-        },
-        {
-          name: "Bryan Vincent",
-          speed: "32.6",
-          power: 356,
-          time: "1:16",
-        },
-        {
-          name: "Jared Day",
-          speed: "31.8",
-          power: 0,
-          time: "1:18",
-        },
-        {
-          name: "David Clark",
-          speed: "31.4",
-          power: 361,
-          time: "1:19",
-        },
-        {
-          name: "Seth Sjoholm",
-          speed: "31.0",
-          power: 225,
-          time: "1:20",
-        },
-        {
-          name: "Eric J.",
-          speed: "30.6",
-          power: 196,
-          time: "1:21",
-        },
-        {
-          name: "Grant Wilky",
-          speed: "30.2",
-          power: 229,
-          time: "1:22",
-        },
-        {
-          name: "David Savoy",
-          speed: "30.2",
-          power: 278,
-          time: "1:22",
-        },
-        {
-          name: "Big Tony",
-          speed: "29.9",
-          power: 433,
-          time: "1:23",
-        },
-        {
-          name: "William Swaim",
-          speed: "29.9",
-          power: 0,
-          time: "1:23",
-        },
-      ],
-    },
-    miles: 0.42800154100438687,
+  "miles": 0.3481551443448867
+}, {
+  "segment": {
+    "id": 12631164,
+    "name": "North 61st Road",
+    "distance": 4782.2
   },
-  {
-    segment: {
-      id: 6863099,
-      name: "BLUR TN : Melber East Bound",
-      distance: 2273.6,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Chris Tyler",
+      "speed": "41.1",
+      "power": 0,
+      "time": "6:59"
+    }, {
+      "name": "Brian Dickel",
+      "speed": "40.3",
+      "power": 297,
+      "time": "7:07"
+    }, {
+      "name": "Trent W.",
+      "speed": "39.9",
+      "power": 301,
+      "time": "7:11"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "37.7",
+      "power": 268,
+      "time": "7:37"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "35.9",
+      "power": 227,
+      "time": "7:59"
+    }, {
+      "name": "Blake Pruitt",
+      "speed": "33.4",
+      "power": 195,
+      "time": "8:35"
+    }, {
+      "name": "james jappa",
+      "speed": "32.6",
+      "power": 201,
+      "time": "8:48"
+    }, {
+      "name": "John Sturd",
+      "speed": "32.0",
+      "power": 0,
+      "time": "8:58"
+    }, {
+      "name": "Drew C.",
+      "speed": "31.5",
+      "power": 157,
+      "time": "9:07"
+    }, {
+      "name": "Ruth Bumgarner",
+      "speed": "31.1",
+      "power": 0,
+      "time": "9:14"
+    }],
+    "firstPlace": {
+      "name": "Chris Tyler",
+      "speed": "41.1",
+      "power": 0,
+      "time": "6:59"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Chad Harmon",
-          speed: "50.2",
-          power: 471,
-          time: "2:43",
-        },
-        {
-          name: "Gray Skinner FluxRC",
-          speed: "48.4",
-          power: 303,
-          time: "2:49",
-        },
-        {
-          name: "Patrick Mannon",
-          speed: "48.1",
-          power: 328,
-          time: "2:50",
-        },
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "47.3",
-          power: 384,
-          time: "2:53",
-        },
-        {
-          name: "Sir K.",
-          speed: "47.0",
-          power: 0,
-          time: "2:54",
-        },
-        {
-          name: "Tommy Rushing",
-          speed: "46.5",
-          power: 377,
-          time: "2:56",
-        },
-        {
-          name: "Kaiseroktavius M.",
-          speed: "46.5",
-          power: 240,
-          time: "2:56",
-        },
-        {
-          name: "Paul Baird",
-          speed: "46.2",
-          power: 278,
-          time: "2:57",
-        },
-        {
-          name: "Sean C.",
-          speed: "46.2",
-          power: 328,
-          time: "2:57",
-        },
-        {
-          name: "Rob E.",
-          speed: "46.2",
-          power: 384,
-          time: "2:57",
-        },
-      ],
-    },
-    miles: 1.4127530540470006,
+    "lastPlace": {
+      "name": "Ruth Bumgarner",
+      "speed": "31.1",
+      "power": 0,
+      "time": "9:14"
+    }
   },
-  {
-    segment: {
-      id: 3847092,
-      name: "sprint to 110",
-      distance: 3395,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Travis Wilky",
-          speed: "50.9",
-          power: 267,
-          time: "4:00",
-        },
-        {
-          name: "Big Tony",
-          speed: "48.3",
-          power: 801,
-          time: "4:13",
-        },
-        {
-          name: "John Ketterhagen",
-          speed: "43.2",
-          power: 307,
-          time: "4:43",
-        },
-        {
-          name: "Ladislav Onhajzer",
-          speed: "42.7",
-          power: 327,
-          time: "4:46",
-        },
-        {
-          name: "Grant Wilky",
-          speed: "42.7",
-          power: 267,
-          time: "4:46",
-        },
-        {
-          name: "Matty Heckeroth",
-          speed: "40.5",
-          power: 129,
-          time: "5:02",
-        },
-        {
-          name: "Sean B.",
-          speed: "40.2",
-          power: 204,
-          time: "5:04",
-        },
-        {
-          name: "A B.",
-          speed: "40.2",
-          power: 324,
-          time: "5:04",
-        },
-        {
-          name: "Markjohnanthony N.",
-          speed: "39.7",
-          power: 250,
-          time: "5:08",
-        },
-        {
-          name: "Zachariah Horne",
-          speed: "38.8",
-          power: 294,
-          time: "5:15",
-        },
-      ],
-    },
-    miles: 2.109560440926094,
+  "miles": 2.9715287012067058
+}, {
+  "segment": {
+    "id": 24997598,
+    "name": "Tree Ridge to Tree Ridge",
+    "distance": 572.4
   },
-  {
-    segment: {
-      id: 25462678,
-      name: "Woody Keeping It Cool",
-      distance: 361.3,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "33.2",
+      "power": 0,
+      "time": "1:02"
+    }, {
+      "name": "Tyler B.",
+      "speed": "32.2",
+      "power": 231,
+      "time": "1:04"
+    }, {
+      "name": "Sean Heaton",
+      "speed": "30.3",
+      "power": 184,
+      "time": "1:08"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "29.9",
+      "power": 207,
+      "time": "1:09"
+    }, {
+      "name": "Jesse M.",
+      "speed": "29.9",
+      "power": 232,
+      "time": "1:09"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "29.4",
+      "power": 228,
+      "time": "1:10"
+    }, {
+      "name": "Aaron S.",
+      "speed": "28.2",
+      "power": 276,
+      "time": "1:13"
+    }, {
+      "name": "Sam O.",
+      "speed": "26.4",
+      "power": 302,
+      "time": "1:18"
+    }, {
+      "name": "Ruth Bumgarner",
+      "speed": "25.1",
+      "power": 0,
+      "time": "1:22"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "24.8",
+      "power": 154,
+      "time": "1:23"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "33.2",
+      "power": 0,
+      "time": "1:02"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Andrew Knowles",
-          speed: "39.4",
-          power: 315,
-          time: "33",
-        },
-        {
-          name: "Derek Henscheid",
-          speed: "39.4",
-          power: 200,
-          time: "33",
-        },
-        {
-          name: "Kory W.",
-          speed: "39.4",
-          power: 111,
-          time: "33",
-        },
-        {
-          name: "Andrew Yeh",
-          speed: "39.4",
-          power: 291,
-          time: "33",
-        },
-        {
-          name: "Luis Acosta",
-          speed: "39.4",
-          power: 110,
-          time: "33",
-        },
-        {
-          name: "Amos &quot;Ace&quot; Kuhn",
-          speed: "38.3",
-          power: 197,
-          time: "34",
-        },
-        {
-          name: "Samuel Pedroza",
-          speed: "38.3",
-          power: 166,
-          time: "34",
-        },
-        {
-          name: "Erik Hensarling",
-          speed: "38.3",
-          power: 174,
-          time: "34",
-        },
-        {
-          name: "Omar Henry🇲🇽",
-          speed: "38.3",
-          power: 132,
-          time: "34",
-        },
-        {
-          name: "Paul Franco",
-          speed: "38.3",
-          power: 131,
-          time: "34",
-        },
-      ],
-    },
-    miles: 0.2245019697515752,
+    "lastPlace": {
+      "name": "Bobby Smith",
+      "speed": "24.8",
+      "power": 154,
+      "time": "1:23"
+    }
   },
-  {
-    segment: {
-      id: 11563991,
-      name: "Guys, Guns & Game",
-      distance: 3752.2,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Derek Henscheid",
-          speed: "43.6",
-          power: 261,
-          time: "5:10",
-        },
-        {
-          name: "Mike M.",
-          speed: "42.7",
-          power: 0,
-          time: "5:16",
-        },
-        {
-          name: "Matt Hall",
-          speed: "41.6",
-          power: 325,
-          time: "5:25",
-        },
-        {
-          name: "Anthony R.",
-          speed: "41.4",
-          power: 307,
-          time: "5:26",
-        },
-        {
-          name: "Big Tony",
-          speed: "40.7",
-          power: 312,
-          time: "5:32",
-        },
-        {
-          name: "Terrance Lockett",
-          speed: "40.2",
-          power: 309,
-          time: "5:36",
-        },
-        {
-          name: "Andaroo Willis",
-          speed: "40.1",
-          power: 173,
-          time: "5:37",
-        },
-        {
-          name: "jonathan buten",
-          speed: "40.0",
-          power: 153,
-          time: "5:38",
-        },
-        {
-          name: "Dave Luplow",
-          speed: "39.6",
-          power: 197,
-          time: "5:41",
-        },
-        {
-          name: "Samuel Pedroza",
-          speed: "39.6",
-          power: 270,
-          time: "5:41",
-        },
-      ],
-    },
-    miles: 2.331514782457405,
+  "miles": 0.35567375445834937
+}, {
+  "segment": {
+    "id": 20755712,
+    "name": "11th Rd Hill",
+    "distance": 783.1
   },
-  {
-    segment: {
-      id: 7927550,
-      name: "Pfluger Berkman Sprint: 973->Manda",
-      distance: 2987.3,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Aaron S.",
+      "speed": "32.8",
+      "power": 393,
+      "time": "1:26"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "26.8",
+      "power": 224,
+      "time": "1:45"
+    }, {
+      "name": "Ruth Bumgarner",
+      "speed": "26.6",
+      "power": 0,
+      "time": "1:46"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "26.1",
+      "power": 183,
+      "time": "1:48"
+    }, {
+      "name": "Jesse M.",
+      "speed": "26.1",
+      "power": 236,
+      "time": "1:48"
+    }, {
+      "name": "Tyler B.",
+      "speed": "25.9",
+      "power": 209,
+      "time": "1:49"
+    }, {
+      "name": "nick vickers",
+      "speed": "25.9",
+      "power": 0,
+      "time": "1:49"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "25.9",
+      "power": 190,
+      "time": "1:49"
+    }, {
+      "name": "Noel Adamson",
+      "speed": "25.6",
+      "power": 225,
+      "time": "1:50"
+    }, {
+      "name": "Michael Bumgarner",
+      "speed": "22.9",
+      "power": 251,
+      "time": "2:03"
+    }],
+    "firstPlace": {
+      "name": "Aaron S.",
+      "speed": "32.8",
+      "power": 393,
+      "time": "1:26"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Josiah ..",
-          speed: "53.2",
-          power: 347,
-          time: "3:22",
-        },
-        {
-          name: "Isaac Spencer",
-          speed: "46.4",
-          power: 287,
-          time: "3:52",
-        },
-        {
-          name: "Omar Henry🇲🇽",
-          speed: "42.8",
-          power: 156,
-          time: "4:11",
-        },
-        {
-          name: "Chico H.",
-          speed: "40.0",
-          power: 291,
-          time: "4:29",
-        },
-        {
-          name: "Christie Tracy",
-          speed: "39.4",
-          power: 172,
-          time: "4:33",
-        },
-        {
-          name: "Allen T.",
-          speed: "39.2",
-          power: 174,
-          time: "4:34",
-        },
-        {
-          name: "John Bartle",
-          speed: "39.1",
-          power: 174,
-          time: "4:35",
-        },
-        {
-          name: "Justin Arnosky",
-          speed: "38.7",
-          power: 295,
-          time: "4:38",
-        },
-        {
-          name: "Rick H.",
-          speed: "38.5",
-          power: 290,
-          time: "4:39",
-        },
-        {
-          name: "Joey Martinez",
-          speed: "38.1",
-          power: 243,
-          time: "4:42",
-        },
-      ],
-    },
-    miles: 1.856226776193968,
+    "lastPlace": {
+      "name": "Michael Bumgarner",
+      "speed": "22.9",
+      "power": 251,
+      "time": "2:03"
+    }
   },
-  {
-    segment: {
-      id: 5174153,
-      name: "Via Rancho Pequino",
-      distance: 1613.8,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Carlos A. Moreno ",
-          speed: "46.1",
-          power: 298,
-          time: "2:06",
-        },
-        {
-          name: "Isaac Spencer",
-          speed: "45.4",
-          power: 259,
-          time: "2:08",
-        },
-        {
-          name: "Kosme Ramirez",
-          speed: "45.4",
-          power: 515,
-          time: "2:08",
-        },
-        {
-          name: "omar gonzalez",
-          speed: "44.7",
-          power: 467,
-          time: "2:10",
-        },
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "44.0",
-          power: 258,
-          time: "2:12",
-        },
-        {
-          name: "Eduardo Gutiérrez",
-          speed: "43.7",
-          power: 0,
-          time: "2:13",
-        },
-        {
-          name: "Jonathan Flores",
-          speed: "43.0",
-          power: 282,
-          time: "2:15",
-        },
-        {
-          name: "Ethan Welling",
-          speed: "43.0",
-          power: 413,
-          time: "2:15",
-        },
-        {
-          name: "JC Flores",
-          speed: "41.8",
-          power: 0,
-          time: "2:19",
-        },
-        {
-          name: "Carlos Flores",
-          speed: "41.8",
-          power: 689,
-          time: "2:19",
-        },
-      ],
-    },
-    miles: 1.0027713224054582,
+  "miles": 0.4865969900704637
+}, {
+  "segment": {
+    "id": 20165213,
+    "name": "31st Rd. Gradual Climb South",
+    "distance": 1789.6
   },
-  {
-    segment: {
-      id: 743806,
-      name: "Jake's Hill climb",
-      distance: 861.7,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Sean Heaton",
+      "speed": "35.0",
+      "power": 255,
+      "time": "3:04"
+    }, {
+      "name": "Tyler B.",
+      "speed": "29.2",
+      "power": 214,
+      "time": "3:41"
+    }, {
+      "name": "Michael Bumgarner",
+      "speed": "28.8",
+      "power": 312,
+      "time": "3:44"
+    }, {
+      "name": "Drew C.",
+      "speed": "28.3",
+      "power": 193,
+      "time": "3:48"
+    }, {
+      "name": "Ruth Bumgarner",
+      "speed": "28.3",
+      "power": 0,
+      "time": "3:48"
+    }, {
+      "name": "Dan Robertson:  Bicycle X-Change River City Racing",
+      "speed": "26.8",
+      "power": 205,
+      "time": "4:00"
+    }, {
+      "name": "Jesse M.",
+      "speed": "26.7",
+      "power": 232,
+      "time": "4:01"
+    }, {
+      "name": "Aaron S.",
+      "speed": "26.0",
+      "power": 172,
+      "time": "4:08"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "25.9",
+      "power": 206,
+      "time": "4:09"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "25.7",
+      "power": 0,
+      "time": "4:11"
+    }],
+    "firstPlace": {
+      "name": "Sean Heaton",
+      "speed": "35.0",
+      "power": 255,
+      "time": "3:04"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Jim D.",
-          speed: "37.8",
-          power: 442,
-          time: "1:22",
-        },
-        {
-          name: "祥星 刘",
-          speed: "36.5",
-          power: 322,
-          time: "1:25",
-        },
-        {
-          name: "Kaiseroktavius M.",
-          speed: "36.1",
-          power: 246,
-          time: "1:26",
-        },
-        {
-          name: "Corey Ray",
-          speed: "36.1",
-          power: 441,
-          time: "1:26",
-        },
-        {
-          name: "Alex R.",
-          speed: "35.3",
-          power: 0,
-          time: "1:28",
-        },
-        {
-          name: "Dustin Dunnam",
-          speed: "34.9",
-          power: 462,
-          time: "1:29",
-        },
-        {
-          name: "Humberto L.",
-          speed: "34.9",
-          power: 268,
-          time: "1:29",
-        },
-        {
-          name: "Luis Acosta",
-          speed: "34.5",
-          power: 0,
-          time: "1:30",
-        },
-        {
-          name: "Gerad Dambrosia",
-          speed: "34.1",
-          power: 425,
-          time: "1:31",
-        },
-        {
-          name: "Jim H.",
-          speed: "34.1",
-          power: 358,
-          time: "1:31",
-        },
-      ],
-    },
-    miles: 0.5354368871711386,
+    "lastPlace": {
+      "name": "Bobby Smith",
+      "speed": "25.7",
+      "power": 0,
+      "time": "4:11"
+    }
   },
-  {
-    segment: {
-      id: 1737231,
-      name: "Hip Hippo",
-      distance: 2549.6,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Patrick Mannon",
-          speed: "55.3",
-          power: 365,
-          time: "2:46",
-        },
-        {
-          name: "Anthony R.",
-          speed: "51.3",
-          power: 540,
-          time: "2:59",
-        },
-        {
-          name: "Christie Tracy",
-          speed: "50.7",
-          power: 164,
-          time: "3:01",
-        },
-        {
-          name: "Jeanette Lockett 🚴‍♀️🇵🇭",
-          speed: "50.7",
-          power: 521,
-          time: "3:01",
-        },
-        {
-          name: "Terrance Lockett",
-          speed: "50.7",
-          power: 346,
-          time: "3:01",
-        },
-        {
-          name: "Carl Harmon",
-          speed: "50.7",
-          power: 264,
-          time: "3:01",
-        },
-        {
-          name: "Ben M.",
-          speed: "49.9",
-          power: 223,
-          time: "3:04",
-        },
-        {
-          name: "Travis Turner",
-          speed: "49.1",
-          power: 471,
-          time: "3:07",
-        },
-        {
-          name: "Alex R.",
-          speed: "48.8",
-          power: 0,
-          time: "3:08",
-        },
-        {
-          name: "James L.",
-          speed: "48.1",
-          power: 0,
-          time: "3:11",
-        },
-      ],
-    },
-    miles: 1.5842519293623474,
+  "miles": 1.1120086495084942
+}, {
+  "segment": {
+    "id": 20612696,
+    "name": "South to 166",
+    "distance": 3984.3
   },
-  {
-    segment: {
-      id: 20200659,
-      name: "to limmer",
-      distance: 2620.6,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Nate Lind \uD83D\uDEE1",
+      "speed": "35.9",
+      "power": 0,
+      "time": "6:40"
+    }, {
+      "name": "Tyler B.",
+      "speed": "31.0",
+      "power": 194,
+      "time": "7:42"
+    }, {
+      "name": "Darren Mora",
+      "speed": "28.6",
+      "power": 0,
+      "time": "8:22"
+    }, {
+      "name": "nick vickers",
+      "speed": "28.6",
+      "power": 0,
+      "time": "8:22"
+    }, {
+      "name": "Mark L.",
+      "speed": "26.1",
+      "power": 230,
+      "time": "9:09"
+    }, {
+      "name": "John Todd Mallow",
+      "speed": "25.2",
+      "power": 137,
+      "time": "9:29"
+    }, {
+      "name": "Brittani Vickers",
+      "speed": "19.9",
+      "power": 73,
+      "time": "12:01"
+    }, {
+      "name": "Morgan M.",
+      "speed": "19.8",
+      "power": 0,
+      "time": "12:03"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "17.9",
+      "power": 97,
+      "time": "13:22"
+    }, {
+      "name": "josh porter",
+      "speed": "16.3",
+      "power": 78,
+      "time": "14:42"
+    }],
+    "firstPlace": {
+      "name": "Nate Lind \uD83D\uDEE1",
+      "speed": "35.9",
+      "power": 0,
+      "time": "6:40"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Eric W.",
-          speed: "49.1",
-          power: 273,
-          time: "3:12",
-        },
-        {
-          name: "Dave Luplow",
-          speed: "48.9",
-          power: 214,
-          time: "3:13",
-        },
-        {
-          name: "Big Tony",
-          speed: "48.1",
-          power: 453,
-          time: "3:16",
-        },
-        {
-          name: "Matt Hall",
-          speed: "47.6",
-          power: 412,
-          time: "3:18",
-        },
-        {
-          name: "Rich Nicholson Alpha Omega Academy",
-          speed: "46.9",
-          power: 387,
-          time: "3:21",
-        },
-        {
-          name: "John Robertson",
-          speed: "46.9",
-          power: 434,
-          time: "3:21",
-        },
-        {
-          name: "Pete Rodriguez_United Cycling",
-          speed: "46.7",
-          power: 235,
-          time: "3:22",
-        },
-        {
-          name: "Doug Hall",
-          speed: "46.0",
-          power: 287,
-          time: "3:25",
-        },
-        {
-          name: "Jerry Dusterhoff",
-          speed: "45.8",
-          power: 190,
-          time: "3:26",
-        },
-        {
-          name: "Greg K.",
-          speed: "44.9",
-          power: 393,
-          time: "3:30",
-        },
-      ],
-    },
-    miles: 1.6283693936644836,
+    "lastPlace": {
+      "name": "josh porter",
+      "speed": "16.3",
+      "power": 78,
+      "time": "14:42"
+    }
   },
-  {
-    segment: {
-      id: 632575,
-      name: "Inner Log Loop WC",
-      distance: 970.4,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Thomas De La Cruz",
-          speed: "28.9",
-          power: 7,
-          time: "2:01",
-        },
-        {
-          name: "Joel Carroll",
-          speed: "28.2",
-          power: 126,
-          time: "2:04",
-        },
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "27.5",
-          power: 121,
-          time: "2:07",
-        },
-        {
-          name: "Patrick Barrett",
-          speed: "26.9",
-          power: 162,
-          time: "2:10",
-        },
-        {
-          name: "Gerad Dambrosia",
-          speed: "26.7",
-          power: 193,
-          time: "2:11",
-        },
-        {
-          name: "jonathan pattie",
-          speed: "26.7",
-          power: 145,
-          time: "2:11",
-        },
-        {
-          name: "Davis Green",
-          speed: "26.7",
-          power: 211,
-          time: "2:11",
-        },
-        {
-          name: "omar gonzalez",
-          speed: "26.7",
-          power: 79,
-          time: "2:11",
-        },
-        {
-          name: "Evan Kemp",
-          speed: "26.5",
-          power: 151,
-          time: "2:12",
-        },
-        {
-          name: "Marco Ochoa",
-          speed: "26.3",
-          power: 126,
-          time: "2:13",
-        },
-      ],
-    },
-    miles: 0.6029801036449725,
+  "miles": 2.4757353946338254
+}, {
+  "segment": {
+    "id": 20165261,
+    "name": "Arkansas River to Geuda Springs",
+    "distance": 2064.4
   },
-  {
-    segment: {
-      id: 675479,
-      name: "Windy Loop",
-      distance: 1171.5,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Nate Lind \uD83D\uDEE1",
+      "speed": "36.1",
+      "power": 0,
+      "time": "3:26"
+    }, {
+      "name": "Mark L.",
+      "speed": "30.3",
+      "power": 232,
+      "time": "4:05"
+    }, {
+      "name": "Tyler B.",
+      "speed": "28.5",
+      "power": 207,
+      "time": "4:21"
+    }, {
+      "name": "Sean Heaton",
+      "speed": "27.3",
+      "power": 173,
+      "time": "4:32"
+    }, {
+      "name": "nick vickers",
+      "speed": "25.7",
+      "power": 0,
+      "time": "4:49"
+    }, {
+      "name": "Darren Mora",
+      "speed": "25.3",
+      "power": 0,
+      "time": "4:54"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "25.0",
+      "power": 155,
+      "time": "4:57"
+    }, {
+      "name": "Dan Robertson:  Bicycle X-Change River City Racing",
+      "speed": "24.4",
+      "power": 107,
+      "time": "5:04"
+    }, {
+      "name": "John Sturd",
+      "speed": "22.6",
+      "power": 0,
+      "time": "5:29"
+    }, {
+      "name": "Aaron S.",
+      "speed": "21.5",
+      "power": 168,
+      "time": "5:46"
+    }],
+    "firstPlace": {
+      "name": "Nate Lind \uD83D\uDEE1",
+      "speed": "36.1",
+      "power": 0,
+      "time": "3:26"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "15.6",
-          power: 111,
-          time: "4:31",
-        },
-        {
-          name: "Saul Monarca",
-          speed: "15.4",
-          power: 95,
-          time: "4:33",
-        },
-        {
-          name: "Eduardo Gutiérrez",
-          speed: "15.4",
-          power: 0,
-          time: "4:34",
-        },
-        {
-          name: "omar gonzalez",
-          speed: "15.2",
-          power: 101,
-          time: "4:38",
-        },
-        {
-          name: "jonathan pattie",
-          speed: "14.8",
-          power: 178,
-          time: "4:45",
-        },
-        {
-          name: "Davis Green",
-          speed: "14.8",
-          power: 127,
-          time: "4:45",
-        },
-        {
-          name: "Elier Rodriguez",
-          speed: "14.2",
-          power: 0,
-          time: "4:56",
-        },
-        {
-          name: "Nick H",
-          speed: "14.1",
-          power: 145,
-          time: "4:59",
-        },
-        {
-          name: "Joel Carroll",
-          speed: "13.8",
-          power: 91,
-          time: "5:06",
-        },
-        {
-          name: "Jason Schaller",
-          speed: "13.6",
-          power: 276,
-          time: "5:09",
-        },
-      ],
-    },
-    miles: 0.7279381609852487,
+    "lastPlace": {
+      "name": "Aaron S.",
+      "speed": "21.5",
+      "power": 168,
+      "time": "5:46"
+    }
   },
-  {
-    segment: {
-      id: 14912100,
-      name: "Fast and Fun AF",
-      distance: 1746.6,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "26.0",
-          power: 122,
-          time: "4:02",
-        },
-        {
-          name: "Joel Carroll",
-          speed: "25.4",
-          power: 109,
-          time: "4:08",
-        },
-        {
-          name: "omar gonzalez",
-          speed: "25.2",
-          power: 114,
-          time: "4:10",
-        },
-        {
-          name: "Davis Green",
-          speed: "25.1",
-          power: 296,
-          time: "4:11",
-        },
-        {
-          name: "Eduardo Gutiérrez",
-          speed: "24.3",
-          power: 0,
-          time: "4:19",
-        },
-        {
-          name: "Omar González",
-          speed: "24.2",
-          power: 0,
-          time: "4:20",
-        },
-        {
-          name: "B Kuehl",
-          speed: "24.2",
-          power: 132,
-          time: "4:20",
-        },
-        {
-          name: "jonathan pattie",
-          speed: "24.1",
-          power: 167,
-          time: "4:21",
-        },
-        {
-          name: "Barry D.",
-          speed: "24.0",
-          power: 254,
-          time: "4:22",
-        },
-        {
-          name: "Mark Fry",
-          speed: "23.9",
-          power: 122,
-          time: "4:23",
-        },
-      ],
-    },
-    miles: 1.0852896218325525,
+  "miles": 1.2827618775398613
+}, {
+  "segment": {
+    "id": 11002158,
+    "name": "8th Street Downhill",
+    "distance": 1495.4
   },
-  {
-    segment: {
-      id: 842232,
-      name: "Walnut Creek - Point Six Loop",
-      distance: 758,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Zach Legleiter",
+      "speed": "41.7",
+      "power": 258,
+      "time": "2:09"
+    }, {
+      "name": "Nathan J.",
+      "speed": "39.0",
+      "power": 332,
+      "time": "2:18"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "36.6",
+      "power": 153,
+      "time": "2:27"
+    }, {
+      "name": "Allen Carter",
+      "speed": "35.9",
+      "power": 151,
+      "time": "2:30"
+    }, {
+      "name": "Kevin Templin",
+      "speed": "35.4",
+      "power": 169,
+      "time": "2:32"
+    }, {
+      "name": "Blake Pruitt",
+      "speed": "35.2",
+      "power": 149,
+      "time": "2:33"
+    }, {
+      "name": "Mark L.",
+      "speed": "34.7",
+      "power": 168,
+      "time": "2:35"
+    }, {
+      "name": "Meg Huey",
+      "speed": "34.1",
+      "power": 261,
+      "time": "2:38"
+    }, {
+      "name": "Ray Robinson",
+      "speed": "31.5",
+      "power": 151,
+      "time": "2:51"
+    }, {
+      "name": "Brian Dickel",
+      "speed": "31.3",
+      "power": 108,
+      "time": "2:52"
+    }],
+    "firstPlace": {
+      "name": "Zach Legleiter",
+      "speed": "41.7",
+      "power": 258,
+      "time": "2:09"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Jonathan Flores",
-          speed: "26.2",
-          power: 57,
-          time: "1:44",
-        },
-        {
-          name: "Carlos Flores",
-          speed: "26.2",
-          power: 129,
-          time: "1:44",
-        },
-        {
-          name: "Jeremy Hamilton",
-          speed: "24.4",
-          power: 96,
-          time: "1:52",
-        },
-        {
-          name: "Dustin P.",
-          speed: "24.4",
-          power: 154,
-          time: "1:52",
-        },
-        {
-          name: "Tom Ketterhagen",
-          speed: "24.1",
-          power: 174,
-          time: "1:53",
-        },
-        {
-          name: "Chase Tucker",
-          speed: "24.1",
-          power: 246,
-          time: "1:53",
-        },
-        {
-          name: "B Kuehl",
-          speed: "24.1",
-          power: 76,
-          time: "1:53",
-        },
-        {
-          name: "Evan Kemp",
-          speed: "23.9",
-          power: 57,
-          time: "1:54",
-        },
-        {
-          name: "Evan Schneider",
-          speed: "23.7",
-          power: 167,
-          time: "1:55",
-        },
-        {
-          name: "Will W.",
-          speed: "23.7",
-          power: 103,
-          time: "1:55",
-        },
-      ],
-    },
-    miles: 0.47100053438055356,
+    "lastPlace": {
+      "name": "Brian Dickel",
+      "speed": "31.3",
+      "power": 108,
+      "time": "2:52"
+    }
   },
-  {
-    segment: {
-      id: 2532118,
-      name: "Cameron Howard->Pecan",
-      distance: 5603.9,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Coach S.",
-          speed: "48.0",
-          power: 492,
-          time: "7:00",
-        },
-        {
-          name: "Antonio L.",
-          speed: "46.8",
-          power: 464,
-          time: "7:11",
-        },
-        {
-          name: "Dave McLaughlin",
-          speed: "45.6",
-          power: 282,
-          time: "7:22",
-        },
-        {
-          name: "Andy Jobin",
-          speed: "45.2",
-          power: 292,
-          time: "7:26",
-        },
-        {
-          name: "Nate Sheetz",
-          speed: "45.0",
-          power: 275,
-          time: "7:28",
-        },
-        {
-          name: "Paulie G.",
-          speed: "44.9",
-          power: 433,
-          time: "7:29",
-        },
-        {
-          name: "Dan H.",
-          speed: "44.8",
-          power: 409,
-          time: "7:30",
-        },
-        {
-          name: "Onder Anilturk",
-          speed: "44.3",
-          power: 227,
-          time: "7:35",
-        },
-        {
-          name: "Zach Stein",
-          speed: "44.1",
-          power: 296,
-          time: "7:37",
-        },
-        {
-          name: "Hot D.",
-          speed: "43.9",
-          power: 381,
-          time: "7:40",
-        },
-      ],
-    },
-    miles: 3.482110678911852,
+  "miles": 0.9292007903861211
+}, {
+  "segment": {
+    "id": 15506543,
+    "name": "Run to the River",
+    "distance": 3766.0
   },
-  {
-    segment: {
-      id: 3428508,
-      name: "Santa Cruz'n South",
-      distance: 1080.3,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Chris Tyler",
+      "speed": "41.6",
+      "power": 0,
+      "time": "5:26"
+    }, {
+      "name": "Zach Bowling",
+      "speed": "39.8",
+      "power": 246,
+      "time": "5:41"
+    }, {
+      "name": "Rick E.",
+      "speed": "38.8",
+      "power": 234,
+      "time": "5:49"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "38.7",
+      "power": 0,
+      "time": "5:50"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "37.3",
+      "power": 196,
+      "time": "6:03"
+    }, {
+      "name": "nick vickers",
+      "speed": "36.3",
+      "power": 0,
+      "time": "6:14"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "36.0",
+      "power": 0,
+      "time": "6:17"
+    }, {
+      "name": "Ryan Jones",
+      "speed": "35.5",
+      "power": 377,
+      "time": "6:22"
+    }, {
+      "name": "Aaron S.",
+      "speed": "35.3",
+      "power": 186,
+      "time": "6:24"
+    }, {
+      "name": "Jesse M.",
+      "speed": "34.5",
+      "power": 157,
+      "time": "6:33"
+    }],
+    "firstPlace": {
+      "name": "Chris Tyler",
+      "speed": "41.6",
+      "power": 0,
+      "time": "5:26"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Jon Pomrenke",
-          speed: "43.7",
-          power: 499,
-          time: "1:29",
-        },
-        {
-          name: "Cameron Cope",
-          speed: "40.9",
-          power: 374,
-          time: "1:35",
-        },
-        {
-          name: "J P",
-          speed: "40.1",
-          power: 343,
-          time: "1:37",
-        },
-        {
-          name: "Austin N.",
-          speed: "37.8",
-          power: 341,
-          time: "1:43",
-        },
-        {
-          name: "Wade M.",
-          speed: "37.8",
-          power: 344,
-          time: "1:43",
-        },
-        {
-          name: "Rodrigo Colín",
-          speed: "37.0",
-          power: 250,
-          time: "1:45",
-        },
-        {
-          name: "Jordan J.",
-          speed: "36.7",
-          power: 311,
-          time: "1:46",
-        },
-        {
-          name: "Jeff Stuesser",
-          speed: "36.7",
-          power: 276,
-          time: "1:46",
-        },
-        {
-          name: "omar gonzalez",
-          speed: "36.7",
-          power: 312,
-          time: "1:46",
-        },
-        {
-          name: "Carlos A. Moreno ",
-          speed: "36.7",
-          power: 283,
-          time: "1:46",
-        },
-      ],
-    },
-    miles: 0.6712689674027862,
+    "lastPlace": {
+      "name": "Jesse M.",
+      "speed": "34.5",
+      "power": 157,
+      "time": "6:33"
+    }
   },
-  {
-    segment: {
-      id: 11573193,
-      name: "BLUR - TN : New",
-      distance: 11660.4,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Rodrigo Colín",
-          speed: "42.9",
-          power: 271,
-          time: "16:19",
-        },
-        {
-          name: "Carlos A. Moreno ",
-          speed: "42.7",
-          power: 263,
-          time: "16:24",
-        },
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "42.4",
-          power: 230,
-          time: "16:31",
-        },
-        {
-          name: "Will Stewart",
-          speed: "42.3",
-          power: 283,
-          time: "16:33",
-        },
-        {
-          name: "Omar Henry🇲🇽",
-          speed: "42.1",
-          power: 258,
-          time: "16:36",
-        },
-        {
-          name: "Mark M.",
-          speed: "41.8",
-          power: 343,
-          time: "16:45",
-        },
-        {
-          name: "JC Flores",
-          speed: "41.7",
-          power: 0,
-          time: "16:46",
-        },
-        {
-          name: "Brandon Woodward",
-          speed: "41.6",
-          power: 253,
-          time: "16:48",
-        },
-        {
-          name: "Kosme Ramirez",
-          speed: "41.6",
-          power: 343,
-          time: "16:48",
-        },
-        {
-          name: "Christian D. Mantilla",
-          speed: "41.6",
-          power: 258,
-          time: "16:48",
-        },
-      ],
-    },
-    miles: 7.245454658431407,
+  "miles": 2.3400897262231726
+}, {
+  "segment": {
+    "id": 27172680,
+    "name": "Climb out of the River Bottom",
+    "distance": 1474.0
   },
-  {
-    segment: {
-      id: 14646033,
-      name: "JBW ",
-      distance: 3812.3,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "bob cummings",
+      "speed": "35.1",
+      "power": 277,
+      "time": "2:31"
+    }, {
+      "name": "nick vickers",
+      "speed": "35.1",
+      "power": 0,
+      "time": "2:31"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "35.1",
+      "power": 0,
+      "time": "2:31"
+    }, {
+      "name": "Sean Heaton",
+      "speed": "34.7",
+      "power": 212,
+      "time": "2:33"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "34.7",
+      "power": 0,
+      "time": "2:33"
+    }, {
+      "name": "Jerry Jones",
+      "speed": "33.6",
+      "power": 0,
+      "time": "2:38"
+    }, {
+      "name": "Van Tubbs",
+      "speed": "33.2",
+      "power": 221,
+      "time": "2:40"
+    }, {
+      "name": "Brent A.",
+      "speed": "33.2",
+      "power": 269,
+      "time": "2:40"
+    }, {
+      "name": "Bruce Van Bebber",
+      "speed": "32.4",
+      "power": 257,
+      "time": "2:44"
+    }, {
+      "name": "Bruce Van Bebber",
+      "speed": "32.4",
+      "power": 261,
+      "time": "2:44"
+    }],
+    "firstPlace": {
+      "name": "bob cummings",
+      "speed": "35.1",
+      "power": 277,
+      "time": "2:31"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "43.4",
-          power: 394,
-          time: "5:16",
-        },
-        {
-          name: "Isaac Spencer",
-          speed: "42.6",
-          power: 248,
-          time: "5:22",
-        },
-        {
-          name: "Rob E.",
-          speed: "42.1",
-          power: 385,
-          time: "5:26",
-        },
-        {
-          name: "Will Derrick",
-          speed: "41.5",
-          power: 0,
-          time: "5:31",
-        },
-        {
-          name: "Tony Forinash | Paragon Training",
-          speed: "41.5",
-          power: 257,
-          time: "5:31",
-        },
-        {
-          name: "Omar Henry🇲🇽",
-          speed: "41.5",
-          power: 206,
-          time: "5:31",
-        },
-        {
-          name: "Adrian Cameron",
-          speed: "41.5",
-          power: 262,
-          time: "5:31",
-        },
-        {
-          name: "Jesse  S. ",
-          speed: "41.3",
-          power: 328,
-          time: "5:32",
-        },
-        {
-          name: "Carlos A. Moreno ",
-          speed: "41.3",
-          power: 216,
-          time: "5:32",
-        },
-        {
-          name: "Kyle Klinger",
-          speed: "41.2",
-          power: 319,
-          time: "5:33",
-        },
-      ],
-    },
-    miles: 2.3688592839300586,
+    "lastPlace": {
+      "name": "Bruce Van Bebber",
+      "speed": "32.4",
+      "power": 261,
+      "time": "2:44"
+    }
   },
-  {
-    segment: {
-      id: 8070005,
-      name: "Get to the Church on time",
-      distance: 1745.6,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Carlos A. Moreno ",
-          speed: "51.1",
-          power: 334,
-          time: "2:03",
-        },
-        {
-          name: "Omar Henry🇲🇽",
-          speed: "50.7",
-          power: 553,
-          time: "2:04",
-        },
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "50.3",
-          power: 566,
-          time: "2:05",
-        },
-        {
-          name: "Cosme Ramirez",
-          speed: "49.9",
-          power: 561,
-          time: "2:06",
-        },
-        {
-          name: "Keegan McCurry",
-          speed: "49.9",
-          power: 309,
-          time: "2:06",
-        },
-        {
-          name: "Alex R.",
-          speed: "49.9",
-          power: 0,
-          time: "2:06",
-        },
-        {
-          name: "E T.",
-          speed: "49.9",
-          power: 303,
-          time: "2:06",
-        },
-        {
-          name: "Paul Baird",
-          speed: "49.5",
-          power: 252,
-          time: "2:07",
-        },
-        {
-          name: "Alan Barrows",
-          speed: "49.5",
-          power: 289,
-          time: "2:07",
-        },
-        {
-          name: "Rodrigo Colín",
-          speed: "49.5",
-          power: 334,
-          time: "2:07",
-        },
-      ],
-    },
-    miles: 1.0846682490959028,
+  "miles": 0.9159034138218152
+}, {
+  "segment": {
+    "id": 26502562,
+    "name": "Low point to lama corner",
+    "distance": 652.4
   },
-  {
-    segment: {
-      id: 2903751,
-      name: "Werchan Ln - SW Bound",
-      distance: 3862.6,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Elliott Rodda",
+      "speed": "27.6",
+      "power": 341,
+      "time": "1:25"
+    }, {
+      "name": "nick vickers",
+      "speed": "27.6",
+      "power": 0,
+      "time": "1:25"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "27.3",
+      "power": 352,
+      "time": "1:26"
+    }, {
+      "name": "Jesse M.",
+      "speed": "18.9",
+      "power": 230,
+      "time": "2:04"
+    }, {
+      "name": "Desiree M.",
+      "speed": "17.9",
+      "power": 237,
+      "time": "2:11"
+    }, {
+      "name": "Strava Athlete",
+      "speed": "16.5",
+      "power": 0,
+      "time": "2:22"
+    }, {
+      "name": "Zach Jackson",
+      "speed": "15.2",
+      "power": 0,
+      "time": "2:35"
+    }, {
+      "name": "Tara Sutton",
+      "speed": "14.2",
+      "power": 0,
+      "time": "2:45"
+    }, {
+      "name": "Darren Mora",
+      "speed": "13.7",
+      "power": 0,
+      "time": "2:51"
+    }, {
+      "name": "Brittani Vickers",
+      "speed": "13.7",
+      "power": 143,
+      "time": "2:51"
+    }],
+    "firstPlace": {
+      "name": "Elliott Rodda",
+      "speed": "27.6",
+      "power": 341,
+      "time": "1:25"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Beau 🇺🇸",
-          speed: "51.9",
-          power: 315,
-          time: "4:28",
-        },
-        {
-          name: "Colin Strickland",
-          speed: "50.0",
-          power: 284,
-          time: "4:38",
-        },
-        {
-          name: "Patrick Mannon",
-          speed: "48.6",
-          power: 320,
-          time: "4:46",
-        },
-        {
-          name: "Carlos A. Moreno ",
-          speed: "48.6",
-          power: 303,
-          time: "4:46",
-        },
-        {
-          name: "Andy Jobin",
-          speed: "47.8",
-          power: 232,
-          time: "4:51",
-        },
-        {
-          name: "The  H.",
-          speed: "47.6",
-          power: 189,
-          time: "4:52",
-        },
-        {
-          name: "Nick Torraca",
-          speed: "47.5",
-          power: 207,
-          time: "4:53",
-        },
-        {
-          name: "Eben Kellogg",
-          speed: "47.5",
-          power: 450,
-          time: "4:53",
-        },
-        {
-          name: "Christian D. Mantilla",
-          speed: "47.5",
-          power: 275,
-          time: "4:53",
-        },
-        {
-          name: "Zach Stein",
-          speed: "47.3",
-          power: 262,
-          time: "4:54",
-        },
-      ],
-    },
-    miles: 2.4001143325835437,
+    "lastPlace": {
+      "name": "Brittani Vickers",
+      "speed": "13.7",
+      "power": 143,
+      "time": "2:51"
+    }
   },
-  {
-    segment: {
-      id: 8846377,
-      name: "Wells Ln Southbound",
-      distance: 3718.4,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Patrick Mannon",
-          speed: "50.9",
-          power: 361,
-          time: "4:23",
-        },
-        {
-          name: "Zach Stein",
-          speed: "48.9",
-          power: 281,
-          time: "4:34",
-        },
-        {
-          name: "Andy Jobin",
-          speed: "48.7",
-          power: 237,
-          time: "4:35",
-        },
-        {
-          name: "Nick Torraca",
-          speed: "47.1",
-          power: 216,
-          time: "4:44",
-        },
-        {
-          name: "Eben Kellogg",
-          speed: "47.0",
-          power: 451,
-          time: "4:45",
-        },
-        {
-          name: "The  H.",
-          speed: "47.0",
-          power: 201,
-          time: "4:45",
-        },
-        {
-          name: "Robert “Kid Dolomite”  .",
-          speed: "45.7",
-          power: 205,
-          time: "4:53",
-        },
-        {
-          name: "Rowdy F.",
-          speed: "44.5",
-          power: 389,
-          time: "5:01",
-        },
-        {
-          name: "Justin Arnosky",
-          speed: "44.5",
-          power: 209,
-          time: "5:01",
-        },
-        {
-          name: "Scott M.",
-          speed: "44.2",
-          power: 401,
-          time: "5:03",
-        },
-      ],
-    },
-    miles: 2.3105123839586414,
+  "miles": 0.40538357339033393
+}, {
+  "segment": {
+    "id": 11002172,
+    "name": "F Street",
+    "distance": 2136.3
   },
-  {
-    segment: {
-      id: 7397395,
-      name: "290 Share Path E - 183 to Johnny Morris",
-      distance: 5014.1,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Sean Roe",
+      "speed": "34.6",
+      "power": 212,
+      "time": "3:42"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "34.5",
+      "power": 234,
+      "time": "3:43"
+    }, {
+      "name": "john collins",
+      "speed": "31.8",
+      "power": 0,
+      "time": "4:02"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "29.5",
+      "power": 155,
+      "time": "4:21"
+    }, {
+      "name": "Allen Carter",
+      "speed": "26.6",
+      "power": 112,
+      "time": "4:49"
+    }, {
+      "name": "Kevin Templin",
+      "speed": "25.9",
+      "power": 117,
+      "time": "4:57"
+    }, {
+      "name": "Kristina Banta",
+      "speed": "23.5",
+      "power": 0,
+      "time": "5:27"
+    }, {
+      "name": "Rachel Locke",
+      "speed": "22.0",
+      "power": 0,
+      "time": "5:49"
+    }, {
+      "name": "Clint Locke",
+      "speed": "21.9",
+      "power": 0,
+      "time": "5:51"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "21.4",
+      "power": 0,
+      "time": "5:59"
+    }],
+    "firstPlace": {
+      "name": "Sean Roe",
+      "speed": "34.6",
+      "power": 212,
+      "time": "3:42"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Todd G.",
-          speed: "32.5",
-          power: 238,
-          time: "9:16",
-        },
-        {
-          name: "Parker Tinsley",
-          speed: "32.2",
-          power: 203,
-          time: "9:20",
-        },
-        {
-          name: "Andrew Kimber",
-          speed: "30.9",
-          power: 182,
-          time: "9:44",
-        },
-        {
-          name: "Courtney Britt",
-          speed: "30.5",
-          power: 197,
-          time: "9:51",
-        },
-        {
-          name: "Lance Armstrong",
-          speed: "29.9",
-          power: 173,
-          time: "10:03",
-        },
-        {
-          name: "P.J. Rabice",
-          speed: "29.5",
-          power: 185,
-          time: "10:11",
-        },
-        {
-          name: "David R.",
-          speed: "29.5",
-          power: 161,
-          time: "10:11",
-        },
-        {
-          name: "Frazer W.",
-          speed: "29.5",
-          power: 150,
-          time: "10:11",
-        },
-        {
-          name: "Ashish Patel",
-          speed: "29.4",
-          power: 146,
-          time: "10:15",
-        },
-        {
-          name: "Lars Finanger",
-          speed: "29.4",
-          power: 163,
-          time: "10:15",
-        },
-      ],
-    },
-    miles: 3.1156250388357964,
+    "lastPlace": {
+      "name": "Chris Tyler",
+      "speed": "21.4",
+      "power": 0,
+      "time": "5:59"
+    }
   },
-  {
-    segment: {
-      id: 8424185,
-      name: "Heartrate Hill",
-      distance: 2522.6,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Scott Henry",
-          speed: "39.3",
-          power: 475,
-          time: "3:51",
-        },
-        {
-          name: "Nick Torraca",
-          speed: "38.5",
-          power: 376,
-          time: "3:56",
-        },
-        {
-          name: "Jakob A.",
-          speed: "37.4",
-          power: 390,
-          time: "4:03",
-        },
-        {
-          name: "patrick hitchins",
-          speed: "37.1",
-          power: 423,
-          time: "4:05",
-        },
-        {
-          name: "Lawson Craddock",
-          speed: "36.9",
-          power: 445,
-          time: "4:06",
-        },
-        {
-          name: "Ian Dille",
-          speed: "36.8",
-          power: 348,
-          time: "4:07",
-        },
-        {
-          name: "Colin Strickland",
-          speed: "36.3",
-          power: 371,
-          time: "4:10",
-        },
-        {
-          name: "David Cresap",
-          speed: "36.2",
-          power: 289,
-          time: "4:11",
-        },
-        {
-          name: "Mark Bozarth-Dreher",
-          speed: "36.2",
-          power: 401,
-          time: "4:11",
-        },
-        {
-          name: "Simon Wallace",
-          speed: "36.2",
-          power: 349,
-          time: "4:11",
-        },
-      ],
-    },
-    miles: 1.5674748654728026,
+  "miles": 1.3274385773049824
+}, {
+  "segment": {
+    "id": 15506566,
+    "name": "Just Around the River ",
+    "distance": 1065.1
   },
-  {
-    segment: {
-      id: 6926811,
-      name: "Decker Scenic Byway",
-      distance: 1939.9,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Chris Tyler",
+      "speed": "37.6",
+      "power": 350,
+      "time": "1:42"
+    }, {
+      "name": "Jesse M.",
+      "speed": "33.1",
+      "power": 344,
+      "time": "1:56"
+    }, {
+      "name": "Zach Bowling",
+      "speed": "31.7",
+      "power": 331,
+      "time": "2:01"
+    }, {
+      "name": "nick vickers",
+      "speed": "30.2",
+      "power": 0,
+      "time": "2:07"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "29.7",
+      "power": 209,
+      "time": "2:09"
+    }, {
+      "name": "Sean Heaton",
+      "speed": "29.5",
+      "power": 216,
+      "time": "2:10"
+    }, {
+      "name": "Ryan Jones",
+      "speed": "29.0",
+      "power": 343,
+      "time": "2:12"
+    }, {
+      "name": "Michael Bumgarner",
+      "speed": "28.6",
+      "power": 320,
+      "time": "2:14"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "28.6",
+      "power": 209,
+      "time": "2:14"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "28.4",
+      "power": 257,
+      "time": "2:15"
+    }],
+    "firstPlace": {
+      "name": "Chris Tyler",
+      "speed": "37.6",
+      "power": 350,
+      "time": "1:42"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Chris Husta",
-          speed: "46.2",
-          power: 435,
-          time: "2:31",
-        },
-        {
-          name: "Jeff Sheldon",
-          speed: "46.2",
-          power: 423,
-          time: "2:31",
-        },
-        {
-          name: "Ben Thompson",
-          speed: "45.3",
-          power: 306,
-          time: "2:34",
-        },
-        {
-          name: "Cameron L.",
-          speed: "45.1",
-          power: 311,
-          time: "2:35",
-        },
-        {
-          name: "Courtney Britt",
-          speed: "44.8",
-          power: 377,
-          time: "2:36",
-        },
-        {
-          name: "Caleb H.",
-          speed: "44.5",
-          power: 357,
-          time: "2:37",
-        },
-        {
-          name: "Robert Irish",
-          speed: "44.5",
-          power: 248,
-          time: "2:37",
-        },
-        {
-          name: "Evan Bausbacher",
-          speed: "44.5",
-          power: 228,
-          time: "2:37",
-        },
-        {
-          name: "Sam Zarat",
-          speed: "44.2",
-          power: 318,
-          time: "2:38",
-        },
-        {
-          name: "William Verheul",
-          speed: "44.2",
-          power: 359,
-          time: "2:38",
-        },
-      ],
-    },
-    miles: 1.2054009718269603,
+    "lastPlace": {
+      "name": "Paul Shimon",
+      "speed": "28.4",
+      "power": 257,
+      "time": "2:15"
+    }
   },
-  {
-    segment: {
-      id: 7397397,
-      name: "290 Share Path W - Manor to Johnny Morris",
-      distance: 5039.1,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Todd G.",
-          speed: "36.3",
-          power: 314,
-          time: "8:20",
-        },
-        {
-          name: "Jim Bauer",
-          speed: "34.7",
-          power: 283,
-          time: "8:43",
-        },
-        {
-          name: "Ben Thompson",
-          speed: "30.5",
-          power: 212,
-          time: "9:54",
-        },
-        {
-          name: "Josh Clephas",
-          speed: "29.4",
-          power: 238,
-          time: "10:17",
-        },
-        {
-          name: "Spencer F.",
-          speed: "29.4",
-          power: 221,
-          time: "10:18",
-        },
-        {
-          name: "Lance Armstrong",
-          speed: "28.7",
-          power: 177,
-          time: "10:31",
-        },
-        {
-          name: "Sid Law",
-          speed: "28.6",
-          power: 176,
-          time: "10:34",
-        },
-        {
-          name: "Roman L.",
-          speed: "28.6",
-          power: 160,
-          time: "10:35",
-        },
-        {
-          name: "peter lopez",
-          speed: "28.0",
-          power: 256,
-          time: "10:47",
-        },
-        {
-          name: "Duane Howell",
-          speed: "27.6",
-          power: 152,
-          time: "10:58",
-        },
-      ],
-    },
-    miles: 3.1311593572520415,
+  "miles": 0.6618241018057092
+}, {
+  "segment": {
+    "id": 23860891,
+    "name": "131 Climb",
+    "distance": 580.2
   },
-  {
-    segment: {
-      id: 7066980,
-      name: "Austin-Manor Trail SB - Lindell to Johnny Morris",
-      distance: 4328.7,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Jesse M.",
+      "speed": "31.2",
+      "power": 379,
+      "time": "1:07"
+    }, {
+      "name": "Phil C.",
+      "speed": "25.5",
+      "power": 433,
+      "time": "1:22"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "24.0",
+      "power": 394,
+      "time": "1:27"
+    }, {
+      "name": "Justin Moore",
+      "speed": "22.0",
+      "power": 240,
+      "time": "1:35"
+    }, {
+      "name": "bob cummings",
+      "speed": "21.8",
+      "power": 283,
+      "time": "1:36"
+    }, {
+      "name": "⚡️David Mizelle ⚡️",
+      "speed": "21.8",
+      "power": 315,
+      "time": "1:36"
+    }, {
+      "name": "Kyle Forsythe",
+      "speed": "21.8",
+      "power": 282,
+      "time": "1:36"
+    }, {
+      "name": "Jay S.",
+      "speed": "21.8",
+      "power": 207,
+      "time": "1:36"
+    }, {
+      "name": "peter sandretto",
+      "speed": "21.3",
+      "power": 267,
+      "time": "1:38"
+    }, {
+      "name": "Simon Lynn",
+      "speed": "21.3",
+      "power": 295,
+      "time": "1:38"
+    }],
+    "firstPlace": {
+      "name": "Jesse M.",
+      "speed": "31.2",
+      "power": 379,
+      "time": "1:07"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Nick Bruskewitz",
-          speed: "39.7",
-          power: 284,
-          time: "6:33",
-        },
-        {
-          name: "Ragnar Olsson",
-          speed: "38.5",
-          power: 0,
-          time: "6:45",
-        },
-        {
-          name: "Ben Thompson",
-          speed: "38.4",
-          power: 311,
-          time: "6:46",
-        },
-        {
-          name: "John McClane",
-          speed: "38.2",
-          power: 0,
-          time: "6:48",
-        },
-        {
-          name: "Lance Armstrong",
-          speed: "38.1",
-          power: 293,
-          time: "6:49",
-        },
-        {
-          name: "Damon H.",
-          speed: "37.4",
-          power: 281,
-          time: "6:57",
-        },
-        {
-          name: "Todd Kaiser",
-          speed: "37.4",
-          power: 254,
-          time: "6:57",
-        },
-        {
-          name: "Hunter Shelton - OTTO Racing",
-          speed: "37.4",
-          power: 159,
-          time: "6:57",
-        },
-        {
-          name: "Ashley Williams ",
-          speed: "37.4",
-          power: 265,
-          time: "6:57",
-        },
-        {
-          name: "Matt DeAngelis",
-          speed: "37.3",
-          power: 237,
-          time: "6:58",
-        },
-      ],
-    },
-    miles: 2.6897361651360185,
+    "lastPlace": {
+      "name": "Simon Lynn",
+      "speed": "21.3",
+      "power": 295,
+      "time": "1:38"
+    }
   },
-  {
-    segment: {
-      id: 1135548,
-      name: "VMO Ronde von Manor Loop",
-      distance: 18517.2,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Logan McLain",
-          speed: "47.4",
-          power: 482,
-          time: "23:27",
-        },
-        {
-          name: "Johannes Steffens",
-          speed: "44.3",
-          power: 418,
-          time: "25:04",
-        },
-        {
-          name: "&lt;         Brendo &gt;",
-          speed: "44.3",
-          power: 412,
-          time: "25:06",
-        },
-        {
-          name: "Brent W.",
-          speed: "44.2",
-          power: 0,
-          time: "25:09",
-        },
-        {
-          name: "Jed R.",
-          speed: "44.1",
-          power: 253,
-          time: "25:13",
-        },
-        {
-          name: "Coach S.",
-          speed: "43.8",
-          power: 406,
-          time: "25:22",
-        },
-        {
-          name: "Gray Skinner FluxRC",
-          speed: "43.7",
-          power: 272,
-          time: "25:26",
-        },
-        {
-          name: "Ste F.",
-          speed: "43.5",
-          power: 370,
-          time: "25:33",
-        },
-        {
-          name: "Ruarri Day-Stirrat (787 Racing)",
-          speed: "42.8",
-          power: 378,
-          time: "25:58",
-        },
-        {
-          name: "Abel Acosta (Abel’sRacing ATX)",
-          speed: "42.7",
-          power: 220,
-          time: "26:02",
-        },
-      ],
-    },
-    miles: 11.506083239091803,
+  "miles": 0.36052046180421793
+}, {
+  "segment": {
+    "id": 5068197,
+    "name": "The Wine Climb",
+    "distance": 1723.2
   },
-  {
-    segment: {
-      id: 3620706,
-      name: "Manor to Ghost Town Express",
-      distance: 3647.3,
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Zach Bowling",
+      "speed": "32.1",
+      "power": 286,
+      "time": "3:13"
+    }, {
+      "name": "Jesse M.",
+      "speed": "29.3",
+      "power": 306,
+      "time": "3:32"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "27.9",
+      "power": 243,
+      "time": "3:42"
+    }, {
+      "name": "Sean Heaton",
+      "speed": "27.7",
+      "power": 186,
+      "time": "3:44"
+    }, {
+      "name": "nick vickers",
+      "speed": "27.6",
+      "power": 0,
+      "time": "3:45"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "26.9",
+      "power": 206,
+      "time": "3:51"
+    }, {
+      "name": "Aaron S.",
+      "speed": "26.9",
+      "power": 242,
+      "time": "3:51"
+    }, {
+      "name": "Michael Bumgarner",
+      "speed": "26.7",
+      "power": 0,
+      "time": "3:52"
+    }, {
+      "name": "Ryan Jones",
+      "speed": "26.2",
+      "power": 331,
+      "time": "3:57"
+    }, {
+      "name": "L Scott Barnhart",
+      "speed": "25.7",
+      "power": 224,
+      "time": "4:01"
+    }],
+    "firstPlace": {
+      "name": "Zach Bowling",
+      "speed": "32.1",
+      "power": 286,
+      "time": "3:13"
     },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Andy Jobin",
-          speed: "50.9",
-          power: 289,
-          time: "4:18",
-        },
-        {
-          name: "Zach Stein",
-          speed: "50.7",
-          power: 374,
-          time: "4:19",
-        },
-        {
-          name: "Chris Tolley - ELBOWZ",
-          speed: "50.7",
-          power: 468,
-          time: "4:19",
-        },
-        {
-          name: "Matt S.",
-          speed: "49.0",
-          power: 505,
-          time: "4:28",
-        },
-        {
-          name: "LUCAS BOURGOYNE",
-          speed: "48.1",
-          power: 251,
-          time: "4:33",
-        },
-        {
-          name: "Eli H.",
-          speed: "48.1",
-          power: 285,
-          time: "4:33",
-        },
-        {
-          name: "Beau 🇺🇸",
-          speed: "47.9",
-          power: 477,
-          time: "4:34",
-        },
-        {
-          name: "Canyon Emmott",
-          speed: "47.9",
-          power: 621,
-          time: "4:34",
-        },
-        {
-          name: "Caleb H.",
-          speed: "47.6",
-          power: 359,
-          time: "4:36",
-        },
-        {
-          name: "Joel Carroll",
-          speed: "47.6",
-          power: 318,
-          time: "4:36",
-        },
-      ],
-    },
-    miles: 2.2663327823828405,
+    "lastPlace": {
+      "name": "L Scott Barnhart",
+      "speed": "25.7",
+      "power": 224,
+      "time": "4:01"
+    }
   },
-  {
-    segment: {
-      id: 7864881,
-      name: "Downhill Store Sprint - 290",
-      distance: 2338.2,
-    },
-    segmentLeaderboard: {
-      leaderboardEntries: [
-        {
-          name: "Kosme Ramirez",
-          speed: "47.8",
-          power: 471,
-          time: "2:56",
-        },
-        {
-          name: "Will Stewart",
-          speed: "47.8",
-          power: 227,
-          time: "2:56",
-        },
-        {
-          name: "Omar Henry🇲🇽",
-          speed: "47.8",
-          power: 440,
-          time: "2:56",
-        },
-        {
-          name: "Rodrigo Colín",
-          speed: "47.6",
-          power: 307,
-          time: "2:57",
-        },
-        {
-          name: "Terrance Lockett",
-          speed: "47.6",
-          power: 456,
-          time: "2:57",
-        },
-        {
-          name: "James L.",
-          speed: "46.8",
-          power: 0,
-          time: "3:00",
-        },
-        {
-          name: "Justin M.",
-          speed: "46.5",
-          power: 283,
-          time: "3:01",
-        },
-        {
-          name: "Kevin E.",
-          speed: "46.3",
-          power: 435,
-          time: "3:02",
-        },
-        {
-          name: "Peter Fierro",
-          speed: "46.0",
-          power: 396,
-          time: "3:03",
-        },
-        {
-          name: "Yen N.",
-          speed: "46.0",
-          power: 403,
-          time: "3:03",
-        },
-      ],
-    },
-    miles: 1.4528937328345781,
+  "miles": 1.0707494997949472
+}, {
+  "segment": {
+    "id": 11002175,
+    "name": "E Popular / North J sprint",
+    "distance": 599.6
   },
-];
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Zach Legleiter",
+      "speed": "34.3",
+      "power": 189,
+      "time": "1:03"
+    }, {
+      "name": "Jesse M.",
+      "speed": "28.0",
+      "power": 117,
+      "time": "1:17"
+    }, {
+      "name": "Kevin Templin",
+      "speed": "25.1",
+      "power": 95,
+      "time": "1:26"
+    }, {
+      "name": "Allen Carter",
+      "speed": "24.5",
+      "power": 91,
+      "time": "1:28"
+    }, {
+      "name": "Sean Roe",
+      "speed": "24.5",
+      "power": 129,
+      "time": "1:28"
+    }, {
+      "name": "Dustin Mast",
+      "speed": "24.0",
+      "power": 91,
+      "time": "1:30"
+    }, {
+      "name": "Olivia Eves",
+      "speed": "22.7",
+      "power": 0,
+      "time": "1:35"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "22.5",
+      "power": 74,
+      "time": "1:36"
+    }, {
+      "name": "Brent Eves",
+      "speed": "22.0",
+      "power": 0,
+      "time": "1:38"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "21.6",
+      "power": 0,
+      "time": "1:40"
+    }],
+    "firstPlace": {
+      "name": "Zach Legleiter",
+      "speed": "34.3",
+      "power": 189,
+      "time": "1:03"
+    },
+    "lastPlace": {
+      "name": "Chris Tyler",
+      "speed": "21.6",
+      "power": 0,
+      "time": "1:40"
+    }
+  },
+  "miles": 0.37257509289522417
+}, {
+  "segment": {
+    "id": 2890453,
+    "name": "Tibet Hill",
+    "distance": 142.7
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Brent A.",
+      "speed": "19.0",
+      "power": 296,
+      "time": "27"
+    }, {
+      "name": "Evan F.",
+      "speed": "18.3",
+      "power": 504,
+      "time": "28"
+    }, {
+      "name": "Rob Bell",
+      "speed": "17.7",
+      "power": 431,
+      "time": "29"
+    }, {
+      "name": "Ryan Jones",
+      "speed": "17.1",
+      "power": 326,
+      "time": "30"
+    }, {
+      "name": "bob cummings",
+      "speed": "17.1",
+      "power": 520,
+      "time": "30"
+    }, {
+      "name": "Kevin Collings",
+      "speed": "16.0",
+      "power": 487,
+      "time": "32"
+    }, {
+      "name": "Lee L.",
+      "speed": "16.0",
+      "power": 432,
+      "time": "32"
+    }, {
+      "name": "Grizz (Tim Place)",
+      "speed": "14.7",
+      "power": 428,
+      "time": "35"
+    }, {
+      "name": "Tyler A.",
+      "speed": "14.7",
+      "power": 266,
+      "time": "35"
+    }, {
+      "name": "L Scott Barnhart",
+      "speed": "14.7",
+      "power": 324,
+      "time": "35"
+    }],
+    "firstPlace": {
+      "name": "Brent A.",
+      "speed": "19.0",
+      "power": 296,
+      "time": "27"
+    },
+    "lastPlace": {
+      "name": "L Scott Barnhart",
+      "speed": "14.7",
+      "power": 324,
+      "time": "35"
+    }
+  },
+  "miles": 0.08866988951992742
+}, {
+  "segment": {
+    "id": 11002179,
+    "name": "Railroad Overpass Climb",
+    "distance": 318.9
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "63.8",
+      "power": 0,
+      "time": "18"
+    }, {
+      "name": "Jacob Cook",
+      "speed": "57.4",
+      "power": 405,
+      "time": "20"
+    }, {
+      "name": "Julie Rice",
+      "speed": "54.7",
+      "power": 0,
+      "time": "21"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "35.9",
+      "power": 502,
+      "time": "32"
+    }, {
+      "name": "Mark L.",
+      "speed": "31.0",
+      "power": 433,
+      "time": "37"
+    }, {
+      "name": "lindsay hutton",
+      "speed": "30.2",
+      "power": 0,
+      "time": "38"
+    }, {
+      "name": "Cathy Eastman",
+      "speed": "28.7",
+      "power": 0,
+      "time": "40"
+    }, {
+      "name": "Nathan J.",
+      "speed": "27.3",
+      "power": 298,
+      "time": "42"
+    }, {
+      "name": "Sean Heaton",
+      "speed": "26.7",
+      "power": 89,
+      "time": "43"
+    }, {
+      "name": "Allen Carter",
+      "speed": "26.7",
+      "power": 94,
+      "time": "43"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "63.8",
+      "power": 0,
+      "time": "18"
+    },
+    "lastPlace": {
+      "name": "Allen Carter",
+      "speed": "26.7",
+      "power": 94,
+      "time": "43"
+    }
+  },
+  "miles": 0.19815576571762336
+}, {
+  "segment": {
+    "id": 4424420,
+    "name": "Hernia Hill near Ark City",
+    "distance": 919.2
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Jared Siler Evans",
+      "speed": "27.6",
+      "power": 412,
+      "time": "2:00"
+    }, {
+      "name": "nick vickers",
+      "speed": "24.3",
+      "power": 0,
+      "time": "2:16"
+    }, {
+      "name": "Sean Heaton",
+      "speed": "21.8",
+      "power": 252,
+      "time": "2:32"
+    }, {
+      "name": "Michael L.",
+      "speed": "21.2",
+      "power": 324,
+      "time": "2:36"
+    }, {
+      "name": "Joe Hedger",
+      "speed": "21.2",
+      "power": 312,
+      "time": "2:36"
+    }, {
+      "name": "Bruce T.",
+      "speed": "19.6",
+      "power": 278,
+      "time": "2:49"
+    }, {
+      "name": "Bruce Van Bebber",
+      "speed": "19.4",
+      "power": 228,
+      "time": "2:51"
+    }, {
+      "name": "L Scott Barnhart",
+      "speed": "19.4",
+      "power": 128,
+      "time": "2:51"
+    }, {
+      "name": "Ryan Lee",
+      "speed": "18.7",
+      "power": 295,
+      "time": "2:57"
+    }, {
+      "name": "Carl Fischer",
+      "speed": "17.5",
+      "power": 280,
+      "time": "3:09"
+    }],
+    "firstPlace": {
+      "name": "Jared Siler Evans",
+      "speed": "27.6",
+      "power": 412,
+      "time": "2:00"
+    },
+    "lastPlace": {
+      "name": "Carl Fischer",
+      "speed": "17.5",
+      "power": 280,
+      "time": "3:09"
+    }
+  },
+  "miles": 0.5711658195285024
+}, {
+  "segment": {
+    "id": 21202122,
+    "name": "street with many names to skyline",
+    "distance": 2284.1
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Xoel R.",
+      "speed": "42.8",
+      "power": 416,
+      "time": "3:12"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "38.4",
+      "power": 273,
+      "time": "3:34"
+    }, {
+      "name": "Trent W.",
+      "speed": "34.8",
+      "power": 234,
+      "time": "3:56"
+    }, {
+      "name": "Brian Dickel",
+      "speed": "34.7",
+      "power": 219,
+      "time": "3:57"
+    }, {
+      "name": "Mark L.",
+      "speed": "33.3",
+      "power": 212,
+      "time": "4:07"
+    }, {
+      "name": "james jappa",
+      "speed": "30.6",
+      "power": 0,
+      "time": "4:29"
+    }, {
+      "name": "Tom &quot;not ready for primetime pedaler&quot;&quot;constitution nazi&quot; Martz",
+      "speed": "28.8",
+      "power": 165,
+      "time": "4:46"
+    }, {
+      "name": "nick vickers",
+      "speed": "27.6",
+      "power": 0,
+      "time": "4:58"
+    }, {
+      "name": "John Sturd",
+      "speed": "25.9",
+      "power": 0,
+      "time": "5:17"
+    }, {
+      "name": "Darren Mora",
+      "speed": "23.8",
+      "power": 0,
+      "time": "5:46"
+    }],
+    "firstPlace": {
+      "name": "Xoel R.",
+      "speed": "42.8",
+      "power": 416,
+      "time": "3:12"
+    },
+    "lastPlace": {
+      "name": "Darren Mora",
+      "speed": "23.8",
+      "power": 0,
+      "time": "5:46"
+    }
+  },
+  "miles": 1.4192774677818236
+}, {
+  "segment": {
+    "id": 12631161,
+    "name": "Ark City West",
+    "distance": 4524.7
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Xoel R.",
+      "speed": "37.0",
+      "power": 370,
+      "time": "7:20"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "36.0",
+      "power": 246,
+      "time": "7:33"
+    }, {
+      "name": "Brian Dickel",
+      "speed": "33.9",
+      "power": 193,
+      "time": "8:01"
+    }, {
+      "name": "Trent W.",
+      "speed": "33.7",
+      "power": 207,
+      "time": "8:04"
+    }, {
+      "name": "james jappa",
+      "speed": "29.3",
+      "power": 0,
+      "time": "9:16"
+    }, {
+      "name": "Mark L.",
+      "speed": "29.1",
+      "power": 168,
+      "time": "9:19"
+    }, {
+      "name": "John Sturd",
+      "speed": "24.6",
+      "power": 0,
+      "time": "11:01"
+    }, {
+      "name": "Kevin Templin",
+      "speed": "22.3",
+      "power": 0,
+      "time": "12:09"
+    }, {
+      "name": "Shawn Darnall",
+      "speed": "21.1",
+      "power": 0,
+      "time": "12:53"
+    }, {
+      "name": "Darren Mora",
+      "speed": "21.0",
+      "power": 0,
+      "time": "12:54"
+    }],
+    "firstPlace": {
+      "name": "Xoel R.",
+      "speed": "37.0",
+      "power": 370,
+      "time": "7:20"
+    },
+    "lastPlace": {
+      "name": "Darren Mora",
+      "speed": "21.0",
+      "power": 0,
+      "time": "12:54"
+    }
+  },
+  "miles": 2.8115252215193807
+}, {
+  "segment": {
+    "id": 11002150,
+    "name": "15th Street Climb",
+    "distance": 802.5
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Bobby Smith",
+      "speed": "44.4",
+      "power": 488,
+      "time": "1:05"
+    }, {
+      "name": "nick vickers",
+      "speed": "43.1",
+      "power": 0,
+      "time": "1:07"
+    }, {
+      "name": "Zach Legleiter",
+      "speed": "34.4",
+      "power": 274,
+      "time": "1:24"
+    }, {
+      "name": "Mark L.",
+      "speed": "34.4",
+      "power": 324,
+      "time": "1:24"
+    }, {
+      "name": "Jesse M.",
+      "speed": "34.4",
+      "power": 282,
+      "time": "1:24"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "32.5",
+      "power": 367,
+      "time": "1:29"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "29.2",
+      "power": 159,
+      "time": "1:39"
+    }, {
+      "name": "bob cummings",
+      "speed": "28.6",
+      "power": 266,
+      "time": "1:41"
+    }, {
+      "name": "Dustin Mast",
+      "speed": "28.3",
+      "power": 219,
+      "time": "1:42"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "28.3",
+      "power": 199,
+      "time": "1:42"
+    }],
+    "firstPlace": {
+      "name": "Bobby Smith",
+      "speed": "44.4",
+      "power": 488,
+      "time": "1:05"
+    },
+    "lastPlace": {
+      "name": "Elliott Rodda",
+      "speed": "28.3",
+      "power": 199,
+      "time": "1:42"
+    }
+  },
+  "miles": 0.49865162116146994
+}, {
+  "segment": {
+    "id": 20612775,
+    "name": "County Line Climb",
+    "distance": 963.3
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "John Todd Mallow",
+      "speed": "44.5",
+      "power": 491,
+      "time": "1:18"
+    }, {
+      "name": "Kenny Collins",
+      "speed": "31.0",
+      "power": 282,
+      "time": "1:52"
+    }, {
+      "name": "Tyler B.",
+      "speed": "29.9",
+      "power": 262,
+      "time": "1:56"
+    }, {
+      "name": "Mark L.",
+      "speed": "27.3",
+      "power": 241,
+      "time": "2:07"
+    }, {
+      "name": "nick vickers",
+      "speed": "27.1",
+      "power": 0,
+      "time": "2:08"
+    }, {
+      "name": "Darren Mora",
+      "speed": "26.1",
+      "power": 0,
+      "time": "2:13"
+    }, {
+      "name": "Shawn Darnall",
+      "speed": "25.9",
+      "power": 0,
+      "time": "2:14"
+    }, {
+      "name": "Brittani Vickers",
+      "speed": "23.8",
+      "power": 136,
+      "time": "2:26"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "22.7",
+      "power": 169,
+      "time": "2:33"
+    }, {
+      "name": "Desiree M.",
+      "speed": "22.7",
+      "power": 228,
+      "time": "2:33"
+    }],
+    "firstPlace": {
+      "name": "John Todd Mallow",
+      "speed": "44.5",
+      "power": 491,
+      "time": "1:18"
+    },
+    "lastPlace": {
+      "name": "Desiree M.",
+      "speed": "22.7",
+      "power": 228,
+      "time": "2:33"
+    }
+  },
+  "miles": 0.5985683572147589
+}, {
+  "segment": {
+    "id": 13237899,
+    "name": "Summit St. ",
+    "distance": 1144.9
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "james jappa",
+      "speed": "67.6",
+      "power": 225,
+      "time": "1:01"
+    }, {
+      "name": "Brian Dickel",
+      "speed": "36.5",
+      "power": 305,
+      "time": "1:53"
+    }, {
+      "name": "Trent W.",
+      "speed": "36.2",
+      "power": 365,
+      "time": "1:54"
+    }, {
+      "name": "Nate Lind \uD83D\uDEE1",
+      "speed": "32.2",
+      "power": 0,
+      "time": "2:08"
+    }, {
+      "name": "Brandon T.",
+      "speed": "31.0",
+      "power": 318,
+      "time": "2:13"
+    }, {
+      "name": "PAUL Mckay",
+      "speed": "29.9",
+      "power": 242,
+      "time": "2:18"
+    }, {
+      "name": "Paul Shimon",
+      "speed": "29.7",
+      "power": 274,
+      "time": "2:19"
+    }, {
+      "name": "Bob L.",
+      "speed": "26.6",
+      "power": 207,
+      "time": "2:35"
+    }, {
+      "name": "Raymond S.",
+      "speed": "23.6",
+      "power": 260,
+      "time": "2:55"
+    }, {
+      "name": "Diane S.",
+      "speed": "23.6",
+      "power": 143,
+      "time": "2:55"
+    }],
+    "firstPlace": {
+      "name": "james jappa",
+      "speed": "67.6",
+      "power": 225,
+      "time": "1:01"
+    },
+    "lastPlace": {
+      "name": "Diane S.",
+      "speed": "23.6",
+      "power": 143,
+      "time": "2:55"
+    }
+  },
+  "miles": 0.7114096461903638
+}, {
+  "segment": {
+    "id": 2398770,
+    "name": "Lyle's Loop",
+    "distance": 3406.8
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Corey Denton",
+      "speed": "17.9",
+      "power": 184,
+      "time": "11:24"
+    }, {
+      "name": "Dylan Postier",
+      "speed": "17.8",
+      "power": 106,
+      "time": "11:28"
+    }, {
+      "name": "trent daulton",
+      "speed": "17.6",
+      "power": 142,
+      "time": "11:35"
+    }, {
+      "name": "Neil Boyd",
+      "speed": "17.4",
+      "power": 144,
+      "time": "11:44"
+    }, {
+      "name": "Chris Renshaw",
+      "speed": "17.4",
+      "power": 0,
+      "time": "11:45"
+    }, {
+      "name": "Kevin Collings",
+      "speed": "17.3",
+      "power": 188,
+      "time": "11:49"
+    }, {
+      "name": "Jon Denton",
+      "speed": "17.2",
+      "power": 104,
+      "time": "11:51"
+    }, {
+      "name": "Corey White",
+      "speed": "17.2",
+      "power": 189,
+      "time": "11:55"
+    }, {
+      "name": "Brandon Roberts",
+      "speed": "17.1",
+      "power": 109,
+      "time": "11:59"
+    }, {
+      "name": "Chris Rodgers",
+      "speed": "16.6",
+      "power": 189,
+      "time": "12:18"
+    }],
+    "firstPlace": {
+      "name": "Corey Denton",
+      "speed": "17.9",
+      "power": 184,
+      "time": "11:24"
+    },
+    "lastPlace": {
+      "name": "Chris Rodgers",
+      "speed": "16.6",
+      "power": 189,
+      "time": "12:18"
+    }
+  },
+  "miles": 2.116892639218562
+}, {
+  "segment": {
+    "id": 4328487,
+    "name": "No Pain No Gain",
+    "distance": 1906.4
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Chris Tyler",
+      "speed": "24.2",
+      "power": 26,
+      "time": "4:44"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "24.1",
+      "power": 203,
+      "time": "4:45"
+    }, {
+      "name": "Jesse M.",
+      "speed": "23.1",
+      "power": 196,
+      "time": "4:57"
+    }, {
+      "name": "Clayton Young",
+      "speed": "22.4",
+      "power": 227,
+      "time": "5:06"
+    }, {
+      "name": "nick vickers",
+      "speed": "22.3",
+      "power": 0,
+      "time": "5:08"
+    }, {
+      "name": "Darren Mora",
+      "speed": "21.5",
+      "power": 0,
+      "time": "5:19"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "19.1",
+      "power": 135,
+      "time": "6:00"
+    }, {
+      "name": "Desiree M.",
+      "speed": "17.6",
+      "power": 160,
+      "time": "6:29"
+    }, {
+      "name": "Sam Podschun",
+      "speed": "17.6",
+      "power": 0,
+      "time": "6:29"
+    }, {
+      "name": "Steve Dutton",
+      "speed": "17.5",
+      "power": 150,
+      "time": "6:32"
+    }],
+    "firstPlace": {
+      "name": "Chris Tyler",
+      "speed": "24.2",
+      "power": 26,
+      "time": "4:44"
+    },
+    "lastPlace": {
+      "name": "Steve Dutton",
+      "speed": "17.5",
+      "power": 150,
+      "time": "6:32"
+    }
+  },
+  "miles": 1.1845849851491916
+}, {
+  "segment": {
+    "id": 3302285,
+    "name": "Cardiac Hill",
+    "distance": 570.2
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Neil Boyd",
+      "speed": "14.0",
+      "power": 285,
+      "time": "2:27"
+    }, {
+      "name": "Kevin Collings",
+      "speed": "13.7",
+      "power": 296,
+      "time": "2:30"
+    }, {
+      "name": "Ryan Jones",
+      "speed": "13.1",
+      "power": 303,
+      "time": "2:37"
+    }, {
+      "name": "Chris Renshaw",
+      "speed": "12.8",
+      "power": 0,
+      "time": "2:40"
+    }, {
+      "name": "trent daulton",
+      "speed": "12.8",
+      "power": 247,
+      "time": "2:40"
+    }, {
+      "name": "nick vickers",
+      "speed": "12.7",
+      "power": 0,
+      "time": "2:42"
+    }, {
+      "name": "Matt Smith",
+      "speed": "12.4",
+      "power": 279,
+      "time": "2:45"
+    }, {
+      "name": "Kevin Caldwell - Phat Tire Bike Shop",
+      "speed": "12.0",
+      "power": 256,
+      "time": "2:51"
+    }, {
+      "name": "Brandon Roberts",
+      "speed": "11.9",
+      "power": 243,
+      "time": "2:53"
+    }, {
+      "name": "Corey White",
+      "speed": "11.7",
+      "power": 263,
+      "time": "2:55"
+    }],
+    "firstPlace": {
+      "name": "Neil Boyd",
+      "speed": "14.0",
+      "power": 285,
+      "time": "2:27"
+    },
+    "lastPlace": {
+      "name": "Corey White",
+      "speed": "11.7",
+      "power": 263,
+      "time": "2:55"
+    }
+  },
+  "miles": 0.3543067344377199
+}, {
+  "segment": {
+    "id": 12022645,
+    "name": "Silverdale to County 1 Challenge",
+    "distance": 945.1
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "17.8",
+      "power": 0,
+      "time": "3:11"
+    }, {
+      "name": "Jd W.",
+      "speed": "17.0",
+      "power": 335,
+      "time": "3:20"
+    }, {
+      "name": "Clayton Young",
+      "speed": "17.0",
+      "power": 233,
+      "time": "3:20"
+    }, {
+      "name": "Eric Zoller",
+      "speed": "14.9",
+      "power": 134,
+      "time": "3:49"
+    }, {
+      "name": "Darren Mora",
+      "speed": "14.7",
+      "power": 0,
+      "time": "3:51"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "14.7",
+      "power": 183,
+      "time": "3:52"
+    }, {
+      "name": "Desiree M.",
+      "speed": "14.7",
+      "power": 188,
+      "time": "3:52"
+    }, {
+      "name": "Daniel Z.",
+      "speed": "14.6",
+      "power": 116,
+      "time": "3:53"
+    }, {
+      "name": "Pat G.",
+      "speed": "14.4",
+      "power": 0,
+      "time": "3:57"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "14.2",
+      "power": 149,
+      "time": "3:59"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "17.8",
+      "power": 0,
+      "time": "3:11"
+    },
+    "lastPlace": {
+      "name": "Elliott Rodda",
+      "speed": "14.2",
+      "power": 149,
+      "time": "3:59"
+    }
+  },
+  "miles": 0.5872593734077324
+}, {
+  "segment": {
+    "id": 12022685,
+    "name": "To Camp Horizon Gravel Challenge",
+    "distance": 3681.6
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "27.0",
+      "power": 0,
+      "time": "8:11"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "26.4",
+      "power": 238,
+      "time": "8:22"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "26.3",
+      "power": 223,
+      "time": "8:24"
+    }, {
+      "name": "Darren Mora",
+      "speed": "21.9",
+      "power": 0,
+      "time": "10:05"
+    }, {
+      "name": "Quincy S.",
+      "speed": "21.7",
+      "power": 0,
+      "time": "10:12"
+    }, {
+      "name": "Daniel Z.",
+      "speed": "17.4",
+      "power": 84,
+      "time": "12:43"
+    }, {
+      "name": "Eric Zoller",
+      "speed": "17.3",
+      "power": 94,
+      "time": "12:47"
+    }, {
+      "name": "Brittani Vickers",
+      "speed": "16.4",
+      "power": 104,
+      "time": "13:26"
+    }, {
+      "name": "Dustin McGowan",
+      "speed": "16.3",
+      "power": 133,
+      "time": "13:33"
+    }, {
+      "name": "Jd W.",
+      "speed": "14.7",
+      "power": 203,
+      "time": "15:01"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "27.0",
+      "power": 0,
+      "time": "8:11"
+    },
+    "lastPlace": {
+      "name": "Jd W.",
+      "speed": "14.7",
+      "power": 203,
+      "time": "15:01"
+    }
+  },
+  "miles": 2.2876458672499287
+}, {
+  "segment": {
+    "id": 5350290,
+    "name": "The Other PITA halfway climb",
+    "distance": 202.3
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Neil Boyd",
+      "speed": "12.8",
+      "power": 278,
+      "time": "57"
+    }, {
+      "name": "Corey White",
+      "speed": "11.7",
+      "power": 268,
+      "time": "1:02"
+    }, {
+      "name": "Chris Renshaw",
+      "speed": "11.6",
+      "power": 0,
+      "time": "1:03"
+    }, {
+      "name": "Kevin Collings",
+      "speed": "11.6",
+      "power": 253,
+      "time": "1:03"
+    }, {
+      "name": "Dylan Postier",
+      "speed": "11.6",
+      "power": 216,
+      "time": "1:03"
+    }, {
+      "name": "Quincy S.",
+      "speed": "11.4",
+      "power": 31,
+      "time": "1:04"
+    }, {
+      "name": "Cooper D.",
+      "speed": "11.0",
+      "power": 177,
+      "time": "1:06"
+    }, {
+      "name": "Jeremy Black",
+      "speed": "11.0",
+      "power": 276,
+      "time": "1:06"
+    }, {
+      "name": "Chris Rodgers",
+      "speed": "10.9",
+      "power": 283,
+      "time": "1:07"
+    }, {
+      "name": "Cody Pollard",
+      "speed": "10.9",
+      "power": 0,
+      "time": "1:07"
+    }],
+    "firstPlace": {
+      "name": "Neil Boyd",
+      "speed": "12.8",
+      "power": 278,
+      "time": "57"
+    },
+    "lastPlace": {
+      "name": "Cody Pollard",
+      "speed": "10.9",
+      "power": 0,
+      "time": "1:07"
+    }
+  },
+  "miles": 0.12570370462425592
+}, {
+  "segment": {
+    "id": 15884147,
+    "name": "Lizard 2017 - 6 Mile to 8 Mile",
+    "distance": 3238.3
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Corey Denton",
+      "speed": "21.4",
+      "power": 180,
+      "time": "9:05"
+    }, {
+      "name": "Quincy S.",
+      "speed": "20.9",
+      "power": 139,
+      "time": "9:19"
+    }, {
+      "name": "Alex Sharp",
+      "speed": "20.7",
+      "power": 95,
+      "time": "9:24"
+    }, {
+      "name": "Dylan Postier",
+      "speed": "20.6",
+      "power": 73,
+      "time": "9:27"
+    }, {
+      "name": "nick vickers",
+      "speed": "20.2",
+      "power": 0,
+      "time": "9:37"
+    }, {
+      "name": "Jon Denton",
+      "speed": "19.8",
+      "power": 75,
+      "time": "9:49"
+    }, {
+      "name": "Albert S.",
+      "speed": "19.8",
+      "power": 89,
+      "time": "9:49"
+    }, {
+      "name": "Chris Rodgers",
+      "speed": "19.6",
+      "power": 165,
+      "time": "9:55"
+    }, {
+      "name": "Brandon Reed",
+      "speed": "19.4",
+      "power": 139,
+      "time": "10:01"
+    }, {
+      "name": "Malaki Caldwell",
+      "speed": "19.4",
+      "power": 0,
+      "time": "10:02"
+    }],
+    "firstPlace": {
+      "name": "Corey Denton",
+      "speed": "21.4",
+      "power": 180,
+      "time": "9:05"
+    },
+    "lastPlace": {
+      "name": "Malaki Caldwell",
+      "speed": "19.4",
+      "power": 0,
+      "time": "10:02"
+    }
+  },
+  "miles": 2.0121913330930696
+}, {
+  "segment": {
+    "id": 2398866,
+    "name": "River bottom",
+    "distance": 1802.2
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "20.2",
+      "power": 0,
+      "time": "5:21"
+    }, {
+      "name": "Chris Renshaw",
+      "speed": "19.8",
+      "power": 0,
+      "time": "5:27"
+    }, {
+      "name": "Neil Boyd",
+      "speed": "19.3",
+      "power": 79,
+      "time": "5:37"
+    }, {
+      "name": "Greg C.",
+      "speed": "19.1",
+      "power": 0,
+      "time": "5:40"
+    }, {
+      "name": "trent daulton",
+      "speed": "19.0",
+      "power": 112,
+      "time": "5:41"
+    }, {
+      "name": "Cooper D.",
+      "speed": "18.2",
+      "power": 53,
+      "time": "5:56"
+    }, {
+      "name": "Quincy S.",
+      "speed": "18.2",
+      "power": 111,
+      "time": "5:56"
+    }, {
+      "name": "Chad S.",
+      "speed": "18.2",
+      "power": 92,
+      "time": "5:57"
+    }, {
+      "name": "Kevin Collings",
+      "speed": "18.1",
+      "power": 124,
+      "time": "5:58"
+    }, {
+      "name": "Corey White",
+      "speed": "18.1",
+      "power": 170,
+      "time": "5:59"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "20.2",
+      "power": 0,
+      "time": "5:21"
+    },
+    "lastPlace": {
+      "name": "Corey White",
+      "speed": "18.1",
+      "power": 170,
+      "time": "5:59"
+    }
+  },
+  "miles": 1.1198379459902819
+}, {
+  "segment": {
+    "id": 15884231,
+    "name": "Lizard 2017 - Cookie Toss Mountain",
+    "distance": 504.9
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "Dustin Burgardt",
+      "speed": "15.5",
+      "power": 378,
+      "time": "1:57"
+    }, {
+      "name": "Greg C.",
+      "speed": "15.4",
+      "power": 0,
+      "time": "1:58"
+    }, {
+      "name": "Quincy S.",
+      "speed": "14.4",
+      "power": 322,
+      "time": "2:06"
+    }, {
+      "name": "Dylan Postier",
+      "speed": "13.2",
+      "power": 247,
+      "time": "2:18"
+    }, {
+      "name": "Chris Rodgers",
+      "speed": "12.6",
+      "power": 356,
+      "time": "2:24"
+    }, {
+      "name": "nick vickers",
+      "speed": "12.6",
+      "power": 0,
+      "time": "2:24"
+    }, {
+      "name": "Corey Denton",
+      "speed": "12.5",
+      "power": 306,
+      "time": "2:25"
+    }, {
+      "name": "Albert S.",
+      "speed": "12.3",
+      "power": 247,
+      "time": "2:28"
+    }, {
+      "name": "Will Eagleton",
+      "speed": "11.8",
+      "power": 251,
+      "time": "2:34"
+    }, {
+      "name": "Corey White",
+      "speed": "11.2",
+      "power": 265,
+      "time": "2:43"
+    }],
+    "firstPlace": {
+      "name": "Dustin Burgardt",
+      "speed": "15.5",
+      "power": 378,
+      "time": "1:57"
+    },
+    "lastPlace": {
+      "name": "Corey White",
+      "speed": "11.2",
+      "power": 265,
+      "time": "2:43"
+    }
+  },
+  "miles": 0.31373109473448746
+}, {
+  "segment": {
+    "id": 12022578,
+    "name": "From Camp Horizon Gravel Challenge",
+    "distance": 3731.6
+  },
+  "segmentLeaderboard": {
+    "leaderboardEntries": [{
+      "name": "nick vickers",
+      "speed": "34.7",
+      "power": 0,
+      "time": "6:27"
+    }, {
+      "name": "Darren Mora",
+      "speed": "34.1",
+      "power": 0,
+      "time": "6:34"
+    }, {
+      "name": "Miles Abbey",
+      "speed": "28.5",
+      "power": 0,
+      "time": "7:52"
+    }, {
+      "name": "Jesse M.",
+      "speed": "27.5",
+      "power": 106,
+      "time": "8:08"
+    }, {
+      "name": "Chris Tyler",
+      "speed": "27.4",
+      "power": 31,
+      "time": "8:10"
+    }, {
+      "name": "Bobby Smith",
+      "speed": "27.4",
+      "power": 120,
+      "time": "8:10"
+    }, {
+      "name": "Elliott Rodda",
+      "speed": "27.2",
+      "power": 115,
+      "time": "8:13"
+    }, {
+      "name": "Desiree M.",
+      "speed": "25.9",
+      "power": 178,
+      "time": "8:38"
+    }, {
+      "name": "Quincy S.",
+      "speed": "25.3",
+      "power": 0,
+      "time": "8:52"
+    }, {
+      "name": "Steve Dutton",
+      "speed": "24.9",
+      "power": 112,
+      "time": "8:59"
+    }],
+    "firstPlace": {
+      "name": "nick vickers",
+      "speed": "34.7",
+      "power": 0,
+      "time": "6:27"
+    },
+    "lastPlace": {
+      "name": "Steve Dutton",
+      "speed": "24.9",
+      "power": 112,
+      "time": "8:59"
+    }
+  },
+  "miles": 2.318714504082419
+}];
