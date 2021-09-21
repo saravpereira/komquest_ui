@@ -6,7 +6,7 @@ import reducer from "./reducer";
 
 const middleware = [thunk];
 
-export default createStore(
+export const store = createStore(
   enableBatching(reducer),
   composeWithDevTools(applyMiddleware(...middleware))
 );

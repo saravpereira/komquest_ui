@@ -6,6 +6,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import SearchLocationInput from "./SearchLocationInputField";
 import * as SearchQuerySelectors from "./redux/selectors";
 import * as KomsActions from "../results/redux/actions";
+import * as KomsSelectors from "../results/redux/selectors";
 import SearchWattsInputField from "./SearchWattsInputField";
 
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +40,7 @@ const SearchFields = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const isInputFilled = useSelector(SearchQuerySelectors.selectIsInputValid);
+  const isLoading = useSelector(KomsSelectors.selectIsLoading);
 
   const handleSubmitSearchQuery = () => {
     dispatch(KomsActions.fetchRecommendedKoms());
@@ -51,7 +53,11 @@ const SearchFields = () => {
         <SearchLocationInput />
         <Tooltip
           title={
-            isInputFilled ? "" : "Enter Watts and Address to start your search"
+            !isInputFilled
+              ? "Enter Watts and Address to start your search"
+              : isLoading === 1
+              ? "Search is in Progress..."
+              : ""
           }
           aria-label="search"
         >
@@ -60,7 +66,7 @@ const SearchFields = () => {
               variant="contained"
               color="primary"
               size="large"
-              disabled={!isInputFilled}
+              disabled={!isInputFilled || isLoading === 1}
               onClick={handleSubmitSearchQuery}
             >
               Search KOMS

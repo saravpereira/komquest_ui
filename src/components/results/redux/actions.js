@@ -1,6 +1,6 @@
+import { showLoading, hideLoading } from "react-redux-loading-bar";
 import { getRecommendedKoms } from "../../common/api/recommendedKomsApi";
 import * as SearchQuerySelectors from "../../header/redux/selectors";
-import { mockData } from "./mockData";
 
 export const setRecommendedKoms = (payload) => ({
   type: "KOMS/SET_RECOMMENDED_KOMS",
@@ -11,7 +11,7 @@ export const setRecommendedKoms = (payload) => ({
 
 export function fetchRecommendedKoms() {
   return function fetchRecommendedKomsThunk(dispatch, getState) {
-    //dispatch(setRecommendedKoms(mockData));
+    dispatch(showLoading());
 
     const state = getState();
     const watts = SearchQuerySelectors.selectWatts(state);
@@ -19,11 +19,16 @@ export function fetchRecommendedKoms() {
 
     const params = {
       watts: watts.toString(),
-      address: address
+      address: address,
     };
 
-    return getRecommendedKoms(params).then((data) => {
-      dispatch(setRecommendedKoms(data));
-    });
+    return getRecommendedKoms(params)
+      .then((data) => {
+        dispatch(setRecommendedKoms(data));
+        dispatch(hideLoading());
+      })
+      .catch(() => {
+        dispatch(hideLoading());
+      });
   };
 }

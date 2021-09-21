@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import LoadingBar from "react-redux-loading-bar";
 import { isEmpty } from "lodash";
 import { makeStyles } from "@material-ui/core/styles";
 import { FaArrowCircleUp } from "react-icons/fa";
@@ -61,6 +62,12 @@ const KomsResults = () => {
 
   return (
     <div className={classes.root}>
+      <LoadingBar
+        updateTime={300}
+        maxProgress={85}
+        progressIncrease={5}
+        style={{ backgroundColor: "#493FC4", height: "5px" }}
+      />
       {recommendedKoms?.map((result) => (
         <div className={classes.cards} key={result.segment.name}>
           <KomsResult
