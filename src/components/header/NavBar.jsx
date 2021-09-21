@@ -71,7 +71,7 @@ const NavBar = () => {
               <img src={komquestsLogo} alt="logo" width="50" height="60" />
             </div>
             <div className={classes.title}>
-              <Typography variant="h6">Komquests</Typography>
+              <Typography variant="h6">KOMQuests</Typography>
             </div>
           </div>
           {!location.pathname.includes(LEADERBOARD_URL) ? (
