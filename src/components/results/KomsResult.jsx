@@ -69,7 +69,7 @@ const KomsResult = ({ id, name, distance, grade, elevationChange, miles, kom }) 
             </Typography>
             <FlashOnIcon fontSize="small" color="disabled" />
             <Typography variant="body2" component="p">
-              {kom.time.includes(":") ? kom.time : kom.time + "s"}
+              {kom.time ? kom.time.includes(":") ? kom.time : kom.time + "s" : "N/A"}
             </Typography>&nbsp;
             <Clock fontSize="small" color="disabled" />
           </div>
