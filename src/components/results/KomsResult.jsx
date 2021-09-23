@@ -7,7 +7,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import KomSymbol from "@mui/icons-material/EmojiEvents";
+import Clock from "@mui/icons-material/AccessTime";
 import { STRAVA_URL } from "../common/constants/urls";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const KomsResult = ({ id, name, distance, miles, kom }) => {
+const KomsResult = ({ id, name, distance, grade, elevationChange, miles, kom }) => {
   const classes = useStyles();
 
   const handleClick = () => {
@@ -55,11 +56,12 @@ const KomsResult = ({ id, name, distance, miles, kom }) => {
           {name}
         </Typography>
         <Typography variant="body2" component="p">
-          {distance} meters <span>•</span> {miles.toFixed(2)} miles
+        {miles.toFixed(2)} miles <span>•</span> {grade}% grade <span>•</span> {(elevationChange * 3.281).toFixed(0)} ft. elevation
         </Typography>
         <br />
         <div className={classes.power}>
-          <EmojiEventsIcon sx={{ color: "#FFD700" }} fontSize="medium" />
+          &nbsp;
+          <KomSymbol sx={{ color: "#FFD700" }} fontSize="medium" />
           &nbsp;
           <div className={classes.komDetails}>
             <Typography variant="body2" component="p">
@@ -67,8 +69,9 @@ const KomsResult = ({ id, name, distance, miles, kom }) => {
             </Typography>
             <FlashOnIcon fontSize="small" color="disabled" />
             <Typography variant="body2" component="p">
-              , {kom.time}
-            </Typography>
+              {kom.time.includes(":") ? kom.time : kom.time + "s"}
+            </Typography>&nbsp;
+            <Clock fontSize="small" color="disabled" />
           </div>
         </div>
       </CardContent>

@@ -63,9 +63,9 @@ const KomsResults = () => {
   return (
     <div className={classes.root}>
       <LoadingBar
-        updateTime={300}
+        updateTime={700}
         maxProgress={85}
-        progressIncrease={5}
+        progressIncrease={3}
         style={{ backgroundColor: "#493FC4", height: "5px" }}
       />
       {recommendedKoms?.map((result) => (
@@ -75,6 +75,8 @@ const KomsResults = () => {
             name={result.segment.name}
             distance={result.segment.distance}
             miles={result.miles}
+            grade={result.segment.averageGrade}
+            elevationChange={result.segment.elevationDifference}
             key={result.segment.name}
             kom={result.segmentLeaderboard.leaderboardEntries[0]}
           />
