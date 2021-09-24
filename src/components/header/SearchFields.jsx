@@ -62,7 +62,7 @@ const SearchFields = () => {
       <Tooltip
         title={
           !isInputFilled
-            ? "Enter Watts and Address to start your search"
+            ? "Enter an Address to start your search"
             : isLoading === 1
             ? "Search is in Progress..."
             : ""

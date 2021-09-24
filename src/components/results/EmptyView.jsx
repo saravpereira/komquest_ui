@@ -3,57 +3,57 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import SearchIcon from "@material-ui/icons/Search";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "35%",
     marginLeft: 50,
     marginTop: 200,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       marginTop: 250,
       marginLeft: 30,
-      width: '100%',
+      width: "100%",
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       marginTop: 100,
       marginLeft: 30,
-      width: '85%',
+      width: "85%",
     },
   },
   bullet: {
     display: "inline-block",
     margin: "0 2px",
     transform: "scale(0.8)",
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
   },
   title: {
     fontSize: 20,
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
   },
   pos: {
     marginBottom: 27,
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
   },
   word: {
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
   },
   definition: {
-    [theme.breakpoints.down('sm')]: {
-      display: 'none',
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
   },
   instructions: {
     display: "flex",
     flexDirection: "row",
-    [theme.breakpoints.down('sm')]: {
-      color: '#dbd9d9',
+    [theme.breakpoints.down("sm")]: {
+      color: "#dbd9d9",
     },
   },
 }));
@@ -81,10 +81,13 @@ const EmptyView = () => {
       <br />
       <br />
       <div className={classes.instructions}>
-       <SearchIcon />
+        <SearchIcon />
         <Typography variant="body2" component="p">
-          Start your Komquest search by entering the <b><i> Watts </i></b> and{" "}
-          <b><i> Address </i></b> above
+          Start your Komquest search by entering an
+          <b>
+            <i> Address </i>
+          </b>{" "}
+          above
         </Typography>
       </div>
     </div>
