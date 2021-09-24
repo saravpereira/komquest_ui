@@ -18,20 +18,3 @@ export const selectIsInputValid = createSelector(
   selectAddress,
   (watts, address) => watts && address
 );
-
-export const selectPermutationFilterCases = createSelector(
-  selectPositiveGrade,
-  selectMaxDistance,
-  selectMaxGrade,
-  (positiveGrade, maxDistance, maxGrade) => {
-    return {
-      case1: !!(positiveGrade && !maxDistance && !maxGrade),
-      case2: !!(positiveGrade && maxDistance && !maxGrade),
-      case3: !!(positiveGrade && maxDistance && maxGrade),
-      case4: !!(!positiveGrade && maxDistance && !maxGrade),
-      case5: !!(!positiveGrade && maxDistance && maxGrade),
-      case6: !!(positiveGrade && !maxDistance && maxGrade),
-      case7: !!(!positiveGrade && !maxDistance && maxGrade),
-    };
-  }
-);

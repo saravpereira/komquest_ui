@@ -1,5 +1,4 @@
 import get from "lodash/get";
-import { isEmpty } from "lodash";
 import { createSelector } from "reselect";
 import * as SearchQuerySelectors from "../../header/redux/selectors";
 
@@ -12,31 +11,28 @@ export const selectFilteredRecommendedKoms = createSelector(
   selectRecommendedKoms,
   SearchQuerySelectors.selectMaxDistance,
   SearchQuerySelectors.selectMaxGrade,
-  SearchQuerySelectors.selectPermutationFilterCases,
-  (allRecommededKoms, maxDistance, maxGrade, cases) => {
-    if (isEmpty(allRecommededKoms)) return;
+  SearchQuerySelectors.selectPositiveGrade,
+  (allRecommededKoms, maxDistance, maxGrade, positiveGrade) => {
+    const excluded = [];
 
-    return allRecommededKoms.filter((kom) => {
-      if (cases.case1) {
-        return kom.segment.averageGrade > 0;
-      } else if (cases.case2) {
-        return kom.segment.averageGrade > 0 && kom.miles <= maxDistance;
-      } else if (cases.case3) {
-        return (
-          kom.segment.averageGrade > 0 &&
-          kom.miles <= maxDistance &&
-          kom.segment.averageGrade <= maxGrade
-        );
-      } else if (cases.case4) {
-        return kom.miles <= maxDistance;
-      } else if (cases.case5) {
-        return kom.miles <= maxDistance && kom.segment.averageGrade <= maxGrade;
-      } else if (cases.case6) {
-        return kom.segment.averageGrade > 0 && kom.segment.averageGrade <= maxGrade;
-      } else if (cases.case7) {
-        return kom.segment.averageGrade <= maxGrade;
+    allRecommededKoms.forEach((kom) => {
+      if (positiveGrade && kom.segment.averageGrade < 0) {
+        excluded.push(kom)
       }
-      return kom
-    });
+
+      if (maxGrade && kom.segment.averageGrade > maxGrade && !excluded.includes(kom)) {
+        excluded.push(kom)
+      }
+
+      if (maxDistance && kom.miles > maxDistance && !excluded.includes(kom)) {
+        excluded.push(kom)
+      }
+
+    })
+
+    const included = allRecommededKoms.filter(kom => !excluded.includes(kom))
+
+    return included;
+    
   }
 );
