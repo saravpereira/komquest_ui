@@ -12,27 +12,42 @@ export const selectFilteredRecommendedKoms = createSelector(
   SearchQuerySelectors.selectMaxDistance,
   SearchQuerySelectors.selectMaxGrade,
   SearchQuerySelectors.selectPositiveGrade,
-  (allRecommededKoms, maxDistance, maxGrade, positiveGrade) => {
+  SearchQuerySelectors.selectWatts,
+  (allRecommededKoms, maxDistance, maxGrade, positiveGrade, watts) => {
     const excluded = [];
 
     allRecommededKoms.forEach((kom) => {
       if (positiveGrade && kom.segment.averageGrade < 0) {
-        excluded.push(kom)
+        excluded.push(kom);
       }
 
-      if (maxGrade && kom.segment.averageGrade > maxGrade && !excluded.includes(kom)) {
-        excluded.push(kom)
+      if (
+        maxGrade &&
+        kom.segment.averageGrade > maxGrade &&
+        !excluded.includes(kom)
+      ) {
+        excluded.push(kom);
       }
 
       if (maxDistance && kom.miles > maxDistance && !excluded.includes(kom)) {
-        excluded.push(kom)
+        excluded.push(kom);
       }
 
-    })
+      if (maxDistance && kom.miles > maxDistance && !excluded.includes(kom)) {
+        excluded.push(kom);
+      }
 
-    const included = allRecommededKoms.filter(kom => !excluded.includes(kom))
+      if (
+        maxDistance &&
+        kom.segmentLeaderboard?.leaderboardEntries[0]?.power > watts &&
+        !excluded.includes(kom)
+      ) {
+        excluded.push(kom);
+      }
+    });
+
+    const included = allRecommededKoms.filter((kom) => !excluded.includes(kom));
 
     return included;
-    
   }
 );
