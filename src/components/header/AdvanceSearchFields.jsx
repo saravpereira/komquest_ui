@@ -40,11 +40,13 @@ const AdvanceSearchFields = () => {
   };
 
   const handleMaxDistanceChange = (e) => {
-    dispatch(SearchQueryActions.setMaxDistance(e.target.value));
+    const typedMaxDistance = e.target.value === "" ? null : e.target.value
+    dispatch(SearchQueryActions.setMaxDistance(typedMaxDistance));
   };
 
   const handleMaxGradeChange = (e) => {
-    dispatch(SearchQueryActions.setMaxGrade(e.target.value));
+    const typedMaxGrade = e.target.value === "" ? null : e.target.value
+    dispatch(SearchQueryActions.setMaxGrade(typedMaxGrade));
   };
 
   const handleReset = () => {

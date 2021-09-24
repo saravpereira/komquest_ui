@@ -17,13 +17,13 @@ export const selectFilteredRecommendedKoms = createSelector(
     if (isEmpty(allRecommededKoms)) return;
 
     const cases = {
-      case1: positiveGrade && !maxDistance && !maxGrade,
-      case2: positiveGrade && maxDistance && !maxGrade,
-      case3: positiveGrade && maxDistance && maxGrade,
-      case4: !positiveGrade && maxDistance && !maxGrade,
-      case5: !positiveGrade && maxDistance && maxGrade,
-      case6: positiveGrade && !maxDistance && maxGrade,
-      case7: !positiveGrade && !maxDistance && maxGrade,
+      case1: !!(positiveGrade && !maxDistance && !maxGrade),
+      case2: !!(positiveGrade && maxDistance && !maxGrade),
+      case3: !!(positiveGrade && maxDistance && maxGrade),
+      case4: !!(!positiveGrade && maxDistance && !maxGrade),
+      case5: !!(!positiveGrade && maxDistance && maxGrade),
+      case6: !!(positiveGrade && !maxDistance && maxGrade),
+      case7: !!(!positiveGrade && !maxDistance && maxGrade),
     };
 
     return allRecommededKoms.filter((kom) => {
