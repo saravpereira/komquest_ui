@@ -8,11 +8,12 @@ import * as SearchQuerySelectors from "./redux/selectors";
 import * as KomsActions from "../results/redux/actions";
 import * as KomsSelectors from "../results/redux/selectors";
 import SearchWattsInputField from "./SearchWattsInputField";
+import AdvanceSearchFields from "./AdvanceSearchFields";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     [theme.breakpoints.down("md")]: {
       flexWrap: "wrap",
     },
@@ -33,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
   },
   submitButton: {
     paddingTop: theme.spacing(0.5),
+  },
+  advanceSearchButton: {
+    paddingTop: theme.spacing(0.8),
+    display: "flex",
+    justifyContent: "center",
   },
 }));
 
@@ -74,6 +80,9 @@ const SearchFields = () => {
           </div>
         </Tooltip>
       </form>
+      <div className={classes.advanceSearchButton}>
+        <AdvanceSearchFields />
+      </div>
     </div>
   );
 };
