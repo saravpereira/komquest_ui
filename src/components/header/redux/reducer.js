@@ -2,6 +2,9 @@ const defaults = {
   watts: "",
   address: "",
   koms: null,
+  positiveGrade: null,
+  maxDistance: null,
+  maxGrade: null,
 };
 
 export default function searchQuery(state = defaults, action) {
@@ -16,6 +19,32 @@ export default function searchQuery(state = defaults, action) {
       return {
         ...state,
         address: action.payload,
+      };
+    }
+    case "SEARCH_QUERY/SET_POSITIVE_GRADE": {
+      return {
+        ...state,
+        positiveGrade: action.payload,
+      };
+    }
+    case "SEARCH_QUERY/SET_MAX_DISTANCE": {
+      return {
+        ...state,
+        maxDistance: action.payload,
+      };
+    }
+    case "SEARCH_QUERY/SET_MAX_GRADE": {
+      return {
+        ...state,
+        maxGrade: action.payload,
+      };
+    }
+    case "SEARCH_QUERY/RESET_ADVANCE_SEARCH": {
+      return {
+        ...state,
+        positiveGrade: defaults.positiveGrade,
+        maxDistance: defaults.maxDistance,
+        maxGrade: defaults.maxGrade,
       };
     }
     default:
