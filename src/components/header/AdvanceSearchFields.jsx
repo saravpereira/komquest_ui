@@ -7,7 +7,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import * as SearchQueryActions from "./redux/actions";
 import * as SearchQuerySelectors from "./redux/selectors";
-import * as KomsSelectors from "../results/redux/selectors"
+import * as KomsSelectors from "../results/redux/selectors";
 
 const useStyles = makeStyles((theme) => ({
   inputFields: {
@@ -33,35 +33,33 @@ const AdvanceSearchFields = () => {
   const positiveGrade = useSelector(SearchQuerySelectors.selectPositiveGrade);
   const maxDistance = useSelector(SearchQuerySelectors.selectMaxDistance);
   const maxGrade = useSelector(SearchQuerySelectors.selectMaxGrade);
+  const watts = useSelector(SearchQuerySelectors.selectWatts);
   const isLoading = useSelector(KomsSelectors.selectIsLoading);
 
-  const handlePostiveGradeChange = (e) => {
+  const handlePostiveGradeChange = (e) =>
     dispatch(SearchQueryActions.setPositiveGrade(e.target.checked));
-  };
 
   const handleMaxDistanceChange = (e) => {
-    const typedMaxDistance = e.target.value === "" ? null : e.target.value
+    const typedMaxDistance = e.target.value === "" ? null : e.target.value;
     dispatch(SearchQueryActions.setMaxDistance(typedMaxDistance));
   };
 
   const handleMaxGradeChange = (e) => {
-    const typedMaxGrade = e.target.value === "" ? null : e.target.value
+    const typedMaxGrade = e.target.value === "" ? null : e.target.value;
     dispatch(SearchQueryActions.setMaxGrade(typedMaxGrade));
   };
 
-  const handleReset = () => {
-    dispatch(SearchQueryActions.resetAdvanceSearch());
+  const handleWattsChange = (e) => {
+    dispatch(SearchQueryActions.setWatts(e.target.value));
   };
+
+  const handleReset = () =>  dispatch(SearchQueryActions.resetAdvanceSearch());
 
   const open = Boolean(anchorEl);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  const handleClick = (event) => setAnchorEl(event.currentTarget);
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClose = () => setAnchorEl(null);
 
   return (
     <>
@@ -73,9 +71,10 @@ const AdvanceSearchFields = () => {
         onClick={handleClick}
         variant="contained"
         disabled={isLoading === 1}
+        size="large"
       >
         <ControlPointIcon />
-        &nbsp; More
+        &nbsp; Filters
       </Button>
       <Menu
         id="basic-menu"
@@ -86,7 +85,11 @@ const AdvanceSearchFields = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem>
+        <MenuItem
+          onClick={() =>
+            dispatch(SearchQueryActions.setPositiveGrade(!positiveGrade))
+          }
+        >
           <input
             type="checkbox"
             onChange={handlePostiveGradeChange}
@@ -114,6 +117,16 @@ const AdvanceSearchFields = () => {
             value={maxDistance || ""}
           />
           &nbsp; miles
+        </MenuItem>
+        <MenuItem>
+          <input
+            placeholder="Watts"
+            type="number"
+            className={classes.inputFields}
+            onChange={handleWattsChange}
+            value={watts}
+          />
+          &nbsp; Watts
         </MenuItem>
         <div className={classes.resetButton}>
           <Button onClick={handleReset}>Reset</Button>

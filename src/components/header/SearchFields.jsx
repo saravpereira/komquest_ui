@@ -7,7 +7,6 @@ import SearchLocationInput from "./SearchLocationInputField";
 import * as SearchQuerySelectors from "./redux/selectors";
 import * as KomsActions from "../results/redux/actions";
 import * as KomsSelectors from "../results/redux/selectors";
-import SearchWattsInputField from "./SearchWattsInputField";
 import AdvanceSearchFields from "./AdvanceSearchFields";
 
 const useStyles = makeStyles((theme) => ({
@@ -34,11 +33,11 @@ const useStyles = makeStyles((theme) => ({
   },
   submitButton: {
     paddingTop: theme.spacing(0.5),
-  },
-  advanceSearchButton: {
-    paddingTop: theme.spacing(0.8),
     display: "flex",
     justifyContent: "center",
+  },
+  advanceSearchButton: {
+    paddingTop: theme.spacing(0.5),
   },
 }));
 
@@ -55,34 +54,33 @@ const SearchFields = () => {
   return (
     <div className={classes.container}>
       <form className={classes.inputField} noValidate autoComplete="off">
-        <SearchWattsInputField />
         <SearchLocationInput />
-        <Tooltip
-          title={
-            !isInputFilled
-              ? "Enter Watts and Address to start your search"
-              : isLoading === 1
-              ? "Search is in Progress..."
-              : ""
-          }
-          aria-label="search"
-        >
-          <div className={classes.submitButton}>
-            <Button
-              variant="contained"
-              color="primary"
-              size="large"
-              disabled={!isInputFilled || isLoading === 1}
-              onClick={handleSubmitSearchQuery}
-            >
-              Search KOMS
-            </Button>
-          </div>
-        </Tooltip>
+        <div className={classes.advanceSearchButton}>
+          <AdvanceSearchFields />
+        </div>
       </form>
-      <div className={classes.advanceSearchButton}>
-        <AdvanceSearchFields />
-      </div>
+      <Tooltip
+        title={
+          !isInputFilled
+            ? "Enter Watts and Address to start your search"
+            : isLoading === 1
+            ? "Search is in Progress..."
+            : ""
+        }
+        aria-label="search"
+      >
+        <div className={classes.submitButton}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            disabled={!isInputFilled || isLoading === 1}
+            onClick={handleSubmitSearchQuery}
+          >
+            Search KOMS
+          </Button>
+        </div>
+      </Tooltip>
     </div>
   );
 };

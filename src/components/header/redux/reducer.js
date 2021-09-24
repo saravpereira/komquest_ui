@@ -1,8 +1,8 @@
 const defaults = {
-  watts: "",
+  watts: "10000",
   address: "",
   koms: null,
-  positiveGrade: null,
+  positiveGrade: false,
   maxDistance: null,
   maxGrade: null,
 };
@@ -45,6 +45,7 @@ export default function searchQuery(state = defaults, action) {
         positiveGrade: defaults.positiveGrade,
         maxDistance: defaults.maxDistance,
         maxGrade: defaults.maxGrade,
+        watts: defaults.watts,
       };
     }
     default:

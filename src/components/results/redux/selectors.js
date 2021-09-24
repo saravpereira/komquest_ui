@@ -10,21 +10,11 @@ export const selectIsLoading = (state) => get(state, `loadingBar.default`);
 
 export const selectFilteredRecommendedKoms = createSelector(
   selectRecommendedKoms,
-  SearchQuerySelectors.selectPositiveGrade,
   SearchQuerySelectors.selectMaxDistance,
   SearchQuerySelectors.selectMaxGrade,
-  (allRecommededKoms, positiveGrade, maxDistance, maxGrade) => {
+  SearchQuerySelectors.selectPermutationFilterCases,
+  (allRecommededKoms, maxDistance, maxGrade, cases) => {
     if (isEmpty(allRecommededKoms)) return;
-
-    const cases = {
-      case1: !!(positiveGrade && !maxDistance && !maxGrade),
-      case2: !!(positiveGrade && maxDistance && !maxGrade),
-      case3: !!(positiveGrade && maxDistance && maxGrade),
-      case4: !!(!positiveGrade && maxDistance && !maxGrade),
-      case5: !!(!positiveGrade && maxDistance && maxGrade),
-      case6: !!(positiveGrade && !maxDistance && maxGrade),
-      case7: !!(!positiveGrade && !maxDistance && maxGrade),
-    };
 
     return allRecommededKoms.filter((kom) => {
       if (cases.case1) {
