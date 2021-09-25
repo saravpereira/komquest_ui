@@ -72,7 +72,7 @@ const AdvanceSearchFields = () => {
         onClick={handleClick}
         variant="contained"
         disabled={isLoading === 1}
-        color="primary"
+        style={{ background: "#2E3B55", color: "white" }}
         size="large"
       >
         <ControlPointIcon />

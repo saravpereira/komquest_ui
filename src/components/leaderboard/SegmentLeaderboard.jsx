@@ -47,7 +47,7 @@ const SegmentLeaderboard = ({ match }) => {
         <div className={classes.navigateBackContainer}>
           <Button
             variant="contained"
-            color="primary"
+            style={{ background: "#2E3B55", color: "white" }}
             size="large"
             onClick={goBack}
           >

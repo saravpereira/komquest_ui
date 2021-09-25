@@ -76,6 +76,7 @@ const SearchFields = () => {
             size="large"
             disabled={!isInputFilled || isLoading === 1}
             onClick={handleSubmitSearchQuery}
+            style={!isInputFilled || isLoading === 1 ? {} : { background: "#2E3B55", color: "white" }}
           >
             Search KOMS
           </Button>
