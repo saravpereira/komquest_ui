@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import Button from "@mui/material/Button";
+import CoreButton from "@material-ui/core/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import * as SearchQueryActions from "./redux/actions";
@@ -63,7 +64,7 @@ const AdvanceSearchFields = () => {
 
   return (
     <>
-      <Button
+      <CoreButton
         id="basic-button"
         aria-controls="basic-menu"
         aria-haspopup="true"
@@ -71,11 +72,12 @@ const AdvanceSearchFields = () => {
         onClick={handleClick}
         variant="contained"
         disabled={isLoading === 1}
+        color="primary"
         size="large"
       >
         <ControlPointIcon />
         &nbsp; Filters
-      </Button>
+      </CoreButton>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -120,7 +122,7 @@ const AdvanceSearchFields = () => {
         </MenuItem>
         <MenuItem>
           <input
-            placeholder="Watts"
+            placeholder="Max Watts"
             type="number"
             className={classes.inputFields}
             onChange={handleWattsChange}

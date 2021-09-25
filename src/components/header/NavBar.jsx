@@ -1,14 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
+import Button from "@mui/material/Button";
+import MenuDrawer from "./MenuDrawer";
 import komquestsLogo from "../common/images/komquestsLogo.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginTop: 4,
+    marginBottom: 8,
   },
   logoAndTitle: {
     display: "flex",
@@ -33,6 +36,23 @@ const useStyles = makeStyles((theme) => ({
       flexWrap: "wrap",
     },
   },
+  navOptions: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  option: {
+    margin: "10px",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
+  menuIcon: {
+    display: "flex",
+    justifyContent: "flex-end",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
 }));
 
 const NavBar = () => {
@@ -40,7 +60,7 @@ const NavBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent" className={classes.appBar}>
+      <AppBar position="static" style={{ background: "#2E3B55", padding: 6 }}>
         <Toolbar className={classes.toolbar}>
           <div className={classes.logoAndTitle}>
             <div className={classes.logo}>
@@ -48,6 +68,34 @@ const NavBar = () => {
             </div>
             <div className={classes.title}>
               <Typography variant="h6">KOMQuests</Typography>
+            </div>
+          </div>
+          <div className={classes.navOptions}>
+            <div className={classes.menuIcon}>
+              <MenuDrawer />
+            </div>
+
+            <div className={classes.option}>
+              <Link to={`/`} style={{ textDecoration: "none" }}>
+                <Button
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  Home
+                </Button>
+              </Link>
+            </div>
+            <div className={classes.option}>
+              <Link to={`/about`} style={{ textDecoration: "none" }}>
+                <Button
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  About
+                </Button>
+              </Link>
             </div>
           </div>
         </Toolbar>
