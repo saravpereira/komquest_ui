@@ -54,7 +54,7 @@ const AdvanceSearchFields = () => {
     dispatch(SearchQueryActions.setWatts(e.target.value));
   };
 
-  const handleReset = () =>  dispatch(SearchQueryActions.resetAdvanceSearch());
+  const handleReset = () => dispatch(SearchQueryActions.resetAdvanceSearch());
 
   const open = Boolean(anchorEl);
 
@@ -72,7 +72,11 @@ const AdvanceSearchFields = () => {
         onClick={handleClick}
         variant="contained"
         disabled={isLoading === 1}
-        style={{ background: "#2E3B55", color: "white", borderRadius: "30px" }}
+        style={
+          isLoading === 1
+            ? {}
+            : { background: "#2E3B55", color: "white", borderRadius: "30px" }
+        }
         size="large"
       >
         <ControlPointIcon />
