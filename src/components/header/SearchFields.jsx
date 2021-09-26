@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
+import SearchIcon from "@mui/icons-material/Search";
 import SearchLocationInput from "./SearchLocationInputField";
 import * as SearchQuerySelectors from "./redux/selectors";
 import * as KomsActions from "../results/redux/actions";
@@ -76,9 +77,14 @@ const SearchFields = () => {
             size="large"
             disabled={!isInputFilled || isLoading === 1}
             onClick={handleSubmitSearchQuery}
-            style={!isInputFilled || isLoading === 1 ? {} : { background: "#2E3B55", color: "white" }}
+            style={
+              !isInputFilled || isLoading === 1
+                ? {}
+                : { background: "#2E3B55", color: "white" }
+            }
           >
-            Search KOMS
+            <SearchIcon />
+            &nbsp; Search KOMS
           </Button>
         </div>
       </Tooltip>
