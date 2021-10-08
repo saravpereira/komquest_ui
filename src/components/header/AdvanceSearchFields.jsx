@@ -132,13 +132,13 @@ const AdvanceSearchFields = () => {
         </MenuItem>
         <MenuItem>
           <input
-            placeholder={recommendationType === "watts" ? "Max Watts" : "Max Pace"}
-            type="number"
+            placeholder={recommendationType === "cycling" ? "Max Watts" : "Max Pace"}
+            type={recommendationType === "cycling" ? "number" : "text"}
             className={classes.inputFields}
-            onChange={recommendationType === "watts" ? handleWattsChange : handlePaceChange}
-            value={recommendationType === "watts" ? watts : pace}
+            onChange={recommendationType === "cycling" ? handleWattsChange : handlePaceChange}
+            value={recommendationType === "cycling" ? watts : pace}
           />
-          &nbsp; {recommendationType === "watts" ? "Watts" : "Pace"}
+          &nbsp; {recommendationType === "cycling" ? "Watts" : "/km"}
         </MenuItem>
         <div className={classes.resetButton}>
           <Button onClick={handleReset}>Reset</Button>

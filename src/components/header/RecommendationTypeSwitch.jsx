@@ -28,10 +28,10 @@ const RecommendationTypeSwitch = () => {
     setValue(event.target.value);
     if (event.target.value === "cycling") {
       dispatch(SearchQueryActions.setPace(""));
-      return dispatch(ResultsActions.setRecommendationType("watts"));
+      return dispatch(ResultsActions.setRecommendationType("cycling"));
     }
     dispatch(SearchQueryActions.setWatts(""));
-    return dispatch(ResultsActions.setRecommendationType("pace"));
+    return dispatch(ResultsActions.setRecommendationType("running"));
   };
 
   return (

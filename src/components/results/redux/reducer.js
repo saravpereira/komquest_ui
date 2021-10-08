@@ -1,6 +1,6 @@
 const defaults = {
   recommendedKoms: [],
-  recommendationType: "watts",
+  recommendationType: "cycling",
 };
 
 export default function komsReducer(state = defaults, action) {

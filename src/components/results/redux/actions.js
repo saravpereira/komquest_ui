@@ -28,7 +28,7 @@ export function fetchRecommendedKoms() {
     const address = SearchQuerySelectors.selectAddress(state);
     const recommendationType = ResultsSelectors.selectRecommendationType(state);
 
-    if (recommendationType === "watts") {
+    if (recommendationType === "cycling") {
       const params = {
         watts: watts.toString(),
         address: address,
@@ -41,7 +41,7 @@ export function fetchRecommendedKoms() {
         .catch(() => {
           dispatch(hideLoading());
         });
-    } else if (recommendationType === "pace") {
+    } else if (recommendationType === "running") {
       const params = {
         pace: pace.toString(),
         address: address,

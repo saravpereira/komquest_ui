@@ -37,12 +37,8 @@ export const selectFilteredRecommendedKoms = createSelector(
         excluded.push(kom);
       }
 
-      if (maxDistance && kom.miles > maxDistance && !excluded.includes(kom)) {
-        excluded.push(kom);
-      }
-
       if (
-        maxDistance &&
+        watts &&
         kom.segmentLeaderboard?.leaderboardEntries[0]?.power > watts &&
         !excluded.includes(kom)
       ) {
@@ -50,13 +46,12 @@ export const selectFilteredRecommendedKoms = createSelector(
       }
 
       if (
-        maxDistance &&
+        pace &&
         kom.segmentLeaderboard?.leaderboardEntries[0]?.pace > pace &&
         !excluded.includes(kom)
       ) {
         excluded.push(kom);
       }
-
     });
 
     const included = allRecommededKoms.filter((kom) => !excluded.includes(kom));
