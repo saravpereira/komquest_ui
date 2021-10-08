@@ -37,7 +37,7 @@ const MenuDrawer = () => {
         {["Home", "About KOMQuests"].map((text, index) => {
           const path = text === "Home" ? "" : "about";
           return (
-            <Link to={`/${path}`} style={{ textDecoration: "none" }}>
+            <Link to={`/${path}`} style={{ textDecoration: "none" }} key={index}>
             <ListItem button key={text}>
               <ListItemIcon>
                 {index % 2 === 0 ? <HomeIcon /> : <InfoIcon />}
