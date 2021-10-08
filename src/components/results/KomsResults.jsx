@@ -90,12 +90,11 @@ const KomsResults = () => {
             <KomsResult
               id={result.segment.id}
               name={result.segment.name}
-              distance={result.segment.distance}
               miles={result.miles}
               grade={result.segment.averageGrade}
               elevationChange={result.segment.elevationDifference}
               key={result.segment.name}
-              kom={result.segmentLeaderboard.leaderboardEntries[0]}
+              kom={result.segmentLeaderboard.firstPlace}
             />
           </div>
         ))}

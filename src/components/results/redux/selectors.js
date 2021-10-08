@@ -5,6 +5,9 @@ import * as SearchQuerySelectors from "../../header/redux/selectors";
 export const selectRecommendedKoms = (state) =>
   get(state, `koms.recommendedKoms`);
 
+export const selectRecommendationType = (state) =>
+  get(state, `koms.recommendationType`);
+
 export const selectIsLoading = (state) => get(state, `loadingBar.default`);
 
 export const selectFilteredRecommendedKoms = createSelector(
@@ -13,7 +16,8 @@ export const selectFilteredRecommendedKoms = createSelector(
   SearchQuerySelectors.selectMaxGrade,
   SearchQuerySelectors.selectPositiveGrade,
   SearchQuerySelectors.selectWatts,
-  (allRecommededKoms, maxDistance, maxGrade, positiveGrade, watts) => {
+  SearchQuerySelectors.selectPace,
+  (allRecommededKoms, maxDistance, maxGrade, positiveGrade, watts, pace) => {
     const excluded = [];
 
     allRecommededKoms.forEach((kom) => {
@@ -44,6 +48,15 @@ export const selectFilteredRecommendedKoms = createSelector(
       ) {
         excluded.push(kom);
       }
+
+      if (
+        maxDistance &&
+        kom.segmentLeaderboard?.leaderboardEntries[0]?.pace > pace &&
+        !excluded.includes(kom)
+      ) {
+        excluded.push(kom);
+      }
+
     });
 
     const included = allRecommededKoms.filter((kom) => !excluded.includes(kom));

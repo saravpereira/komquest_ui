@@ -3,6 +3,11 @@ export const setWatts = (payload) => ({
   payload,
 });
 
+export const setPace = (payload) => ({
+  type: "SEARCH_QUERY/SET_PACE",
+  payload,
+});
+
 export const setAddress = (payload) => ({
   type: "SEARCH_QUERY/SET_ADDRESS",
   payload,

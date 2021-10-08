@@ -35,7 +35,9 @@ const AdvanceSearchFields = () => {
   const maxDistance = useSelector(SearchQuerySelectors.selectMaxDistance);
   const maxGrade = useSelector(SearchQuerySelectors.selectMaxGrade);
   const watts = useSelector(SearchQuerySelectors.selectWatts);
+  const pace = useSelector(SearchQuerySelectors.selectPace);
   const isLoading = useSelector(KomsSelectors.selectIsLoading);
+  const recommendationType = useSelector(KomsSelectors.selectRecommendationType);
 
   const handlePostiveGradeChange = (e) =>
     dispatch(SearchQueryActions.setPositiveGrade(e.target.checked));
@@ -52,6 +54,10 @@ const AdvanceSearchFields = () => {
 
   const handleWattsChange = (e) => {
     dispatch(SearchQueryActions.setWatts(e.target.value));
+  };
+
+  const handlePaceChange = (e) => {
+    dispatch(SearchQueryActions.setPace(e.target.value));
   };
 
   const handleReset = () => dispatch(SearchQueryActions.resetAdvanceSearch());
@@ -126,13 +132,13 @@ const AdvanceSearchFields = () => {
         </MenuItem>
         <MenuItem>
           <input
-            placeholder="Max Watts"
+            placeholder={recommendationType === "watts" ? "Max Watts" : "Max Pace"}
             type="number"
             className={classes.inputFields}
-            onChange={handleWattsChange}
-            value={watts}
+            onChange={recommendationType === "watts" ? handleWattsChange : handlePaceChange}
+            value={recommendationType === "watts" ? watts : pace}
           />
-          &nbsp; Watts
+          &nbsp; {recommendationType === "watts" ? "Watts" : "Pace"}
         </MenuItem>
         <div className={classes.resetButton}>
           <Button onClick={handleReset}>Reset</Button>

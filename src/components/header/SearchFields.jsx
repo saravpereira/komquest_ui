@@ -9,6 +9,7 @@ import * as SearchQuerySelectors from "./redux/selectors";
 import * as KomsActions from "../results/redux/actions";
 import * as KomsSelectors from "../results/redux/selectors";
 import AdvanceSearchFields from "./AdvanceSearchFields";
+import RecommendationTypeSwitch from "./RecommendationTypeSwitch";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -40,12 +41,26 @@ const useStyles = makeStyles((theme) => ({
   advanceSearchButton: {
     paddingTop: theme.spacing(0.5),
   },
+  filters: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    [theme.breakpoints.down("md")]: {
+      flexWrap: "wrap",
+    },
+  },
+  typeFilter: {
+    paddingTop: theme.spacing(0.5),
+    paddingLeft: theme.spacing(2),
+    display: "flex",
+    flexDirection: "row",
+  }
 }));
 
 const SearchFields = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const isInputFilled = useSelector(SearchQuerySelectors.selectIsInputValid);
+  const isInputFilled = useSelector(SearchQuerySelectors.selectAddress);
   const isLoading = useSelector(KomsSelectors.selectIsLoading);
 
   const handleSubmitSearchQuery = () => {
@@ -56,8 +71,15 @@ const SearchFields = () => {
     <div className={classes.container}>
       <form className={classes.inputField} noValidate autoComplete="off">
         <SearchLocationInput />
-        <div className={classes.advanceSearchButton}>
-          <AdvanceSearchFields />
+        <div className={classes.filters}>
+          <div className={classes.advanceSearchButton}>
+            <AdvanceSearchFields />
+          </div>
+          <Tooltip title="Re-run your search if modified">
+          <div className={classes.typeFilter}>
+            <RecommendationTypeSwitch />
+          </div>
+          </Tooltip>
         </div>
       </form>
       <Tooltip

@@ -1,5 +1,6 @@
 const defaults = {
   recommendedKoms: [],
+  recommendationType: "watts",
 };
 
 export default function komsReducer(state = defaults, action) {
@@ -8,6 +9,12 @@ export default function komsReducer(state = defaults, action) {
       return {
         ...state,
         recommendedKoms: action.payload,
+      };
+    }
+    case "KOMS/SET_RECOMMENDATION_TYPE": {
+      return {
+        ...state,
+        recommendationType: action.payload,
       };
     }
     default:

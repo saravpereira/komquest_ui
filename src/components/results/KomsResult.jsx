@@ -36,18 +36,20 @@ const useStyles = makeStyles((theme) => ({
   },
   komDetails: {
     paddingTop: 1,
-    width: '100%',
+    width: "100%",
     display: "flex",
     flexDirection: "row",
-  }
+  },
 }));
 
-const KomsResult = ({ id, name, distance, grade, elevationChange, miles, kom }) => {
+const KomsResult = ({ id, name, grade, elevationChange, miles, kom }) => {
   const classes = useStyles();
 
   const handleClick = () => {
     window.open(`${STRAVA_URL}${id}`);
   };
+
+  const isCycling = "power" in kom;
 
   return (
     <Card className={classes.root} variant="outlined">
@@ -56,7 +58,8 @@ const KomsResult = ({ id, name, distance, grade, elevationChange, miles, kom }) 
           {name}
         </Typography>
         <Typography variant="body2" component="p">
-        {miles.toFixed(2)} miles <span>•</span> {grade}% grade <span>•</span> {(elevationChange * 3.281).toFixed(0)} ft. elevation
+          {miles.toFixed(2)} miles <span>•</span> {grade}% grade <span>•</span>{" "}
+          {(elevationChange * 3.281).toFixed(0)} ft. elevation
         </Typography>
         <br />
         <div className={classes.power}>
@@ -65,12 +68,18 @@ const KomsResult = ({ id, name, distance, grade, elevationChange, miles, kom }) 
           &nbsp;
           <div className={classes.komDetails}>
             <Typography variant="body2" component="p">
-              <strong>KOM:</strong> {kom.power}W
+              <strong>KOM:</strong> {isCycling ? kom.power : kom.pace}
+              {isCycling ? "W" : <>/km,&nbsp; </> }
             </Typography>
-            <FlashOnIcon fontSize="small" color="disabled" />
+            {isCycling && <FlashOnIcon fontSize="small" color="disabled" />}
             <Typography variant="body2" component="p">
-              {kom.time ? kom.time.includes(":") ? kom.time : kom.time + "s" : "N/A"}
-            </Typography>&nbsp;
+              {kom.time
+                ? kom.time.includes(":")
+                  ? kom.time
+                  : kom.time + "s"
+                : "N/A"}
+            </Typography>
+            &nbsp;
             <Clock fontSize="small" color="disabled" />
           </div>
         </div>

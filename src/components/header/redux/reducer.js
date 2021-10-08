@@ -1,5 +1,6 @@
 const defaults = {
-  watts: "10000",
+  pace: "",
+  watts: "",
   address: "",
   koms: null,
   positiveGrade: false,
@@ -9,6 +10,12 @@ const defaults = {
 
 export default function searchQuery(state = defaults, action) {
   switch (action.type) {
+    case "SEARCH_QUERY/SET_PACE": {
+      return {
+        ...state,
+        pace: action.payload,
+      };
+    }
     case "SEARCH_QUERY/SET_WATTS": {
       return {
         ...state,
@@ -46,6 +53,7 @@ export default function searchQuery(state = defaults, action) {
         maxDistance: defaults.maxDistance,
         maxGrade: defaults.maxGrade,
         watts: defaults.watts,
+        pace: defaults.pace,
       };
     }
     default:

@@ -107,8 +107,11 @@ const LeaderboardTable = ({ match }) => {
   const chosenSegment = recommendedKoms?.filter(
     (koms) => koms.segment.id === parseInt(match.params.id)
   );
-  const leaderEntries =
-    !isEmpty(chosenSegment) ? chosenSegment[0].segmentLeaderboard?.leaderboardEntries : [];
+  const leaderEntries = !isEmpty(chosenSegment)
+    ? chosenSegment[0].segmentLeaderboard?.leaderboardEntries
+    : [];
+
+  const isCycling = "power" in chosenSegment[0].segmentLeaderboard?.firstPlace;
 
   const segmentName = !isEmpty(chosenSegment) && chosenSegment[0].segment?.name;
 
@@ -126,13 +129,17 @@ const LeaderboardTable = ({ match }) => {
             <TableHead>
               <TableRow>
                 <StyledTableCell>Name</StyledTableCell>
+                {isCycling && (
+                  <StyledTableCell align="center">
+                    Speed
+                    <div className={classes.headerUnits}>&nbsp;(km/h)</div>
+                  </StyledTableCell>
+                )}
                 <StyledTableCell align="center">
-                  Speed
-                  <div className={classes.headerUnits}>&nbsp;(km/h)</div>
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  Power
-                  <div className={classes.headerUnits}>&nbsp;(W)</div>
+                  {isCycling ? "Power" : "Pace"}
+                  <div className={classes.headerUnits}>
+                    &nbsp; {isCycling ? "(W)" : "(/km)"}
+                  </div>
                 </StyledTableCell>
                 <StyledTableCell align="center">Time</StyledTableCell>
               </TableRow>
@@ -146,17 +153,27 @@ const LeaderboardTable = ({ match }) => {
                   <StyledTableCell component="th" scope="row">
                     {entry.name}
                   </StyledTableCell>
-                  <StyledTableCell align="center">
-                    <div className={classes.speed}>
-                      {entry.speed}{" "}
-                      <div className={classes.speedUnit}>km/h</div>
-                    </div>
-                  </StyledTableCell>
+                  {isCycling && (
+                    <StyledTableCell align="center">
+                      <div className={classes.speed}>
+                        {entry.speed}{" "}
+                        <div className={classes.speedUnit}>km/h</div>
+                      </div>
+                    </StyledTableCell>
+                  )}
+
                   <StyledTableCell align="center">
                     <div className={classes.power}>
-                      {entry.power}
+                      {isCycling ? entry.power : entry.pace}
                       <div className={classes.powerUnit}>
-                        W<FlashOnIcon fontSize="small" color="disabled" />
+                        {isCycling ? (
+                          <>
+                            W
+                            <FlashOnIcon fontSize="small" color="disabled" />
+                          </>
+                        ) : (
+                          "/km"
+                        )}
                       </div>
                     </div>
                   </StyledTableCell>
