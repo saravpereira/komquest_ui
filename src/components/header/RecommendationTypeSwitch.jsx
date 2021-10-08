@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Radio from "@mui/material/Radio";
@@ -20,12 +20,11 @@ const useStyles = makeStyles((theme) => ({
 
 const RecommendationTypeSwitch = () => {
   const dispatch = useDispatch();
-  const [value, setValue] = useState("cycling");
   const isLoading = useSelector(KomsSelectors.selectIsLoading);
+  const recommendationType = useSelector(KomsSelectors.selectRecommendationType)
   const classes = useStyles({isLoading});
 
   const handleChange = (event) => {
-    setValue(event.target.value);
     if (event.target.value === "cycling") {
       dispatch(SearchQueryActions.setPace(""));
       return dispatch(ResultsActions.setRecommendationType("cycling"));
@@ -39,7 +38,7 @@ const RecommendationTypeSwitch = () => {
       <FormControl component="fieldset">
         <RadioGroup
           aria-label="type"
-          defaultValue={value}
+          defaultValue={recommendationType}
           name="radio-buttons-group"
           onChange={handleChange}
           row
