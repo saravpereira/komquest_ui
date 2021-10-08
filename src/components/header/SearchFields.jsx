@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
@@ -54,17 +55,37 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(2),
     display: "flex",
     flexDirection: "row",
-  }
+  },
 }));
 
 const SearchFields = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const isInputFilled = useSelector(SearchQuerySelectors.selectAddress);
+  const history = useHistory();
+  const address = useSelector(SearchQuerySelectors.selectAddress);
+  const watts = useSelector(SearchQuerySelectors.selectWatts);
+  const pace = useSelector(SearchQuerySelectors.selectPace);
+  const positiveGrade = useSelector(SearchQuerySelectors.selectPositiveGrade);
+  const maxDistance = useSelector(SearchQuerySelectors.selectMaxDistance);
+  const maxGrade = useSelector(SearchQuerySelectors.selectMaxGrade);
+  const recommendationType = useSelector(KomsSelectors.selectRecommendationType);
   const isLoading = useSelector(KomsSelectors.selectIsLoading);
 
   const handleSubmitSearchQuery = () => {
-    dispatch(KomsActions.fetchRecommendedKoms());
+    dispatch(KomsActions.fetchRecommendedKoms()).then(() => {
+      history.push({
+        pathname: "/search",
+        search: `?a=${address}`,
+        state: {
+          watts,
+          pace,
+          positiveGrade,
+          maxDistance,
+          maxGrade,
+          recommendationType
+        }
+      });
+    });
   };
 
   return (
@@ -76,15 +97,15 @@ const SearchFields = () => {
             <AdvanceSearchFields />
           </div>
           <Tooltip title="Re-run your search if modified">
-          <div className={classes.typeFilter}>
-            <RecommendationTypeSwitch />
-          </div>
+            <div className={classes.typeFilter}>
+              <RecommendationTypeSwitch />
+            </div>
           </Tooltip>
         </div>
       </form>
       <Tooltip
         title={
-          !isInputFilled
+          !address
             ? "Enter an Address to start your search"
             : isLoading === 1
             ? "Search is in Progress..."
@@ -97,10 +118,10 @@ const SearchFields = () => {
             variant="contained"
             color="primary"
             size="large"
-            disabled={!isInputFilled || isLoading === 1}
+            disabled={!address || isLoading === 1}
             onClick={handleSubmitSearchQuery}
             style={
-              !isInputFilled || isLoading === 1
+              !address || isLoading === 1
                 ? {}
                 : { background: "#2E3B55", color: "white" }
             }

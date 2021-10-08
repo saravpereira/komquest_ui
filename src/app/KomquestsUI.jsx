@@ -4,6 +4,7 @@ import NavBar from "../components/header/NavBar";
 import KomsResults from "../components/results/KomsResults";
 import SegmentLeaderboard from "../components/leaderboard/SegmentLeaderboard";
 import AboutPage from "../components/about/AboutPage";
+import HomePage from "../components/home/HomePage";
 
 const KomquestsUI = () => {
   return (
@@ -11,7 +12,8 @@ const KomquestsUI = () => {
       <div>
         <NavBar />
         <Switch>
-          <Route path="/" exact component={KomsResults} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/search" component={KomsResults} />
           <Route path="/leaderboard/:id" component={SegmentLeaderboard} />
           <Route path="/about" exact component={AboutPage} />
         </Switch>
