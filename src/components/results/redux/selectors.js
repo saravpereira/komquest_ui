@@ -47,7 +47,7 @@ export const selectFilteredRecommendedKoms = createSelector(
 
       if (
         pace &&
-        kom.segmentLeaderboard?.leaderboardEntries[0]?.pace > pace &&
+        kom.segmentLeaderboard?.leaderboardEntries[0]?.pace < pace &&
         !excluded.includes(kom)
       ) {
         excluded.push(kom);

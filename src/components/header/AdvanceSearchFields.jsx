@@ -137,7 +137,7 @@ const AdvanceSearchFields = () => {
         <MenuItem>
           <input
             placeholder={
-              recommendationType === "cycling" ? "Max Watts" : "Max Pace"
+              recommendationType === "cycling" ? "Max Watts" : "Min Pace"
             }
             type={recommendationType === "cycling" ? "number" : "text"}
             className={classes.inputFields}
