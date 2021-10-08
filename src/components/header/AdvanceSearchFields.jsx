@@ -37,7 +37,9 @@ const AdvanceSearchFields = () => {
   const watts = useSelector(SearchQuerySelectors.selectWatts);
   const pace = useSelector(SearchQuerySelectors.selectPace);
   const isLoading = useSelector(KomsSelectors.selectIsLoading);
-  const recommendationType = useSelector(KomsSelectors.selectRecommendationType);
+  const recommendationType = useSelector(
+    KomsSelectors.selectRecommendationType
+  );
 
   const handlePostiveGradeChange = (e) =>
     dispatch(SearchQueryActions.setPositiveGrade(e.target.checked));
@@ -91,6 +93,8 @@ const AdvanceSearchFields = () => {
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        transformOrigin={{ vertical: "top", horizontal: "center" }}
         open={open}
         onClose={handleClose}
         MenuListProps={{
@@ -132,10 +136,16 @@ const AdvanceSearchFields = () => {
         </MenuItem>
         <MenuItem>
           <input
-            placeholder={recommendationType === "cycling" ? "Max Watts" : "Max Pace"}
+            placeholder={
+              recommendationType === "cycling" ? "Max Watts" : "Max Pace"
+            }
             type={recommendationType === "cycling" ? "number" : "text"}
             className={classes.inputFields}
-            onChange={recommendationType === "cycling" ? handleWattsChange : handlePaceChange}
+            onChange={
+              recommendationType === "cycling"
+                ? handleWattsChange
+                : handlePaceChange
+            }
             value={recommendationType === "cycling" ? watts : pace}
           />
           &nbsp; {recommendationType === "cycling" ? "Watts" : "/km"}

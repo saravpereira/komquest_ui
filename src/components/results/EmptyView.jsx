@@ -83,7 +83,7 @@ const EmptyView = () => {
       <div className={classes.instructions}>
         <SearchIcon />
         <Typography variant="body2" component="p">
-          Start your Komquest search by entering an
+          Start your KOMQuest search by entering an
           <b>
             <i> Address </i>
           </b>{" "}
