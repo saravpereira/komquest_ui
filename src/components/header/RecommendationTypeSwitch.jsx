@@ -63,12 +63,12 @@ const RecommendationTypeSwitch = () => {
             control={
               <Radio
                 disabled={isLoading}
-                sx={!isLoading && {
+                sx={!isLoading ? {
                   color: indigo[50],
                   "&.Mui-checked": {
                     color: indigo[100],
                   },
-                }}
+                } : {}}
               />
             }
             label={<span style={!isLoading ? { color: "white" } : {}}>Running</span>}
