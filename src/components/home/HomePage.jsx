@@ -1,8 +1,11 @@
-import React from "react";
-import LoadingBar from "react-redux-loading-bar";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import LoadingBar, { hideLoading } from "react-redux-loading-bar";
 import { makeStyles } from "@material-ui/core/styles";
 import EmptyView from "../results/EmptyView";
 import SearchFields from "../header/SearchFields";
+import * as SearchQueryActions from "../header/redux/actions";
+import * as KomsActions from "../results/redux/actions";
 
 const useStyles = makeStyles((theme) => ({
   resultContainer: {
@@ -29,6 +32,14 @@ const useStyles = makeStyles((theme) => ({
 
 const HomePage = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(SearchQueryActions.resetAdvanceSearch());
+    dispatch(SearchQueryActions.resetAddress());
+    dispatch(KomsActions.resetRecommendations());
+    dispatch(hideLoading());
+  });
 
   return (
     <div>

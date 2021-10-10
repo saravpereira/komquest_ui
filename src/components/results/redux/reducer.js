@@ -17,6 +17,13 @@ export default function komsReducer(state = defaults, action) {
         recommendationType: action.payload,
       };
     }
+    case "KOMS/RESET_RECOMMENDATIONS": {
+      return {
+        ...state,
+        recommendedKoms: defaults.recommendedKoms,
+        recommendationType: defaults.recommendationType,
+      };
+    }
     default:
       return state;
   }

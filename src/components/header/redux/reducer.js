@@ -56,6 +56,12 @@ export default function searchQuery(state = defaults, action) {
         pace: defaults.pace,
       };
     }
+    case "SEARCH_QUERY/RESET_ADDRESS": {
+      return {
+        ...state,
+        address: defaults.address,
+      };
+    }
     default:
       return state;
   }

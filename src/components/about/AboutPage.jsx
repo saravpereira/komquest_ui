@@ -60,8 +60,8 @@ const AboutPage = () => {
             Release Notes
           </Typography>
         </div>
-        {releaseNotes?.map((note) => (
-          <>
+        {releaseNotes?.map((note, index) => (
+          <div key={index}>
             <Divider />
             <div className={classes.releaseTitle}>
               <Typography variant="body1">{note.title}</Typography>
@@ -69,14 +69,14 @@ const AboutPage = () => {
             </div>
             <div>
               <ul>
-                {note.listOfChanges.map((list) => (
-                  <li>
+                {note.listOfChanges.map((list, i) => (
+                  <li key={i}>
                     <Typography variant="body2">{list}</Typography>
                   </li>
                 ))}
               </ul>
             </div>
-          </>
+          </div>
         ))}
         <footer className={classes.footer}>
           <div className={classes.authorName}>

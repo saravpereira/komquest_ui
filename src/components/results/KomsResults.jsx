@@ -1,13 +1,16 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import LoadingBar from "react-redux-loading-bar";
+import { useLocation } from "react-router-dom";
 import { isEmpty } from "lodash";
 import { makeStyles } from "@material-ui/core/styles";
 import { FaArrowCircleUp } from "react-icons/fa";
 import KomsResult from "./KomsResult";
-import EmptyView from "./EmptyView";
 import SearchFields from "../header/SearchFields";
+import * as SearchQueryActions from "../header/redux/actions";
+import * as SearchQuerySelectors from "../header/redux/selectors";
 import * as KomsSelector from "./redux/selectors";
+import * as KomsActions from "./redux/actions";
 
 const useStyles = makeStyles((theme) => ({
   resultContainer: {
@@ -56,8 +59,35 @@ const useStyles = makeStyles((theme) => ({
 
 const KomsResults = () => {
   const classes = useStyles();
-  const recommendedKoms = useSelector(KomsSelector.selectFilteredRecommendedKoms);
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const recommendedKoms = useSelector(
+    KomsSelector.selectFilteredRecommendedKoms
+  );
+  const recommendationType = useSelector(KomsSelector.selectRecommendationType);
+  const address = useSelector(SearchQuerySelectors.selectAddress);
+  const isLoading = useSelector(KomsSelector.selectIsLoading);
   const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (
+      params.get("a") === address &&
+      params.get("rt") === recommendationType &&
+      !isEmpty(recommendedKoms)
+    ) {
+      return;
+    }
+    dispatch(
+      SearchQueryActions.updateAllParams({
+        address: params.get("a"),
+        recommendationType: params.get("rt"),
+      })
+    );
+    dispatch(KomsActions.fetchRecommendedKoms());
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.search]);
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 100) {
@@ -84,24 +114,20 @@ const KomsResults = () => {
         style={{ backgroundColor: "#493FC4", height: "5px" }}
       />
       <div className={classes.resultContainer}>
-        {recommendedKoms?.map((result) => (
-          <div className={classes.cards} key={result.segment.name}>
-            <KomsResult
-              id={result.segment.id}
-              name={result.segment.name}
-              miles={result.miles}
-              grade={result.segment.averageGrade}
-              elevationChange={result.segment.elevationDifference}
-              key={result.segment.name}
-              kom={result.segmentLeaderboard.firstPlace}
-            />
-          </div>
-        ))}
-        {isEmpty(recommendedKoms) && (
-          <div>
-            <EmptyView />
-          </div>
-        )}
+        {!isLoading &&
+          recommendedKoms?.map((result) => (
+            <div className={classes.cards} key={result.segment.name}>
+              <KomsResult
+                id={result.segment.id}
+                name={result.segment.name}
+                miles={result.miles}
+                grade={result.segment.averageGrade}
+                elevationChange={result.segment.elevationDifference}
+                key={result.segment.name}
+                kom={result.segmentLeaderboard.firstPlace}
+              />
+            </div>
+          ))}
         <FaArrowCircleUp
           className={classes.scrollTop}
           onClick={scrollTop}

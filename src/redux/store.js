@@ -8,6 +8,7 @@ import reducer from "./reducer";
 
 const persistConfig = {
   key: "root",
+  blacklist: ["loadingBar"],
   storage,
 };
 

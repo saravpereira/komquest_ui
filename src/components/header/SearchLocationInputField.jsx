@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { GOOGLE_PLACES_API } from "../common/constants/urls";
 import * as SearchQueryActions from "./redux/actions";
 import * as SearchQuerySelectors from "./redux/selectors";
+import * as KomsSelectors from "../results/redux/selectors";
 
 const useStyles = makeStyles((theme) => ({
   searchLocationInput: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     "&:focus-within": {
       boxShadow: "0 1px 6px 0 rgba(32,33,36,0.28)",
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       width: theme.spacing(40.5),
     },
   },
@@ -41,6 +42,7 @@ const SearchLocationInput = () => {
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
   const currentAddress = useSelector(SearchQuerySelectors.selectAddress);
+  const isLoading = useSelector(KomsSelectors.selectIsLoading);
 
   let autoComplete;
 
@@ -74,25 +76,26 @@ const SearchLocationInput = () => {
     autoComplete?.addListener("place_changed", () =>
       handlePlaceSelect(updateQuery)
     );
-  }
+  };
 
   async function handlePlaceSelect(updateQuery) {
     const addressObject = autoComplete?.getPlace();
     const query = addressObject?.formatted_address;
-    dispatch(SearchQueryActions.setAddress(query))
+    dispatch(SearchQueryActions.setAddress(query));
     updateQuery(query);
   }
 
-  const handleOnChange = e => {
-    setQuery(e.target.value)
-    dispatch(SearchQueryActions.setAddress(e.target.value))
-  }
+  const handleOnChange = (e) => {
+    setQuery(e.target.value);
+    dispatch(SearchQueryActions.setAddress(e.target.value));
+  };
 
   useEffect(() => {
     loadScript(GOOGLE_PLACES_API, () =>
       handleScriptLoad(setQuery, autoCompleteRef)
     );
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className={classes.searchLocationInput}>
@@ -101,11 +104,12 @@ const SearchLocationInput = () => {
         ref={autoCompleteRef}
         onChange={handleOnChange}
         placeholder="Address *"
-        value={query || currentAddress}
+        value={query || currentAddress || ""}
         required
+        disabled={isLoading > 0}
       />
     </div>
   );
-}
+};
 
 export default SearchLocationInput;

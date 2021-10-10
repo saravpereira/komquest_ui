@@ -79,9 +79,9 @@ const AdvanceSearchFields = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         variant="contained"
-        disabled={isLoading === 1}
+        disabled={isLoading > 0}
         style={
-          isLoading === 1
+          isLoading > 0
             ? {}
             : { background: "#2E3B55", color: "white", borderRadius: "30px" }
         }

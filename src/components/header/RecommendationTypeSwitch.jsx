@@ -39,6 +39,7 @@ const RecommendationTypeSwitch = () => {
         <RadioGroup
           aria-label="type"
           defaultValue={recommendationType}
+          value={recommendationType}
           name="radio-buttons-group"
           onChange={handleChange}
           row
@@ -47,8 +48,8 @@ const RecommendationTypeSwitch = () => {
             value="cycling"
             control={
               <Radio
-                disabled={isLoading}
-                sx={!isLoading ? {
+                disabled={isLoading > 0}
+                sx={isLoading === 0 ? {
                   color: indigo[50],
                   "&.Mui-checked": {
                     color: indigo[100],
@@ -56,14 +57,14 @@ const RecommendationTypeSwitch = () => {
                 } : {}}
               />
             }
-            label={<span style={!isLoading ? { color: "white" } : {}}>Cycling</span>}
+            label={<span style={isLoading === 0 ? { color: "white" } : {}}>Cycling</span>}
           />
           <FormControlLabel
             value="running"
             control={
               <Radio
-                disabled={isLoading}
-                sx={!isLoading ? {
+                disabled={isLoading > 0}
+                sx={isLoading === 0 ? {
                   color: indigo[50],
                   "&.Mui-checked": {
                     color: indigo[100],
@@ -71,7 +72,7 @@ const RecommendationTypeSwitch = () => {
                 } : {}}
               />
             }
-            label={<span style={!isLoading ? { color: "white" } : {}}>Running</span>}
+            label={<span style={isLoading === 0 ? { color: "white" } : {}}>Running</span>}
           />
         </RadioGroup>
       </FormControl>

@@ -1,3 +1,6 @@
+import { batchActions } from "redux-batched-actions";
+import * as KomsActions from "../../results/redux/actions";
+
 export const setWatts = (payload) => ({
   type: "SEARCH_QUERY/SET_WATTS",
   payload,
@@ -31,3 +34,35 @@ export const setMaxGrade = (payload) => ({
 export const resetAdvanceSearch = () => ({
   type: "SEARCH_QUERY/RESET_ADVANCE_SEARCH",
 });
+
+export const resetAddress = () => ({
+  type: "SEARCH_QUERY/RESET_ADDRESS",
+});
+
+/* ====================================== THUNK ACTIONS ========================================= */
+
+export function updateAllParams({
+  address,
+  recommendationType,
+}) {
+  return function updateAllParamsThunk(dispatch) {
+    dispatch(
+      batchActions([
+        setAddress(address),
+        KomsActions.setRecommendationType(recommendationType),
+      ])
+    );
+  };
+}
+
+export function resetAllParams() {
+  return function resetAllParamsThunk(dispatch) {
+    dispatch(
+      batchActions([
+        resetAdvanceSearch(),
+        resetAddress(),
+        KomsActions.resetRecommendations(),
+      ])
+    );
+  };
+}

@@ -1,14 +1,15 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
+import qs from "query-string";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
 import SearchIcon from "@mui/icons-material/Search";
 import SearchLocationInput from "./SearchLocationInputField";
 import * as SearchQuerySelectors from "./redux/selectors";
-import * as KomsActions from "../results/redux/actions";
 import * as KomsSelectors from "../results/redux/selectors";
+import * as KomsActions from "../results/redux/actions";
 import AdvanceSearchFields from "./AdvanceSearchFields";
 import RecommendationTypeSwitch from "./RecommendationTypeSwitch";
 
@@ -60,37 +61,34 @@ const useStyles = makeStyles((theme) => ({
 
 const SearchFields = () => {
   const classes = useStyles();
-  const dispatch = useDispatch();
   const history = useHistory();
+  const location = useLocation();
+  const dispatch = useDispatch();
   const address = useSelector(SearchQuerySelectors.selectAddress);
-  const watts = useSelector(SearchQuerySelectors.selectWatts);
-  const pace = useSelector(SearchQuerySelectors.selectPace);
-  const positiveGrade = useSelector(SearchQuerySelectors.selectPositiveGrade);
-  const maxDistance = useSelector(SearchQuerySelectors.selectMaxDistance);
-  const maxGrade = useSelector(SearchQuerySelectors.selectMaxGrade);
-  const recommendationType = useSelector(KomsSelectors.selectRecommendationType);
+  const recommendationType = useSelector(
+    KomsSelectors.selectRecommendationType
+  );
   const isLoading = useSelector(KomsSelectors.selectIsLoading);
 
-  const handleSubmitSearchQuery = () => {
-    dispatch(KomsActions.fetchRecommendedKoms()).then(() => {
-      history.push({
-        pathname: "/search",
-        search: `?a=${address}`,
-        state: {
-          watts,
-          pace,
-          positiveGrade,
-          maxDistance,
-          maxGrade,
-          recommendationType
-        }
-      });
+  const queryParam = qs.parse(location.search);
+  const newQueryParam = {
+    ...queryParam,
+    a: address,
+    rt: recommendationType,
+  };
+
+  const handleSubmitSearchQuery = async () => {
+    history.push({
+      pathname: "/search",
+      search: qs.stringify(newQueryParam),
     });
+
+    dispatch(KomsActions.fetchRecommendedKoms())
   };
 
   return (
     <div className={classes.container}>
-      <form className={classes.inputField} noValidate autoComplete="off">
+      <form className={classes.inputField} noValidate autoComplete="off" onSubmit={e => e.preventDefault()}>
         <SearchLocationInput />
         <div className={classes.filters}>
           <div className={classes.advanceSearchButton}>
@@ -107,7 +105,7 @@ const SearchFields = () => {
         title={
           !address
             ? "Enter an Address to start your search"
-            : isLoading === 1
+            : isLoading > 0
             ? "Search is in Progress..."
             : ""
         }
@@ -121,7 +119,7 @@ const SearchFields = () => {
             disabled={!address || isLoading === 1}
             onClick={handleSubmitSearchQuery}
             style={
-              !address || isLoading === 1
+              !address || isLoading > 0
                 ? {}
                 : { background: "#2E3B55", color: "white" }
             }
