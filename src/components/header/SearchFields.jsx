@@ -116,7 +116,7 @@ const SearchFields = () => {
             variant="contained"
             color="primary"
             size="large"
-            disabled={!address || isLoading === 1}
+            disabled={!address || isLoading > 0}
             onClick={handleSubmitSearchQuery}
             style={
               !address || isLoading > 0
