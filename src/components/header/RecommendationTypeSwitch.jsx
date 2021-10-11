@@ -9,6 +9,7 @@ import { indigo } from "@mui/material/colors";
 import * as ResultsActions from "../results/redux/actions";
 import * as SearchQueryActions from "../header/redux/actions";
 import * as KomsSelectors from "../results/redux/selectors";
+import { isEmpty } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -49,7 +50,7 @@ const RecommendationTypeSwitch = () => {
             control={
               <Radio
                 disabled={isLoading > 0}
-                sx={isLoading === 0 ? {
+                sx={isLoading === 0 || isEmpty(isLoading) ? {
                   color: indigo[50],
                   "&.Mui-checked": {
                     color: indigo[100],
@@ -57,14 +58,14 @@ const RecommendationTypeSwitch = () => {
                 } : {}}
               />
             }
-            label={<span style={isLoading === 0 ? { color: "white" } : {}}>Cycling</span>}
+            label={<span style={isLoading === 0 || isEmpty(isLoading) ? { color: "white" } : {}}>Cycling</span>}
           />
           <FormControlLabel
             value="running"
             control={
               <Radio
                 disabled={isLoading > 0}
-                sx={isLoading === 0 ? {
+                sx={isLoading === 0 || isEmpty(isLoading) ? {
                   color: indigo[50],
                   "&.Mui-checked": {
                     color: indigo[100],
@@ -72,7 +73,7 @@ const RecommendationTypeSwitch = () => {
                 } : {}}
               />
             }
-            label={<span style={isLoading === 0 ? { color: "white" } : {}}>Running</span>}
+            label={<span style={isLoading === 0 || isEmpty(isLoading) ? { color: "white" } : {}}>Running</span>}
           />
         </RadioGroup>
       </FormControl>
