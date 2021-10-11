@@ -2,7 +2,6 @@ const defaults = {
   pace: "",
   watts: "",
   address: "",
-  koms: null,
   positiveGrade: false,
   maxDistance: null,
   maxGrade: null,
