@@ -35,6 +35,7 @@ const EmptyLeaderboard = ({ match }) => {
   const classes = useStyles();
   const recommendedKoms = useSelector(KomsSelector.selectRecommendedKoms);
   const recommendationType = useSelector(KomsSelector.selectRecommendationType);
+  const isLoading = useSelector(KomsSelector.selectIsLoading);
   const currentAddress = useSelector(SearchQuerySelectors.selectAddress);
   const chosenSegment = recommendedKoms?.filter(
     (koms) => koms.segment.id === parseInt(match.params.id)
@@ -44,17 +45,19 @@ const EmptyLeaderboard = ({ match }) => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.container}>
-        <Typography variant="h6" component="h6">
-          Uh-Oh!
-        </Typography>
-        <Typography variant="body1">
-          {isEmpty(recommendedKoms)
-            ? "Seems like the search query is empty or expired. Please navigate back to search for KOMs."
-            : isEmpty(chosenSegment) &&
-              `This segment ID doesn't match what you're querying for: ${formattedRecType} segments at ${currentAddress}`}
-        </Typography>
-      </div>
+      {isLoading === 0 && (
+        <div className={classes.container}>
+          <Typography variant="h6" component="h6">
+            Uh-Oh!
+          </Typography>
+          <Typography variant="body1">
+            {isEmpty(recommendedKoms)
+              ? "Seems like the search query is empty or expired. Please navigate back to search for KOMs."
+              : isEmpty(chosenSegment) &&
+                `This segment ID doesn't match what you're querying for: ${formattedRecType} segments at ${currentAddress}`}
+          </Typography>
+        </div>
+      )}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Typography from "@material-ui/core/Typography";
+import Tooltip from "@material-ui/core/Tooltip";
 import { LEADERBOARD_URL } from "../common/constants/urls";
 import LeaderboardTable from "./LeaderboardTable";
 import EmptyLeaderboard from "./EmptyLeaderboard";
@@ -24,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-end",
     width: "98%",
+    paddingBottom: theme.spacing(1.25),
     [theme.breakpoints.down("xs")]: {
       width: "100%",
       justifyContent: "center",
@@ -39,6 +41,7 @@ const SegmentLeaderboard = ({ match }) => {
   const dispatch = useDispatch();
   const recommendedKoms = useSelector(KomsSelector.selectRecommendedKoms);
   const recommendationType = useSelector(KomsSelector.selectRecommendationType);
+  const isLoading = useSelector(KomsSelector.selectIsLoading);
   const address = useSelector(SearchQuerySelectors.selectAddress);
 
   const chosenKom = recommendedKoms?.filter(
@@ -76,21 +79,26 @@ const SegmentLeaderboard = ({ match }) => {
   return (
     <div className={classes.root}>
       {location.pathname.includes(LEADERBOARD_URL) && (
-        <div className={classes.navigateBackContainer}>
-          <Button
-            variant="contained"
-            style={{ background: "#2E3B55", color: "white" }}
-            size="large"
-            onClick={goBack}
-          >
-            <ArrowBackIcon />
-            <Typography variant="body1">
-              {isEmpty(recommendedKoms)
-                ? "Back to Koms Search"
-                : "Back to Recommendations"}
-            </Typography>
-          </Button>
-        </div>
+        <Tooltip title={isLoading > 0 ? "Search is in Progress..." : ""}>
+          <div className={classes.navigateBackContainer}>
+            <Button
+              variant="contained"
+              size="large"
+              onClick={goBack}
+              disabled={isLoading > 0}
+              style={
+                isLoading > 0 ? {} : { background: "#2E3B55", color: "white" }
+              }
+            >
+              <ArrowBackIcon />
+              <Typography variant="body1">
+                {isEmpty(recommendedKoms) && isLoading === 0
+                  ? "Back to Koms Search"
+                  : "Back to Recommendations"}
+              </Typography>
+            </Button>
+          </div>
+        </Tooltip>
       )}
       <LoadingBar
         updateTime={700}
