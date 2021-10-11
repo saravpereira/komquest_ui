@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import * as KomsSelector from "../results/redux/selectors";
 import * as SearchQuerySelectors from "../header/redux/selectors";
+import { capitalizeFirstLetter } from "./utils";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,11 +34,13 @@ const useStyles = makeStyles((theme) => ({
 const EmptyLeaderboard = ({ match }) => {
   const classes = useStyles();
   const recommendedKoms = useSelector(KomsSelector.selectRecommendedKoms);
+  const recommendationType = useSelector(KomsSelector.selectRecommendationType);
   const currentAddress = useSelector(SearchQuerySelectors.selectAddress);
-  const currentWatts = useSelector(SearchQuerySelectors.selectWatts);
   const chosenSegment = recommendedKoms?.filter(
     (koms) => koms.segment.id === parseInt(match.params.id)
   );
+
+  const formattedRecType = capitalizeFirstLetter(recommendationType);
 
   return (
     <div className={classes.root}>
@@ -46,8 +49,10 @@ const EmptyLeaderboard = ({ match }) => {
           Uh-Oh!
         </Typography>
         <Typography variant="body1">
-          {isEmpty(recommendedKoms) ? "Seems like the search query is empty or expired. Please navigate back to search for KOMs." : 
-          isEmpty(chosenSegment) && `This segment ID doesn't match what you're querying for: ${currentWatts}W at ${currentAddress}`}
+          {isEmpty(recommendedKoms)
+            ? "Seems like the search query is empty or expired. Please navigate back to search for KOMs."
+            : isEmpty(chosenSegment) &&
+              `This segment ID doesn't match what you're querying for: ${formattedRecType} segments at ${currentAddress}`}
         </Typography>
       </div>
     </div>

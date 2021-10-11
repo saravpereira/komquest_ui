@@ -14,7 +14,7 @@ const KomquestsUI = () => {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/search" component={KomsResults} />
-          <Route path="/leaderboard/:id" component={SegmentLeaderboard} />
+          <Route path="/leaderboard/:id/search" component={SegmentLeaderboard} />
           <Route path="/about" exact component={AboutPage} />
         </Switch>
       </div>

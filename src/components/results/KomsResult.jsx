@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 const KomsResult = ({ id, name, grade, elevationChange, miles, kom }) => {
   const classes = useStyles();
+  const location = useLocation();
 
   const handleClick = () => {
     window.open(`${STRAVA_URL}${id}`);
@@ -69,7 +70,7 @@ const KomsResult = ({ id, name, grade, elevationChange, miles, kom }) => {
           <div className={classes.komDetails}>
             <Typography variant="body2" component="p">
               <strong>KOM:</strong> {isCycling ? kom.power : kom.pace}
-              {isCycling ? "W" : <>/km,&nbsp; </> }
+              {isCycling ? "W" : <>/km,&nbsp; </>}
             </Typography>
             {isCycling && <FlashOnIcon fontSize="small" color="disabled" />}
             <Typography variant="body2" component="p">
@@ -88,7 +89,10 @@ const KomsResult = ({ id, name, grade, elevationChange, miles, kom }) => {
         <Button size="small" color="primary" onClick={handleClick}>
           View in Strava
         </Button>
-        <Link to={`/leaderboard/${id}`} style={{ textDecoration: "none" }}>
+        <Link
+          to={`/leaderboard/${id}/search${location.search}`}
+          style={{ textDecoration: "none" }}
+        >
           <Button size="small" color="primary">
             View Leaderboard
           </Button>
